@@ -1,0 +1,234 @@
+<body>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to controller: "homepage",action:"show" do %>
+                    <p> Home </p>
+                <% end %>
+            </li>
+            <li>
+                <a class="this" href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="team.html">Il team</a>
+            </li>
+            <li>
+                <a href="contatti.html">Contatti</a>
+            </li>
+            <li>
+                <a href="FAQ.html">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='login.html'">login</button>            
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>     
+    </nav>  
+    
+
+    <div class="header" style="background-color: #b1c9ce;">
+        <br>
+        
+        <h1 style="margin-top: 3%;">Servizi a tua disposizione</h1>
+        <div class="container" >
+            <p>
+                Doc2me offre la possibilità ad utenti registrati di prenotare visite nello studio di via Oslavia 14 o a domicilio e di richiedere una consulenza
+                online con uno dei nostri medici. Per urgenze torna alla home e clicca sul pulsante GO per metterti subito in contatto con un nostro medico. Se non sei utente Doc2me , registrati ora!
+                Scopri in basso come prenotare una visita!
+            </p> 
+        </div>
+    </div>
+
+    <section class="cards">
+        <div class="card">
+            <div class="card__copy">
+                <div class="father-servizi">
+                    <h2 style="color:  #04044c;">&nbsp&nbspConsulenze online&nbsp&nbsp</h2><br>
+                </div>
+                <p>
+                    Richiedi una consulenza online con uno dei nostri medici.
+                    Inserisci i dati richiesti ,scegli quando vuoi che la visita avvenga e invia la richiesta!
+                </p>
+                <div id="richiedi1">
+                    <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                      <!--vue js proprietà per transizione-->
+                    <transition name="slide" appear>
+                        <div class="modal modal1" v-if="showModal">
+                            
+                            <form action="#" style="margin: 1%;">
+                                <div class="row ">
+                                    <!-- data e ora -->
+                                    <div class="input-group col-lg-12 mb-4">
+                                        
+                                        <input id="ora" type="date" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="margin-top: 3%; margin-left: 10%;">
+                                <button class="nav-mybutton" @click="showModal = false">Invia </button>
+                                <button class="nav-mybutton" @click="showModal = false">Esci</button>
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card__copy">
+                <div class="father-servizi">
+                    <h2 style="color:  #04044c;">&nbsp&nbspVisite in studio&nbsp&nbsp</h2><br>
+                </div>
+                <p> 
+                    Guarda le disponibilità nello studio di via Oslavia 14 per una visita con un nostro medico.
+                    Scegli data ed ora disponibili e procedi per prenotare!
+
+                 </p>
+                <div >
+                    <button type="button"class="nav-mybutton" onclick="window.location.href='disponibilita.html'">disponibilità</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            
+            <div class="card__copy">
+                <div class="father-servizi">
+                    <h2 style="color:  #04044c;">&nbsp&nbspVisite a domicilio&nbsp&nbsp</h2><br>
+                </div>
+                <p>
+                    Richiedi una visita a domicilio con uno dei nostri medici. Inserisci il tuo indirizzo, il giorno, l'ora e attendi
+                   la conferma per email dal medico!
+                </p>
+                <div id="richiedi2">
+                    <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                      <!--vue js proprietà per transizione-->
+                    <transition name="slide" appear>
+                        <div class="modal modal2" v-if="showModal">
+                            
+                            <form action="#" style="margin: 1%;">
+                                <div class="row ">
+                                    <!-- data e ora -->
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="ora" type="date" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                    <!-- Password -->
+                                    <div class="input-group col-lg-12 mb-4">
+                                        
+                                        <input id="indirizzo" type="indirizzo" name="indirizzo" placeholder="indirizzo" class="form-control bg-white border-left-0 border-md">
+                                    </div>
+                                </div>
+                            </form>
+                            <div style="margin-top: 3%; margin-left: 10%;">
+                                <button class="nav-mybutton" @click="showModal = false">Invia </button>
+                                <button class="nav-mybutton" @click="showModal = false">Esci</button>
+                            </div>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img src="img/Online Doctor-amico.svg" style="margin-left: 35%; width: 30%;">
+    
+    <div class=" my-text" id="hanging-icons" style="width: 80%; margin-left: 10%; ">
+        <h2 style="border-bottom:solid; border-color: cornflowerblue; font-size:xxx-large; margin-bottom: 2%;">Tariffe</h2>
+        <div class="row" style=" margin-bottom: 4%;">
+            <div class="col-md-4 ">
+                <div style="display: flex; margin-top: 2%;">
+                    <img style="width: 10ch;" src="img/cmp.svg"> <h2 style="margin-top: 7%; margin-left: 0.5%;">Visite online</h2>
+                </div>
+                <div>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                </div>
+            </div>
+            <div class="col-md-4 " >
+                <div style="display: flex;">
+                    <img style="width: 10ch;" src="img/hospital.svg"> <h2 style="margin-top: 7%; margin-left: 0.5%;">Visite in studio</h2>
+                </div>
+                <div>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                </div>
+            </div>
+            <div class="col-md-4  " >
+                <div style="display: flex;">
+                    <img style="width: 10ch;" src="img/casa-2.svg"> <h2 style="margin-top: 7%; margin-left: 0.5%;">Visite a domicilio</h2>
+                </div>
+                <div>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class=" footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo:</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+   <%= javascript_pack_tag 'index.js' %>
+   <%= javascript_pack_tag 'popup.js' %>
+  
+</body>

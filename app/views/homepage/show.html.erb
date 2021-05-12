@@ -1,0 +1,210 @@
+
+<body id="body-home" style="overflow-x: hidden;">
+    
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="team.html">Il team</a>
+            </li>
+            <li>
+                <a href="contatti.html">Contatti</a>
+            </li>
+            <li>
+                <a href="FAQ.html">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+
+    <main class="home">
+        <div style="background: linear-gradient( #b1c9ce, white) ">
+            <div class="urgenza-flex container">
+                <div style="margin-right: 8%; margin-top: 12.2%;">
+                    <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+                </div>
+                <div class="father-urgenza">
+                    <br><br>
+                    <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+                </div>
+                <div  class="urgenza-text" >
+                            Clicca qui per entrare in contatto con un nostro medico.<br>
+                            Scopri i servizi di DOC2ME!
+                </div>
+                <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+            </div>
+            <br>
+            <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+                <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+            </div>
+        </div>
+        <div id="guida">
+            <div class="cards-home clearfix" >
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le urgenze</h2> <br>
+                        <p >
+                            Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+                            Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+                        </p>
+                        <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+                        
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le visite</h2> <br>
+                        <p>
+                            Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+                            di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+
+                        </p>
+                        
+                        <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I pazienti</h2> <br>
+                        <p>
+                            Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+                            Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+                        </p>
+                        
+                        <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I costi</h2> <br>
+                        <p>
+                            Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+                            Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+                        </p> 
+                        
+                        <%=image_tag("costi.png", style:"width: 33%;")%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="about-flex">
+            
+            <%=image_tag("Health professional team-amico.svg", style:"width: 20%; margin-top: 6%; margin-right: 9%;",class:"img-home")%>
+            <div class="father-about">
+                <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+                <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"img-home")%>
+            </div>
+            <div class="aboutus-text">
+                Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+                L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+                <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+            </div>
+            
+        </div>
+        <div  class=" team-flex" >
+            <div class="father-team">    
+                 <h1 class="son-team">&nbsp Chi siamo? </h1> 
+                 <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+            </div>
+            <div class="team-text">   
+                Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+                la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+                La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+                superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+                <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+                tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+                Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+            </div>
+            <%=image_tag("Good team-bro.svg", style:"width: 20%; margin-top: 7.5%; margin-right: 3%;",class:"img-home")%>
+            
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+
+
+    
+</body>

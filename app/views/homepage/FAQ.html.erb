@@ -1,0 +1,212 @@
+<body>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to controller: "homepage",action:"show" do %>
+                    <p> Home </p>
+                <% end %>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="team.html">Il team</a>
+            </li>
+            <li>
+                <a href="contatti.html">Contatti</a>
+            </li>
+            <li>
+                <a class="this" href="FAQ.html">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="login.html">Login</a>
+            </li>  
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton"  onclick="window.location.href='login.html'">login</button>     
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>       
+    </nav>
+
+    <div id="maindiv-ped" class="container" >
+        <br><br>
+        <!--riga 1-->
+        <div class="row" style="margin-top: 3%;">
+            <div class="col-sm-6">
+                <div class=" pedi p-4 my-auto jumbotron" > 
+                    <div class="pedi-info">
+                        <h3>Chi siamo</h3> 
+                        Doc2me è una piattaforma online per prenotazione e gestione di visite mediche.<br>
+                        Essa semplifica la comunicazione fra medico e paziente e offre tariffe fisse applicabili sia con pagamento contante che online.<br>
+                        Il team è composto da medici qualificati che aderendo alla piattaforma si rendono disponibili a turno a ricevere le prenotazioni e svolgere 
+                        le visite stesse.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class=" pedi p-4 my-auto jumbotron" > 
+                    <div class="pedi-info" >
+                        <h3>I nostri obiettivi</h3> 
+                        Doc2me si propone di offrire gli stessi servizi presenti in altri siti web del settore ,con un layout più semplice e lineare, ma aggiungendo funzionalità non presenti su nessun 
+                            altra piattaforma analoga ,come la possibilità di pagare direttamente online, avere tariffe fisse per ogni visita e visualizzare in un profilo personale un report di tutte le prenotazioni effettuate,
+                            con i relativi referti medici.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <img src="img/Telecommuting-rafiki.png" style="width: 40%; margin: 5%; margin-left: 30%;">
+    </div>
+   
+   <!-- sezione faq-->
+    <section id="faq" class="faq">
+        <div class="row">
+            <div class="accordion-container">
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>How much will it cost?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>How To update website?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>is domain provided free?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>how long it takes to design?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>how long it takes to design?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>how long it takes to design?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>is it seo freindly?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <!-- fine sezione faq-->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+   <%= javascript_pack_tag 'index.js' %>
+   <%= javascript_pack_tag 'jquery.js' %>
+   <!--<script src="jquery.js"></script>-->
+   
+</body>
