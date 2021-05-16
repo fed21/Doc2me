@@ -27,13 +27,13 @@
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a href="team.html">Il team</a>
+                <a href="/team">Il team</a>
             </li>
             <li>
-                <a href="contatti.html">Contatti</a>
+                <a href="/contatti">Contatti</a>
             </li>
             <li>
-                <a href="FAQ.html">FAQ</a>
+                <a href="/FAQ">FAQ</a>
             </li>  
             <li id="but">
                 <a href="<%= user_session_path%>">Login</a>
@@ -122,11 +122,11 @@
 
         <div class="about-flex">
             
-            <%=image_tag("Health professional team-amico.svg", style:"width: 20%; margin-top: 6%; margin-right: 9%;",class:"img-home")%>
+            <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
             <div class="father-about">
                 <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
                 <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
-                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"img-home")%>
+                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
             </div>
             <div class="aboutus-text">
                 Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
@@ -150,7 +150,7 @@
                 tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
                 Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
             </div>
-            <%=image_tag("Good team-bro.svg", style:"width: 20%; margin-top: 7.5%; margin-right: 3%;",class:"img-home")%>
+            <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
             
         </div>
         
@@ -204,6 +204,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>
 
 
     

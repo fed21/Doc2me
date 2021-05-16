@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get '/' => 'homepage#show'
 
   #per il momento ho mappato servizi nel controller di homepage
+  get '/contatti' => 'homepage#contatti'
   get '/servizi' => 'homepage#servizi'
   get '/FAQ' => 'homepage#FAQ'
+  get '/team' => 'homepage#team'
   
   devise_for :users, controllers: { omniauth_callbacks:
   'users/omniauth_callbacks' }

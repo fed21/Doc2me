@@ -23,11 +23,17 @@
  padding: 0px;
  box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     padding-top: 60px ; 
     position: relative;
     overflow-x: hidden;
+    height: 100%;
+
 }
 
 a{
@@ -122,6 +128,7 @@ nav {
     margin-top: 1.5%;  
 }
 
+
 .ul-nav li{
     list-style: none;
 }
@@ -142,10 +149,12 @@ nav {
     font-weight: bold;
 }
 
+
 .burger {
     display:none;
     cursor: pointer;
 }
+
 
 .burger div{
     background-color: #04044c;
@@ -157,6 +166,34 @@ nav {
 
 #but{
     display: none;
+}
+
+#but-logged{
+    display: none;
+}
+
+@media screen and (max-width:1224px) {
+    .logged-nav{
+        position: fixed;
+        right: 0px;
+        height: 90vh;
+        top: 9vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    #logged-burger{
+        display: block;
+    }
+    #but-logged{
+        display: block;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -175,7 +212,7 @@ nav {
     }
 
     #but{
-        display: block;    
+        display:inline;    
     }
     .ul-nav-logo{
         margin-top: 5%;
@@ -184,7 +221,7 @@ nav {
     
         position: fixed;
         right: 0px;
-        height: 90vh;
+        height: 80vh;
         top: 9vh;
         background-color: white;
         display: flex;
@@ -207,6 +244,12 @@ nav {
     }
 }
 
+@media screen and (max-width: 420px) {
+    
+    .ul-nav-logo{
+        margin-top: 9%;
+    }
+}
 .nav-active{
     transform: translateX(0%);
 }
@@ -305,7 +348,7 @@ nav {
     height: 530px;
     padding: 0.5em;
     
-    overflow-x: hidden;
+    
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -384,7 +427,15 @@ nav {
 .icon-home{
     display: none;
 }
+#img-home-chi{
+    width: 20%; margin-top: 7.5%; margin-left: 100%;
+    position: absolute;
+}
 
+#img-home-team{
+    width: 20%; margin-top: 7.5%; margin-left: -40%;
+    position: absolute;
+}
 @media screen and (max-width: 1520px) {
     .urgenza-flex{
         display: flex;
@@ -460,7 +511,8 @@ nav {
     .card-home {
         display: flex;
         flex-direction: column;
-        width: 95%;
+        width: 90%;
+        margin-left: 5%;
     }
 
     .img-home{
@@ -598,7 +650,7 @@ nav {
     transform: translate(-50%, -50%);
     z-index: 99;
     
-    width: 100%; height: 28vh;
+    width: 100%; 
     max-width: 400px;
 
     display: flex;
@@ -613,16 +665,38 @@ nav {
     box-shadow: 5px 5px 4px #4e4e64;
     border-radius: 10px;
     padding: 25px;
+
+   
 }
 .modal1{
     top: 50%;
     left: 16.5%;
     background: linear-gradient( #abbff6,white);
+    height: 40vh;
+    min-height: 380 px;
 }
 .modal2{
     top: 50%;
     left: 82.5%;
     background: linear-gradient( #abbff6,white);
+    height: 50vh;
+    min-height: 380 px;
+}
+
+.modal3{
+    top: 50%;
+    left: 50%;
+    background: linear-gradient( #abbff6,white);
+    height: 40vh;
+    min-height: 380 px;
+}
+
+.modal4{
+    top: 50%;
+    left: 50%;
+    background: linear-gradient( #abbff6,white);
+    height: 50vh;
+    min-height: 380 px;
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -643,6 +717,26 @@ nav {
 .slide-leave-to {
     transform: translateY(-50%) translateX(100vw);
 }
+@media screen and (max-height: 760px) {
+    .modal{
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width: 760px) {
+    .modal1{
+        left: 50%;
+        height: 80vh; max-height: 380px;
+    }
+    .modal2{
+        left: 50%;
+        height: 80vh; max-height: 380px;
+    }
+    .modal3{
+        left: 50%;
+        height: 80vh; max-height: 380px;
+    }
+}
+
 /*contatti*/
 /*
 .contact{
@@ -697,7 +791,11 @@ nav {
     margin-top: 2%; margin-bottom: 2%;
 }
 
-
+@media screen and (max-width: 760px) {
+    #form-contatti{
+        padding: 3%;
+    }
+}
 /*
 .son-item1-contact{
     border-radius: 10px;
@@ -725,27 +823,26 @@ nav {
     height: 100%;
     width: 100%;
 }
+
+*/
 .p-social{
-    color: #04044c; 
-    font-weight: bold; font-size: 17px;
-    margin-top: 7%;
-   
+    margin-top: 4%;
 }
 
 .social-img{
     border-radius: 50%;
     width: 50px; height: 50px;
-    margin-left: 5%; margin-top: 3%;
+   margin-bottom: 1%; margin-top: 1%;
     
 }
 
 #contact-instagram{
-    background-image: url("img/instagram.svg");
+    background-image: url("instagram.svg");
     background-size: cover;
 }
 
 #contact-facebook{
-    background-image: url("img/fb.svg");
+    background-image: url("fb.svg");
     background-size: cover;
 }
 
@@ -755,7 +852,7 @@ nav {
 /*team pediatri*/
 
 #body-pedi {
-    background-color: #b1c9ce;
+    background: linear-gradient( #b1c9ce, white);
 }
 
 .header{
@@ -791,15 +888,32 @@ nav {
 .pedi-img{
     border-radius: 50%;
     width: 175px; height: 168px;
-    background-image: url("img/mia.jpeg");
+    background-image: url("mia.jpeg");
     background-size: cover;
     flex: 4;
     border: 2px solid #2e2e69;
+    color: white;
 }
 .pedi-img2{
     border-radius: 50%;
     width: 175px; height: 168px;
-    background-image: url("img/gauss.jpg");
+    background-image: url("gauss.jpg");
+    background-size: cover;
+    flex: 4;
+    border: 2px solid #2e2e69;
+}
+.pedi-img3{
+    border-radius: 50%;
+    width: 175px; height: 168px;
+    background-image: url("fdabold.jpg");
+    background-size: cover;
+    flex: 4;
+    border: 2px solid #2e2e69;
+}
+.pedi-img4{
+    border-radius: 50%;
+    width: 175px; height: 168px;
+    background-image: url("feffo.jpeg");
     background-size: cover;
     flex: 4;
     border: 2px solid #2e2e69;
@@ -845,9 +959,9 @@ nav {
 .footer{
     width: 100%;
     left: 0 ; right: 0; bottom: -50; 
-    
 	background-color:#2e2e69;
     padding-top: 2%; 
+    margin-top: auto;
 }
 .footer-col{
    width: 15%;
@@ -924,7 +1038,10 @@ nav {
 @media screen and (max-width: 992px){
     .log-div{
       display: none;
-  }
+    }
+    .login{
+        margin-right: 0%;
+    }
   }
 /* docprofile bio */
 
@@ -1034,5 +1151,118 @@ nav {
 
     .faq .row .accordion-container{
         width:100%;
+    }
+}
+
+/* disponibilita*/
+
+.disp{
+    margin-top: 3%;
+}
+#map-2 {
+    display: none;
+}
+
+#disp-panel{
+    display: none;
+}
+
+#disp-container{
+    width: 100vh;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 760px) {
+    #disp-container{
+        width: 39.5vh;
+        margin-left: 0%;
+        
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #map-1{
+        display: none;
+    }
+    #map-2{
+        display: block;
+        margin-bottom: 15vh;
+    }
+}
+
+/*profile*/
+
+.ul-profile{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.li-2{
+    margin-left: 14%;
+}
+
+.contact-profile{
+    display: inline;
+    color: #04044c;
+    text-align: center;
+    margin: 2%;
+}
+
+.button-prof{
+    margin-right: 52vh;
+}
+
+@media screen and (max-width: 1200px) {
+    .button-prof{
+        margin-right: auto;
+    }
+    .ul-profile{
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    .li-2{
+        margin-left: 0%;
+    }
+    
+}
+
+/*prenotazione*/
+
+.icons-prenotazione{
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 8%; margin-top: 10%;
+    padding: 1%;
+    
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .button-prenotazione{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 760px) {
+    .icons-prenotazione{
+        flex-direction: row; 
+        justify-content: space-around;
+        
+    }
+    .card-prenotazione{
+        width: 140vh;
+    }
+    
+}
+@media screen and (max-width:  760px) {
+    .icons-prenotazione{
+        flex-direction: row; 
+        justify-content: space-around;
+        margin-left: -0.2%;
     }
 }
