@@ -1,6 +1,69 @@
 
 <body id="body-home" style="overflow-x: hidden;">
-    
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <%= current_user.nome%>
+                
+                <%= current_user.cognome%>
+                Utente
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!--<%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
     <nav>
         <ul class="ul-nav-logo">
             <li>
@@ -46,6 +109,7 @@
             <div class="line3"></div>
         </div> 
     </nav>  
+    <% end %>
 
     <main class="home">
         <div style="background: linear-gradient( #b1c9ce, white) ">

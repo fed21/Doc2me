@@ -24736,3 +24736,3324 @@ Processing by HomepageController#show as HTML
 Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 14737)
 
 
+Started GET "/" for ::1 at 2021-05-17 11:43:11 +0200
+  [1m[35m (59.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 652.3ms | Allocations: 37920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 664.3ms | Allocations: 44644)
+Completed 200 OK in 684ms (Views: 667.8ms | ActiveRecord: 0.0ms | Allocations: 48514)
+
+
+Started GET "/" for ::1 at 2021-05-17 11:43:13 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 31.9ms | Allocations: 8320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 14354)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 14840)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 11:43:27 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 30.7ms | Allocations: 7323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 13303)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 13860)
+
+
+Started GET "/team" for ::1 at 2021-05-17 11:43:28 +0200
+Processing by HomepageController#team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/team.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/team.html.erb within layouts/application (Duration: 40.9ms | Allocations: 5198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 11187)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 11745)
+
+
+Started GET "/contatti" for ::1 at 2021-05-17 11:43:31 +0200
+Processing by HomepageController#contatti as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/contatti.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/contatti.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3581)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 9524)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 10079)
+
+
+Started GET "/FAQ" for ::1 at 2021-05-17 11:43:32 +0200
+Processing by HomepageController#FAQ as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/FAQ.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/FAQ.html.erb within layouts/application (Duration: 19.1ms | Allocations: 5715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 11743)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 12302)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 11:43:35 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 334.9ms | Allocations: 8866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 346.4ms | Allocations: 14902)
+Completed 200 OK in 579ms (Views: 349.5ms | ActiveRecord: 159.3ms | Allocations: 26395)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 11:44:12 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 11:44:13 +0200
+Started GET "/users/auth/google_oauth2/callback?state=9a8f5fedd221cc8b05865f0d275c5084c12a3c5d23e38e5b&code=4/0AY0e-g5dWeDi7FgBUga4gfEt1U8jPmaVuI1rKqnhzbtECfFiteJpW-RRcEcSWtv-nJ9YHA&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 11:44:16 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"9a8f5fedd221cc8b05865f0d275c5084c12a3c5d23e38e5b", "code"=>"4/0AY0e-g5dWeDi7FgBUga4gfEt1U8jPmaVuI1rKqnhzbtECfFiteJpW-RRcEcSWtv-nJ9YHA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (86.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms (ActiveRecord: 87.4ms | Allocations: 2418)
+
+
+Started GET "/" for ::1 at 2021-05-17 11:44:17 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 22.8ms | Allocations: 8341)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 15490)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.8ms | Allocations: 15954)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 11:44:50 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 1.0ms | Allocations: 4981)
+
+
+Started GET "/" for ::1 at 2021-05-17 11:44:50 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 8323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 14363)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 14823)
+
+
+Started GET "/" for ::1 at 2021-05-17 11:53:58 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 9222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 15558)
+Completed 200 OK in 31ms (Views: 30.3ms | Allocations: 16864)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 11:54:02 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.5ms | Allocations: 4319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 10355)
+Completed 200 OK in 71ms (Views: 67.7ms | Allocations: 12016)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 11:54:04 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 11:54:04 +0200
+Started GET "/users/auth/google_oauth2/callback?state=1640704bfa7710c8ad87ede060cad6602c563e2629965621&code=4/0AY0e-g7x11cvJHdtKqOZSp2YdXSfi2qW66jxhKAhhmf7PN-DalBIMg2QBZ9S7g_WXWBvTw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 11:54:07 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"1640704bfa7710c8ad87ede060cad6602c563e2629965621", "code"=>"4/0AY0e-g7x11cvJHdtKqOZSp2YdXSfi2qW66jxhKAhhmf7PN-DalBIMg2QBZ9S7g_WXWBvTw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 9.1ms | Allocations: 4577)
+
+
+Started GET "/" for ::1 at 2021-05-17 11:54:07 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 8909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 14930)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.7ms | Allocations: 15396)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:00:53 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 31.6ms | Allocations: 13893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 20266)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 11.9ms | Allocations: 21578)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:01:43 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.2ms | Allocations: 10258)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 16630)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 1.5ms | Allocations: 17939)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:03:51 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.5ms | Allocations: 10255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 16556)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.8ms | Allocations: 17869)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:04:41 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 22.8ms | Allocations: 10249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 16629)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 2.2ms | Allocations: 17944)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:05:16 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 47.8ms | Allocations: 10252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.8ms | Allocations: 16634)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 1.1ms | Allocations: 17942)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:07:31 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  Rendered homepage/show.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4617)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4687)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5980)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/index">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <a  href="prenotazione.html">Logout</a>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <%= current_user.nome%>
+                <br>
+                <%= current_user.cognome%>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete% do %>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> 
+                <% end %>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+
+    <main class="home">
+        <div style="background: linear-gradient( #b1c9ce, white) ">
+            <div class="urgenza-flex container">
+                <div style="margin-right: 8%; margin-top: 12.2%;">
+                    <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+                </div>
+                <div class="father-urgenza">
+                    <br><br>
+                    <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+                </div>
+                <div  class="urgenza-text" >
+                            Clicca qui per entrare in contatto con un nostro medico.<br>
+                            Scopri i servizi di DOC2ME!
+                </div>
+                <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+            </div>
+            <br>
+            <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+                <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+            </div>
+        </div>
+        <div id="guida">
+            <div class="cards-home clearfix" >
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le urgenze</h2> <br>
+                        <p >
+                            Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+                            Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+                        </p>
+                        <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+                        
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le visite</h2> <br>
+                        <p>
+                            Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+                            di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+
+                        </p>
+                        
+                        <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I pazienti</h2> <br>
+                        <p>
+                            Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+                            Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+                        </p>
+                        
+                        <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I costi</h2> <br>
+                        <p>
+                            Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+                            Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+                        </p> 
+                        
+                        <%=image_tag("costi.png", style:"width: 33%;")%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="about-flex">
+            
+            <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+            <div class="father-about">
+                <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+                <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+            </div>
+            <div class="aboutus-text">
+                Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+                L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+                <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+            </div>
+            
+        </div>
+        <div  class=" team-flex" >
+            <div class="father-team">    
+                 <h1 class="son-team">&nbsp Chi siamo? </h1> 
+                 <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+            </div>
+            <div class="team-text">   
+                Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+                la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+                La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+                superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+                <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+                tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+                Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+            </div>
+            <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+            
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>
+
+
+    
+</body>
+):
+1:    
+2:    <body id="body-home" style="overflow-x: hidden;">
+3:        <% if user_signed_in?  %>
+4:        <nav>
+5:            <ul class="ul-nav-logo">
+6:                <li>
+7:                    <div class="logo-image">
+8:                        <%= link_to "/" do %>
+9:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+10:                        <% end %>
+11:                     </div>
+12:                </li>
+13:                <li>
+14:                    <div  class="mylogo">
+15:                        <%= link_to "/" do %>
+16:                        <p> DOC2ME </p>
+17:                        <% end %>
+18:                    </div>
+19:                </li>
+20:            </ul>
+21:            <ul class="ul-nav logged-nav">
+22:                <li>
+23:                    <a  href="/index">Home</a>
+24:                </li>
+25:                <li>
+26:                    <a href="/servizi">Servizi</a>
+27:                </li>
+28:                <li>
+29:                    <a href="/team">Il team</a>
+30:                </li>
+31:                <li>
+32:                    <a href="/contatti">Contatti</a>
+33:                </li>
+34:                <li>
+35:                    <a  href="/FAQ">FAQ</a>
+36:                </li> 
+37:                <li>
+38:                    <a  href="profilo-utente.html">Profilo</a>
+39:                </li> 
+40:                <li>
+41:                    <a  href="prenotazione.html">Prenotazioni</a>
+42:                </li> 
+43:                <li id="but-logged">
+44:                    <a  href="prenotazione.html">Logout</a>
+45:                </li>
+46:            </ul>
+47:            <div style="display: flex;" class="logged-nav">
+48:                <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+49:                    <%= current_user.nome%>
+50:                    <br>
+51:                    <%= current_user.cognome%>
+52:                </div>
+53:                <div style=" margin-top: 5%" class="logged-nav">
+54:                    <%= link_to 'Logout', destroy_user_session_path, :method => :delete% do %>
+55:                    <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> 
+56:                    <% end %>
+57:                </div>
+58:            </div>   
+59:            <div class="burger" id="logged-burger"> 
+60:                <div class="line1"></div>
+61:                <div class="line2"></div>
+62:                <div class="line3"></div>
+63:            </div>    
+64:        </nav>
+65:        <% else %>
+66:        <nav>
+67:            <ul class="ul-nav-logo">
+68:                <li>
+69:                    <div class="logo-image">
+70:                        <%= link_to controller: "homepage",action:"show" do %>
+71:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+72:                        <% end %>
+73:                     </div>
+74:                </li>
+75:                <li>
+76:                    <div  class="mylogo">
+77:                        <%= link_to controller: "homepage",action:"show" do %>
+78:                        <p> DOC2ME </p>
+79:                        <% end %>
+80:                    </div>
+81:                </li>
+82:            </ul>
+83:            <ul class="ul-nav">
+84:                <li>
+85:                    <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+86:                </li>
+87:                <li>
+88:                <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+89:                    <a href="/servizi">Servizi</a>
+90:                </li>
+91:                <li>
+92:                    <a href="/team">Il team</a>
+93:                </li>
+94:                <li>
+95:                    <a href="/contatti">Contatti</a>
+96:                </li>
+97:                <li>
+98:                    <a href="/FAQ">FAQ</a>
+99:                </li>  
+100:                <li id="but">
+101:                    <a href="<%= user_session_path%>">Login</a>
+102:                </li>
+103:            </ul>
+104:            <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+105:            <div class="burger">
+106:                <div class="line1"></div>
+107:                <div class="line2"></div>
+108:                <div class="line3"></div>
+109:            </div> 
+110:        </nav>  
+111:        <% end %>
+112:    
+113:        <main class="home">
+114:            <div style="background: linear-gradient( #b1c9ce, white) ">
+115:                <div class="urgenza-flex container">
+116:                    <div style="margin-right: 8%; margin-top: 12.2%;">
+117:                        <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+118:                    </div>
+119:                    <div class="father-urgenza">
+120:                        <br><br>
+121:                        <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+122:                    </div>
+123:                    <div  class="urgenza-text" >
+124:                                Clicca qui per entrare in contatto con un nostro medico.<br>
+125:                                Scopri i servizi di DOC2ME!
+126:                    </div>
+127:                    <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+128:                </div>
+129:                <br>
+130:                <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+131:                    <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+132:                </div>
+133:            </div>
+134:            <div id="guida">
+135:                <div class="cards-home clearfix" >
+136:                    <div class="card-home">
+137:                        <div class="card__copy">
+138:                            <h2>Le urgenze</h2> <br>
+139:                            <p >
+140:                                Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+141:                                Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+142:                            </p>
+143:                            <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+144:                            
+145:                        </div>
+146:                    </div>
+147:                    <div class="card-home">
+148:                        <div class="card__copy">
+149:                            <h2>Le visite</h2> <br>
+150:                            <p>
+151:                                Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+152:                                di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+153:    
+154:                            </p>
+155:                            
+156:                            <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+157:                        </div>
+158:                    </div>
+159:                    <div class="card-home">
+160:                        <div class="card__copy">
+161:                            <h2>I pazienti</h2> <br>
+162:                            <p>
+163:                                Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+164:                                Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+165:                            </p>
+166:                            
+167:                            <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+168:                        </div>
+169:                    </div>
+170:                    <div class="card-home">
+171:                        <div class="card__copy">
+172:                            <h2>I costi</h2> <br>
+173:                            <p>
+174:                                Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+175:                                Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+176:                            </p> 
+177:                            
+178:                            <%=image_tag("costi.png", style:"width: 33%;")%>
+179:                        </div>
+180:                        
+181:                    </div>
+182:                </div>
+183:            </div>
+184:            </div>
+185:    
+186:            <div class="about-flex">
+187:                
+188:                <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+189:                <div class="father-about">
+190:                    <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+191:                    <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+192:                    <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+193:                </div>
+194:                <div class="aboutus-text">
+195:                    Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+196:                    in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+197:                    L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+198:                    <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+199:                </div>
+200:                
+201:            </div>
+202:            <div  class=" team-flex" >
+203:                <div class="father-team">    
+204:                     <h1 class="son-team">&nbsp Chi siamo? </h1> 
+205:                     <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+206:                </div>
+207:                <div class="team-text">   
+208:                    Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+209:                    la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+210:                    La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+211:                    superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+212:                    <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+213:                    tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+214:                    Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+215:                </div>
+216:                <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+217:                
+218:            </div>
+219:            
+220:        </main>
+221:        <footer class="footer">
+222:            <div class="container-footer">
+223:                <div class="row-footer">
+224:                    <div class="footer-col">
+225:                        <h4>Home</h4>
+226:                        <ul class="ul-footer">
+227:                            <li><a href="sos.html">go</a></li>
+228:                            <li><a href="servizi.html">come funziona</a></li>
+229:                            <li><a href="team.html">il team</a></li>
+230:                        </ul>
+231:                    </div>
+232:                    <div class="footer-col">
+233:                        <h4>team</h4>
+234:                        <ul class="ul-footer">
+235:                            <li><a href="team.html">i nostri medici</a></li>
+236:                        </ul>
+237:                    </div>
+238:                    <div class="footer-col">
+239:                        <h4>Servizi</h4>
+240:                        <ul class="ul-footer">
+241:                            <li><a href="disponibilita.html">le visite</a></li>
+242:                            <li><a href="servizi.html">tariffe</a></li>
+243:                            
+244:                        </ul>
+245:                    </div>
+246:                    <div class="footer-col">
+247:                        <h4>contratti</h4>
+248:                        <ul class="ul-footer">
+249:                            <li><a href="contatti.html">informazioni</a></li>
+250:                            <li><a href="contatti.html">lavora con noi</a></li>
+251:    
+252:                        </ul>
+253:                    </div>
+254:                    <div class="footer-col">
+255:                        <h4>FAQ</h4>
+256:                        <ul class="ul-footer">
+257:                            <li><a href="#">terms</a></li>
+258:                            <li><a href="#">privacy policy</a></li>
+259:                        </ul>
+260:                    </div>
+261:                    <div class="footer-col">
+262:                        <h4>dove siamo</h4>
+263:                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+264:                    </div>
+265:                </div>
+266:            </div>
+267:        </footer>
+268:        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+269:        <%= javascript_pack_tag 'index.js' %>
+270:        <%= javascript_pack_tag 'slide.js' %>
+271:    
+272:    
+273:        
+274:    </body>
+  
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+app/views/homepage/show.html.erb:54: syntax error, unexpected `do' for block
+app/views/homepage/show.html.erb:65: else without rescue is useless
+app/views/homepage/show.html.erb:276: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2021-05-17 12:08:35 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+  Rendered homepage/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5055)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5125)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.0ms | Allocations: 6415)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for "/users/sign_out":String):
+    51:                 <%= current_user.cognome%>
+    52:             </div>
+    53:             <div style=" margin-top: 5%" class="logged-nav">
+    54:                 <%= link_to 'Logout', destroy_user_session_path, :method => :delete do %>
+    55:                 <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> 
+    56:                 <% end %>
+    57:             </div>
+  
+app/views/homepage/show.html.erb:54
+Started GET "/" for ::1 at 2021-05-17 12:09:29 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 10321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 16672)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 1.2ms | Allocations: 17985)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:10:23 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.2ms | Allocations: 10303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 16571)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.9ms | Allocations: 17878)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:10:38 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 22.1ms | Allocations: 10306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 16574)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.9ms | Allocations: 17881)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:10:47 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 25.9ms | Allocations: 10302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 16570)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 2.2ms | Allocations: 17877)
+
+
+Started GET "/index.html" for ::1 at 2021-05-17 12:10:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:10:53 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.2ms | Allocations: 9294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 15291)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.8ms | Allocations: 15749)
+
+
+Started GET "/index.html" for ::1 at 2021-05-17 12:10:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:10:56 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.6ms | Allocations: 9294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 15291)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.8ms | Allocations: 15747)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:12:05 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  Rendered homepage/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1947)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2017)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3293)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/index">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <a  href="prenotazione.html">Logout</a>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <%= current_user.nome%>
+                <br>
+                <%= current_user.cognome%>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<% destroy_user_session_path, :method => :delete %>'">
+                LOGOUT
+                </button> 
+               
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+
+    <main class="home">
+        <div style="background: linear-gradient( #b1c9ce, white) ">
+            <div class="urgenza-flex container">
+                <div style="margin-right: 8%; margin-top: 12.2%;">
+                    <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+                </div>
+                <div class="father-urgenza">
+                    <br><br>
+                    <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+                </div>
+                <div  class="urgenza-text" >
+                            Clicca qui per entrare in contatto con un nostro medico.<br>
+                            Scopri i servizi di DOC2ME!
+                </div>
+                <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+            </div>
+            <br>
+            <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+                <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+            </div>
+        </div>
+        <div id="guida">
+            <div class="cards-home clearfix" >
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le urgenze</h2> <br>
+                        <p >
+                            Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+                            Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+                        </p>
+                        <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+                        
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le visite</h2> <br>
+                        <p>
+                            Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+                            di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+
+                        </p>
+                        
+                        <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I pazienti</h2> <br>
+                        <p>
+                            Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+                            Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+                        </p>
+                        
+                        <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I costi</h2> <br>
+                        <p>
+                            Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+                            Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+                        </p> 
+                        
+                        <%=image_tag("costi.png", style:"width: 33%;")%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="about-flex">
+            
+            <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+            <div class="father-about">
+                <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+                <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+            </div>
+            <div class="aboutus-text">
+                Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+                L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+                <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+            </div>
+            
+        </div>
+        <div  class=" team-flex" >
+            <div class="father-team">    
+                 <h1 class="son-team">&nbsp Chi siamo? </h1> 
+                 <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+            </div>
+            <div class="team-text">   
+                Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+                la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+                La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+                superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+                <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+                tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+                Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+            </div>
+            <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+            
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>
+
+
+    
+</body>
+):
+1:    
+2:    <body id="body-home" style="overflow-x: hidden;">
+3:        <% if user_signed_in?  %>
+4:        <nav>
+5:            <ul class="ul-nav-logo">
+6:                <li>
+7:                    <div class="logo-image">
+8:                        <%= link_to "/" do %>
+9:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+10:                        <% end %>
+11:                     </div>
+12:                </li>
+13:                <li>
+14:                    <div  class="mylogo">
+15:                        <%= link_to "/" do %>
+16:                        <p> DOC2ME </p>
+17:                        <% end %>
+18:                    </div>
+19:                </li>
+20:            </ul>
+21:            <ul class="ul-nav logged-nav">
+22:                <li>
+23:                    <a  href="/index">Home</a>
+24:                </li>
+25:                <li>
+26:                    <a href="/servizi">Servizi</a>
+27:                </li>
+28:                <li>
+29:                    <a href="/team">Il team</a>
+30:                </li>
+31:                <li>
+32:                    <a href="/contatti">Contatti</a>
+33:                </li>
+34:                <li>
+35:                    <a  href="/FAQ">FAQ</a>
+36:                </li> 
+37:                <li>
+38:                    <a  href="profilo-utente.html">Profilo</a>
+39:                </li> 
+40:                <li>
+41:                    <a  href="prenotazione.html">Prenotazioni</a>
+42:                </li> 
+43:                <li id="but-logged">
+44:                    <a  href="prenotazione.html">Logout</a>
+45:                </li>
+46:            </ul>
+47:            <div style="display: flex;" class="logged-nav">
+48:                <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+49:                    <%= current_user.nome%>
+50:                    <br>
+51:                    <%= current_user.cognome%>
+52:                </div>
+53:                <div style=" margin-top: 5%" class="logged-nav">
+54:                    
+55:                    <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<% destroy_user_session_path, :method => :delete %>'">
+56:                    LOGOUT
+57:                    </button> 
+58:                   
+59:                </div>
+60:            </div>   
+61:            <div class="burger" id="logged-burger"> 
+62:                <div class="line1"></div>
+63:                <div class="line2"></div>
+64:                <div class="line3"></div>
+65:            </div>    
+66:        </nav>
+67:        <% else %>
+68:        <nav>
+69:            <ul class="ul-nav-logo">
+70:                <li>
+71:                    <div class="logo-image">
+72:                        <%= link_to controller: "homepage",action:"show" do %>
+73:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+74:                        <% end %>
+75:                     </div>
+76:                </li>
+77:                <li>
+78:                    <div  class="mylogo">
+79:                        <%= link_to controller: "homepage",action:"show" do %>
+80:                        <p> DOC2ME </p>
+81:                        <% end %>
+82:                    </div>
+83:                </li>
+84:            </ul>
+85:            <ul class="ul-nav">
+86:                <li>
+87:                    <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+88:                </li>
+89:                <li>
+90:                <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+91:                    <a href="/servizi">Servizi</a>
+92:                </li>
+93:                <li>
+94:                    <a href="/team">Il team</a>
+95:                </li>
+96:                <li>
+97:                    <a href="/contatti">Contatti</a>
+98:                </li>
+99:                <li>
+100:                    <a href="/FAQ">FAQ</a>
+101:                </li>  
+102:                <li id="but">
+103:                    <a href="<%= user_session_path%>">Login</a>
+104:                </li>
+105:            </ul>
+106:            <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+107:            <div class="burger">
+108:                <div class="line1"></div>
+109:                <div class="line2"></div>
+110:                <div class="line3"></div>
+111:            </div> 
+112:        </nav>  
+113:        <% end %>
+114:    
+115:        <main class="home">
+116:            <div style="background: linear-gradient( #b1c9ce, white) ">
+117:                <div class="urgenza-flex container">
+118:                    <div style="margin-right: 8%; margin-top: 12.2%;">
+119:                        <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+120:                    </div>
+121:                    <div class="father-urgenza">
+122:                        <br><br>
+123:                        <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+124:                    </div>
+125:                    <div  class="urgenza-text" >
+126:                                Clicca qui per entrare in contatto con un nostro medico.<br>
+127:                                Scopri i servizi di DOC2ME!
+128:                    </div>
+129:                    <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+130:                </div>
+131:                <br>
+132:                <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+133:                    <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+134:                </div>
+135:            </div>
+136:            <div id="guida">
+137:                <div class="cards-home clearfix" >
+138:                    <div class="card-home">
+139:                        <div class="card__copy">
+140:                            <h2>Le urgenze</h2> <br>
+141:                            <p >
+142:                                Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+143:                                Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+144:                            </p>
+145:                            <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+146:                            
+147:                        </div>
+148:                    </div>
+149:                    <div class="card-home">
+150:                        <div class="card__copy">
+151:                            <h2>Le visite</h2> <br>
+152:                            <p>
+153:                                Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+154:                                di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+155:    
+156:                            </p>
+157:                            
+158:                            <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+159:                        </div>
+160:                    </div>
+161:                    <div class="card-home">
+162:                        <div class="card__copy">
+163:                            <h2>I pazienti</h2> <br>
+164:                            <p>
+165:                                Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+166:                                Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+167:                            </p>
+168:                            
+169:                            <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+170:                        </div>
+171:                    </div>
+172:                    <div class="card-home">
+173:                        <div class="card__copy">
+174:                            <h2>I costi</h2> <br>
+175:                            <p>
+176:                                Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+177:                                Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+178:                            </p> 
+179:                            
+180:                            <%=image_tag("costi.png", style:"width: 33%;")%>
+181:                        </div>
+182:                        
+183:                    </div>
+184:                </div>
+185:            </div>
+186:            </div>
+187:    
+188:            <div class="about-flex">
+189:                
+190:                <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+191:                <div class="father-about">
+192:                    <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+193:                    <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+194:                    <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+195:                </div>
+196:                <div class="aboutus-text">
+197:                    Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+198:                    in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+199:                    L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+200:                    <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+201:                </div>
+202:                
+203:            </div>
+204:            <div  class=" team-flex" >
+205:                <div class="father-team">    
+206:                     <h1 class="son-team">&nbsp Chi siamo? </h1> 
+207:                     <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+208:                </div>
+209:                <div class="team-text">   
+210:                    Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+211:                    la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+212:                    La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+213:                    superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+214:                    <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+215:                    tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+216:                    Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+217:                </div>
+218:                <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+219:                
+220:            </div>
+221:            
+222:        </main>
+223:        <footer class="footer">
+224:            <div class="container-footer">
+225:                <div class="row-footer">
+226:                    <div class="footer-col">
+227:                        <h4>Home</h4>
+228:                        <ul class="ul-footer">
+229:                            <li><a href="sos.html">go</a></li>
+230:                            <li><a href="servizi.html">come funziona</a></li>
+231:                            <li><a href="team.html">il team</a></li>
+232:                        </ul>
+233:                    </div>
+234:                    <div class="footer-col">
+235:                        <h4>team</h4>
+236:                        <ul class="ul-footer">
+237:                            <li><a href="team.html">i nostri medici</a></li>
+238:                        </ul>
+239:                    </div>
+240:                    <div class="footer-col">
+241:                        <h4>Servizi</h4>
+242:                        <ul class="ul-footer">
+243:                            <li><a href="disponibilita.html">le visite</a></li>
+244:                            <li><a href="servizi.html">tariffe</a></li>
+245:                            
+246:                        </ul>
+247:                    </div>
+248:                    <div class="footer-col">
+249:                        <h4>contratti</h4>
+250:                        <ul class="ul-footer">
+251:                            <li><a href="contatti.html">informazioni</a></li>
+252:                            <li><a href="contatti.html">lavora con noi</a></li>
+253:    
+254:                        </ul>
+255:                    </div>
+256:                    <div class="footer-col">
+257:                        <h4>FAQ</h4>
+258:                        <ul class="ul-footer">
+259:                            <li><a href="#">terms</a></li>
+260:                            <li><a href="#">privacy policy</a></li>
+261:                        </ul>
+262:                    </div>
+263:                    <div class="footer-col">
+264:                        <h4>dove siamo</h4>
+265:                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+266:                    </div>
+267:                </div>
+268:            </div>
+269:        </footer>
+270:        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+271:        <%= javascript_pack_tag 'index.js' %>
+272:        <%= javascript_pack_tag 'slide.js' %>
+273:    
+274:    
+275:        
+276:    </body>
+  
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+app/views/homepage/show.html.erb:55: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+Started GET "/" for ::1 at 2021-05-17 12:12:32 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  Rendered homepage/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1951)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2021)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3299)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/index">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <a  href="prenotazione.html">Logout</a>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <%= current_user.nome%>
+                <br>
+                <%= current_user.cognome%>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<% {destroy_user_session_path, :method => :delete} %>'">
+                LOGOUT
+                </button> 
+               
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+
+    <main class="home">
+        <div style="background: linear-gradient( #b1c9ce, white) ">
+            <div class="urgenza-flex container">
+                <div style="margin-right: 8%; margin-top: 12.2%;">
+                    <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+                </div>
+                <div class="father-urgenza">
+                    <br><br>
+                    <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+                </div>
+                <div  class="urgenza-text" >
+                            Clicca qui per entrare in contatto con un nostro medico.<br>
+                            Scopri i servizi di DOC2ME!
+                </div>
+                <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+            </div>
+            <br>
+            <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+                <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+            </div>
+        </div>
+        <div id="guida">
+            <div class="cards-home clearfix" >
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le urgenze</h2> <br>
+                        <p >
+                            Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+                            Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+                        </p>
+                        <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+                        
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>Le visite</h2> <br>
+                        <p>
+                            Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+                            di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+
+                        </p>
+                        
+                        <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I pazienti</h2> <br>
+                        <p>
+                            Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+                            Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+                        </p>
+                        
+                        <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="card__copy">
+                        <h2>I costi</h2> <br>
+                        <p>
+                            Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+                            Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+                        </p> 
+                        
+                        <%=image_tag("costi.png", style:"width: 33%;")%>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="about-flex">
+            
+            <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+            <div class="father-about">
+                <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+                <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+                <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+            </div>
+            <div class="aboutus-text">
+                Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+                L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+                <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+            </div>
+            
+        </div>
+        <div  class=" team-flex" >
+            <div class="father-team">    
+                 <h1 class="son-team">&nbsp Chi siamo? </h1> 
+                 <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+            </div>
+            <div class="team-text">   
+                Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+                la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+                La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+                superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+                <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+                tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+                Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+            </div>
+            <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+            
+        </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contratti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>
+
+
+    
+</body>
+):
+1:    
+2:    <body id="body-home" style="overflow-x: hidden;">
+3:        <% if user_signed_in?  %>
+4:        <nav>
+5:            <ul class="ul-nav-logo">
+6:                <li>
+7:                    <div class="logo-image">
+8:                        <%= link_to "/" do %>
+9:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+10:                        <% end %>
+11:                     </div>
+12:                </li>
+13:                <li>
+14:                    <div  class="mylogo">
+15:                        <%= link_to "/" do %>
+16:                        <p> DOC2ME </p>
+17:                        <% end %>
+18:                    </div>
+19:                </li>
+20:            </ul>
+21:            <ul class="ul-nav logged-nav">
+22:                <li>
+23:                    <a  href="/index">Home</a>
+24:                </li>
+25:                <li>
+26:                    <a href="/servizi">Servizi</a>
+27:                </li>
+28:                <li>
+29:                    <a href="/team">Il team</a>
+30:                </li>
+31:                <li>
+32:                    <a href="/contatti">Contatti</a>
+33:                </li>
+34:                <li>
+35:                    <a  href="/FAQ">FAQ</a>
+36:                </li> 
+37:                <li>
+38:                    <a  href="profilo-utente.html">Profilo</a>
+39:                </li> 
+40:                <li>
+41:                    <a  href="prenotazione.html">Prenotazioni</a>
+42:                </li> 
+43:                <li id="but-logged">
+44:                    <a  href="prenotazione.html">Logout</a>
+45:                </li>
+46:            </ul>
+47:            <div style="display: flex;" class="logged-nav">
+48:                <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+49:                    <%= current_user.nome%>
+50:                    <br>
+51:                    <%= current_user.cognome%>
+52:                </div>
+53:                <div style=" margin-top: 5%" class="logged-nav">
+54:                    
+55:                    <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<% {destroy_user_session_path, :method => :delete} %>'">
+56:                    LOGOUT
+57:                    </button> 
+58:                   
+59:                </div>
+60:            </div>   
+61:            <div class="burger" id="logged-burger"> 
+62:                <div class="line1"></div>
+63:                <div class="line2"></div>
+64:                <div class="line3"></div>
+65:            </div>    
+66:        </nav>
+67:        <% else %>
+68:        <nav>
+69:            <ul class="ul-nav-logo">
+70:                <li>
+71:                    <div class="logo-image">
+72:                        <%= link_to controller: "homepage",action:"show" do %>
+73:                        <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+74:                        <% end %>
+75:                     </div>
+76:                </li>
+77:                <li>
+78:                    <div  class="mylogo">
+79:                        <%= link_to controller: "homepage",action:"show" do %>
+80:                        <p> DOC2ME </p>
+81:                        <% end %>
+82:                    </div>
+83:                </li>
+84:            </ul>
+85:            <ul class="ul-nav">
+86:                <li>
+87:                    <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+88:                </li>
+89:                <li>
+90:                <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+91:                    <a href="/servizi">Servizi</a>
+92:                </li>
+93:                <li>
+94:                    <a href="/team">Il team</a>
+95:                </li>
+96:                <li>
+97:                    <a href="/contatti">Contatti</a>
+98:                </li>
+99:                <li>
+100:                    <a href="/FAQ">FAQ</a>
+101:                </li>  
+102:                <li id="but">
+103:                    <a href="<%= user_session_path%>">Login</a>
+104:                </li>
+105:            </ul>
+106:            <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+107:            <div class="burger">
+108:                <div class="line1"></div>
+109:                <div class="line2"></div>
+110:                <div class="line3"></div>
+111:            </div> 
+112:        </nav>  
+113:        <% end %>
+114:    
+115:        <main class="home">
+116:            <div style="background: linear-gradient( #b1c9ce, white) ">
+117:                <div class="urgenza-flex container">
+118:                    <div style="margin-right: 8%; margin-top: 12.2%;">
+119:                        <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
+120:                    </div>
+121:                    <div class="father-urgenza">
+122:                        <br><br>
+123:                        <h1 class="son-urgenza"> Hai un'urgenza? </h1>
+124:                    </div>
+125:                    <div  class="urgenza-text" >
+126:                                Clicca qui per entrare in contatto con un nostro medico.<br>
+127:                                Scopri i servizi di DOC2ME!
+128:                    </div>
+129:                    <button type="button" class="mybutton" id="but-sos" onclick="window.location.href='sos.html'">GO</button>
+130:                </div>
+131:                <br>
+132:                <div  class="container" style="border-top: solid; border-bottom: solid; border-color: #04044c;" >
+133:                    <h2 id="h2-home">Con DOC2ME prenoti una visita in meno di un minuto!</h2>
+134:                </div>
+135:            </div>
+136:            <div id="guida">
+137:                <div class="cards-home clearfix" >
+138:                    <div class="card-home">
+139:                        <div class="card__copy">
+140:                            <h2>Le urgenze</h2> <br>
+141:                            <p >
+142:                                Doc2me consente di prenotare visite in modalità urgenza usando il pulsante GO.<br>
+143:                                Dovrai solo compilare un rapido form per essere immediatamente ricontattato telefonicamente da uno dei nostri medici.
+144:                            </p>
+145:                            <%=image_tag("urg.png", alt: "Example Image" , style:"width: 33%;")%>
+146:                            
+147:                        </div>
+148:                    </div>
+149:                    <div class="card-home">
+150:                        <div class="card__copy">
+151:                            <h2>Le visite</h2> <br>
+152:                            <p>
+153:                                Doc2me considera fondamentale che vi sia un contatto rapido fra medico e paziente <br> La piattaforma pertanto permette
+154:                                di poter ricevere una consulenza online prima di effettuare una visita a studio o a domicilio.
+155:    
+156:                            </p>
+157:                            
+158:                            <%=image_tag("visit.png", style:"width: 33%; padding-bottom:1%;")%>
+159:                        </div>
+160:                    </div>
+161:                    <div class="card-home">
+162:                        <div class="card__copy">
+163:                            <h2>I pazienti</h2> <br>
+164:                            <p>
+165:                                Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+166:                                Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
+167:                            </p>
+168:                            
+169:                            <%=image_tag("pat.png", style:"width: 40%; padding-bottom:1%;")%>
+170:                        </div>
+171:                    </div>
+172:                    <div class="card-home">
+173:                        <div class="card__copy">
+174:                            <h2>I costi</h2> <br>
+175:                            <p>
+176:                                Doc2me garantisce una prezzo fisso per ogni servizio offerto.<br>
+177:                                Per avvicinarsi alle richieste dei nostri utenti DOC2ME permette di effettuare pagamenti in contanti al dottore, oppure online tramite PayPal.
+178:                            </p> 
+179:                            
+180:                            <%=image_tag("costi.png", style:"width: 33%;")%>
+181:                        </div>
+182:                        
+183:                    </div>
+184:                </div>
+185:            </div>
+186:            </div>
+187:    
+188:            <div class="about-flex">
+189:                
+190:                <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
+191:                <div class="father-about">
+192:                    <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+193:                    <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
+194:                    <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
+195:                </div>
+196:                <div class="aboutus-text">
+197:                    Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
+198:                    in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+199:                    L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
+200:                    <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+201:                </div>
+202:                
+203:            </div>
+204:            <div  class=" team-flex" >
+205:                <div class="father-team">    
+206:                     <h1 class="son-team">&nbsp Chi siamo? </h1> 
+207:                     <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
+208:                </div>
+209:                <div class="team-text">   
+210:                    Doc2me nasce dalla collaborazione fra il Dott.Pignataro ,medico specializzando presso 
+211:                    la Sapienza di Roma, e un gruppo di studenti di Ingegneria Informatica della stessa Università.
+212:                    La piattaforma è sviluppata con lo scopo di velocizzare il contatto fra medici e pazienti ; si propone di 
+213:                    superare le attuali difficoltà di comunicazione  offrendo una grafica intuitiva e chiara e permettendo di creare profili familiari. 
+214:                    <br>Doc2me ,rispetto ad altri siti già esistenti, permette anche ad utenti non registrati di entrare in contatto con i nostri professionisti
+215:                    tramite la sezione Urgenze. <br> Doc2me è attualmente attiva presso la zona Nord di Roma , pur puntando in futuro ad espandersi verso tutta la città. 
+216:                    Lo studio medico associato ,sito in via Oslavia 14, si trova in posizione centrale e facilmente raggiungibile.
+217:                </div>
+218:                <%=image_tag("Good team-bro.svg", class:"img-home", id:"img-home-chi")%>
+219:                
+220:            </div>
+221:            
+222:        </main>
+223:        <footer class="footer">
+224:            <div class="container-footer">
+225:                <div class="row-footer">
+226:                    <div class="footer-col">
+227:                        <h4>Home</h4>
+228:                        <ul class="ul-footer">
+229:                            <li><a href="sos.html">go</a></li>
+230:                            <li><a href="servizi.html">come funziona</a></li>
+231:                            <li><a href="team.html">il team</a></li>
+232:                        </ul>
+233:                    </div>
+234:                    <div class="footer-col">
+235:                        <h4>team</h4>
+236:                        <ul class="ul-footer">
+237:                            <li><a href="team.html">i nostri medici</a></li>
+238:                        </ul>
+239:                    </div>
+240:                    <div class="footer-col">
+241:                        <h4>Servizi</h4>
+242:                        <ul class="ul-footer">
+243:                            <li><a href="disponibilita.html">le visite</a></li>
+244:                            <li><a href="servizi.html">tariffe</a></li>
+245:                            
+246:                        </ul>
+247:                    </div>
+248:                    <div class="footer-col">
+249:                        <h4>contratti</h4>
+250:                        <ul class="ul-footer">
+251:                            <li><a href="contatti.html">informazioni</a></li>
+252:                            <li><a href="contatti.html">lavora con noi</a></li>
+253:    
+254:                        </ul>
+255:                    </div>
+256:                    <div class="footer-col">
+257:                        <h4>FAQ</h4>
+258:                        <ul class="ul-footer">
+259:                            <li><a href="#">terms</a></li>
+260:                            <li><a href="#">privacy policy</a></li>
+261:                        </ul>
+262:                    </div>
+263:                    <div class="footer-col">
+264:                        <h4>dove siamo</h4>
+265:                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+266:                    </div>
+267:                </div>
+268:            </div>
+269:        </footer>
+270:        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+271:        <%= javascript_pack_tag 'index.js' %>
+272:        <%= javascript_pack_tag 'slide.js' %>
+273:    
+274:    
+275:        
+276:    </body>
+  
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+app/views/homepage/show.html.erb:55: syntax error, unexpected ',', expecting =>
+app/views/homepage/show.html.erb:55: syntax error, unexpected '}', expecting `end'
+Started GET "/" for ::1 at 2021-05-17 12:12:59 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 10322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 16674)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.8ms | Allocations: 17988)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:14:10 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 10305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 16573)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.8ms | Allocations: 17880)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:14:22 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 10309)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 16582)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.7ms | Allocations: 17890)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:15:12 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 10487)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 16740)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.8ms | Allocations: 18053)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:15:48 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 32.6ms | Allocations: 10463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 16716)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 1.4ms | Allocations: 18023)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 12:16:05 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms | Allocations: 1979)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:16:05 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 8403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 14317)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 14776)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:16:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 10273)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 11936)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:16:17 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:16:17 +0200
+Started GET "/users/auth/google_oauth2/callback?state=dceabe7b1cefa867a3e6fde27cc680073d1f14770ba547b2&code=4/0AY0e-g7OQb_g8No9qJbLmhE0y3xHCC_TeCLLMvkzl4bztAZdpLSs1bFOjuhqZm9GhwHOeA&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 12:16:19 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"dceabe7b1cefa867a3e6fde27cc680073d1f14770ba547b2", "code"=>"4/0AY0e-g7OQb_g8No9qJbLmhE0y3xHCC_TeCLLMvkzl4bztAZdpLSs1bFOjuhqZm9GhwHOeA", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 1221)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:16:20 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 25.9ms | Allocations: 9426)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 15335)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 1.5ms | Allocations: 15798)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:17:00 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.0ms | Allocations: 10465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 16718)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.2ms | Allocations: 18030)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:17:31 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 10496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 16833)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 1.3ms | Allocations: 18147)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:19:01 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.9ms | Allocations: 10496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 16749)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 1.4ms | Allocations: 18062)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:19:09 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.4ms | Allocations: 10478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 16731)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.1ms | Allocations: 18038)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:19:18 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 10478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 16735)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 1.5ms | Allocations: 18043)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:19:51 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 10478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 16814)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 1.2ms | Allocations: 18121)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:19:53 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 23.4ms | Allocations: 9431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 15334)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 1.5ms | Allocations: 15791)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:01 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 26.4ms | Allocations: 10491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 16835)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 1.4ms | Allocations: 18148)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:02 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 18.8ms | Allocations: 9431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 15417)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.6ms | Allocations: 15875)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:06 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 43.1ms | Allocations: 9430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 15333)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 3.8ms | Allocations: 15789)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:22 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 22.5ms | Allocations: 10479)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 16732)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 1.6ms | Allocations: 18044)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:24 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 9413)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 15316)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 1.4ms | Allocations: 15774)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:25 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.1ms | Allocations: 9412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 15355)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.8ms | Allocations: 15811)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:35 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 23.1ms | Allocations: 10495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 16791)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 1.0ms | Allocations: 18097)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:44 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 24.0ms | Allocations: 10499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 16843)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 1.1ms | Allocations: 18157)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:20:52 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.4ms | Allocations: 10497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 16833)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 1.0ms | Allocations: 18147)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:00 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 10496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 16749)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 1.6ms | Allocations: 18056)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:07 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.0ms | Allocations: 10479)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 16732)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.8ms | Allocations: 18045)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:13 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 23.0ms | Allocations: 10481)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 16734)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.8ms | Allocations: 18042)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:22 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.1ms | Allocations: 10478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 16772)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 1.1ms | Allocations: 18079)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:33 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 10496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 16838)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 1.0ms | Allocations: 18146)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:46 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 23.1ms | Allocations: 9433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 15420)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 2.3ms | Allocations: 15878)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 12:21:49 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 1974)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:49 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 8421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 14418)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 14877)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:21:51 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 10272)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 11934)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:21:53 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:21:53 +0200
+Started GET "/users/auth/google_oauth2/callback?state=06fa4c3a786722b295df26c952558eeca9e25f51d00aa51b&code=4/0AY0e-g59Do5yzLm5SxYFS413JZg6Lugf4Y_uRV4PMRiB4kbAU4zX_mCQUGZseUHVLR6ZeQ&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 12:21:55 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"06fa4c3a786722b295df26c952558eeca9e25f51d00aa51b", "code"=>"4/0AY0e-g59Do5yzLm5SxYFS413JZg6Lugf4Y_uRV4PMRiB4kbAU4zX_mCQUGZseUHVLR6ZeQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1216)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:21:56 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.8ms | Allocations: 9434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 15343)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.8ms | Allocations: 15806)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:22:19 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.2ms | Allocations: 10480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 16733)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 1.3ms | Allocations: 18046)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:22:36 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.8ms | Allocations: 10484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 16809)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.7ms | Allocations: 18117)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:23:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:23:09 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 15.6ms | Allocations: 9432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 15418)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 1.0ms | Allocations: 15876)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:23:53 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:24:01 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 9430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 15333)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 1.2ms | Allocations: 15790)
+
+
+Started GET "/index" for ::1 at 2021-05-17 12:24:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:24:06 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.4ms | Allocations: 9432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 15418)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.8ms | Allocations: 15878)
+
+
+Started GET "/index" for ::1 at 2021-05-17 12:24:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:24:12 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.5ms | Allocations: 9432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 15418)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 1.6ms | Allocations: 15874)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:26:37 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 17.0ms | Allocations: 7338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 14330)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.3ms | Allocations: 14890)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:26:43 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 14.4ms | Allocations: 6056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 13112)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 2.3ms | Allocations: 13572)
+
+
+Started GET "/team" for ::1 at 2021-05-17 12:26:46 +0200
+Processing by HomepageController#team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/team.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/team.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 12205)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 1.1ms | Allocations: 12765)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:26:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:26:52 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 18.3ms | Allocations: 9574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 15560)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.8ms | Allocations: 16017)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:26:55 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:26:58 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 27.7ms | Allocations: 9431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 15418)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 1.7ms | Allocations: 15875)
+
+
+Started GET "/index" for ::1 at 2021-05-17 12:27:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:27:02 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.0ms | Allocations: 9419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 15322)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 1.5ms | Allocations: 15779)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:27:12 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 10499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 16836)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 1.2ms | Allocations: 18149)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:27:15 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.6ms | Allocations: 9412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 15335)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 1.2ms | Allocations: 15795)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:27:17 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 20.5ms | Allocations: 7311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 14303)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.7ms | Allocations: 14863)
+
+
+Started GET "/team" for ::1 at 2021-05-17 12:27:35 +0200
+Processing by HomepageController#team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/team.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/team.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 12291)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 1.5ms | Allocations: 12851)
+
+
+Started GET "/contatti" for ::1 at 2021-05-17 12:27:38 +0200
+Processing by HomepageController#contatti as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/contatti.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/contatti.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 10588)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.3ms | Allocations: 11147)
+
+
+Started GET "/FAQ" for ::1 at 2021-05-17 12:27:40 +0200
+Processing by HomepageController#FAQ as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/FAQ.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/FAQ.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 12711)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.6ms | Allocations: 13271)
+
+
+Started GET "/profilo-utente.html" for ::1 at 2021-05-17 12:27:43 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profilo-utente.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:27:45 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 37.6ms | Allocations: 9433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 15419)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 2.0ms | Allocations: 15875)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:27:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:27:50 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 16.0ms | Allocations: 9434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 15420)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.9ms | Allocations: 15876)
+
+
+Started GET "/prenotazione.html" for ::1 at 2021-05-17 12:27:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/prenotazione.html"):
+  
+Started GET "/" for ::1 at 2021-05-17 12:27:59 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 16.7ms | Allocations: 9414)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 15396)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.8ms | Allocations: 15865)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:28:50 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.0ms | Allocations: 10545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 16881)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 1.0ms | Allocations: 18193)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 12:28:52 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms | Allocations: 1980)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:28:52 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 8424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 14421)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 14881)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:28:57 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10277)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 11936)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:28:59 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:28:59 +0200
+Started GET "/users/auth/google_oauth2/callback?state=b26dbf731358aaf8dfdec9b7948638f9e79b3a73fff973a0&code=4/0AY0e-g4M8uH0gcaBYt7M4xjcmjRRio3MwyOav3ZFiTHrSXGzG_fAbklIIbNZrUBF4QAHjA&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 12:29:01 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"b26dbf731358aaf8dfdec9b7948638f9e79b3a73fff973a0", "code"=>"4/0AY0e-g4M8uH0gcaBYt7M4xjcmjRRio3MwyOav3ZFiTHrSXGzG_fAbklIIbNZrUBF4QAHjA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 1216)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:29:02 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.1ms | Allocations: 9461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 15450)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.7ms | Allocations: 15913)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:29:39 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 10524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 16778)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 1.3ms | Allocations: 18091)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:31:14 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.0ms | Allocations: 10522)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 16778)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 1.8ms | Allocations: 18086)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:31:16 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/servizi.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 16.5ms | Allocations: 8717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 14696)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.9ms | Allocations: 15257)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 12:31:22 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 2003)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:31:22 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 8424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 14421)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 14880)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:31:23 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 18.8ms | Allocations: 6739)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 12636)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 13091)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:31:27 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 8387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 14295)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 14750)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:31:29 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 12.5ms | Allocations: 6127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 12104)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 12559)
+
+
+Started GET "/team" for ::1 at 2021-05-17 12:31:29 +0200
+Processing by HomepageController#team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/team.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/team.html.erb within layouts/application (Duration: 12.5ms | Allocations: 5209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 11152)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 11708)
+
+
+Started GET "/contatti" for ::1 at 2021-05-17 12:31:30 +0200
+Processing by HomepageController#contatti as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/contatti.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/contatti.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3586)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 9529)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 10084)
+
+
+Started GET "/FAQ" for ::1 at 2021-05-17 12:31:31 +0200
+Processing by HomepageController#FAQ as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/FAQ.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/FAQ.html.erb within layouts/application (Duration: 19.1ms | Allocations: 5701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 11657)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 12213)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:31:32 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 29.4ms | Allocations: 6136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 12689)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.0ms | Allocations: 13145)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:31:32 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 15.5ms | Allocations: 8405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 14394)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 14850)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:31:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 10271)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 11932)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:31:35 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:31:35 +0200
+Started GET "/users/auth/google_oauth2/callback?state=f7b7ed7986d760b4c99858fcae693ef9e68fa09bbca04129&code=4/0AY0e-g4WemCHw5NMzUkDqjwe8uUK8-SrCvEeoQvjzGXY03brr95SZAEnc0MJm4yip2CPfw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2021-05-17 12:31:38 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"f7b7ed7986d760b4c99858fcae693ef9e68fa09bbca04129", "code"=>"4/0AY0e-g4WemCHw5NMzUkDqjwe8uUK8-SrCvEeoQvjzGXY03brr95SZAEnc0MJm4yip2CPfw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "cicchetti.1853840@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 1216)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:31:39 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 15.5ms | Allocations: 9445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 15363)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.9ms | Allocations: 15826)
+
+
+Started GET "/servizi" for ::1 at 2021-05-17 12:31:41 +0200
+Processing by HomepageController#servizi as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/servizi.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/homepage/servizi.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/servizi.html.erb within layouts/application (Duration: 45.8ms | Allocations: 7785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.5ms | Allocations: 13680)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 2.4ms | Allocations: 14140)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-05-17 12:33:37 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms | Allocations: 1992)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:33:37 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 8390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 14304)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 14762)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:33:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 3555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 9573)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms | Allocations: 10262)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:36:22 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 9563)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 10250)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-05-17 12:36:25 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 9569)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 10256)
+
+
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:36:28 +0200
+Started GET "/users/auth/google_oauth2" for ::1 at 2021-05-17 12:36:28 +0200
+Started GET "/users/auth/google_oauth2/callback?state=4292933c588d74759e0d40c3a717a29be5b7f083f2c815af&code=4%2F0AY0e-g5FTQGgsFqdQE2JDrVUCy4M2oyQpxpf8Y26DSkgoCaS0rS_7Kt5D1pEK9Xdg-Rnvg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=consent" for ::1 at 2021-05-17 12:36:32 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"4292933c588d74759e0d40c3a717a29be5b7f083f2c815af", "code"=>"4/0AY0e-g5FTQGgsFqdQE2JDrVUCy4M2oyQpxpf8Y26DSkgoCaS0rS_7Kt5D1pEK9Xdg-Rnvg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "prompt"=>"consent"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "giordano.cicchetti.gc@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10:in `from_omniauth'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:12:in `from_omniauth'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "giordano.cicchetti.gc@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12:in `from_omniauth'
+  [1m[36mUser Create (100.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "nome", "cognome") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "giordano.cicchetti.gc@gmail.com"], ["encrypted_password", "$2a$12$Sse.vOzG0HkXCjT30rpRZ.5ZaMuJE0E1782/fZrKuBMIoBdfiJTlW"], ["created_at", "2021-05-17 10:36:33.626006"], ["updated_at", "2021-05-17 10:36:33.626006"], ["nome", "giordano"], ["cognome", "cicchetti"]]
+  ↳ app/models/user.rb:12:in `from_omniauth'
+  [1m[36mTRANSACTION (56.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:12:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 881ms (ActiveRecord: 161.2ms | Allocations: 7856)
+
+
+Started GET "/" for ::1 at 2021-05-17 12:36:33 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 20.1ms | Allocations: 9459)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 15436)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.9ms | Allocations: 15898)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-05-17 12:39:52 +0200
+Processing by HomepageController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/homepage/show.html.erb:3
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 10527)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 16792)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 1.0ms | Allocations: 18105)
+
+
+Started GET "/team" for ::1 at 2021-05-17 12:39:53 +0200
+Processing by HomepageController#team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homepage/team.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/homepage/team.html.erb:2
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered homepage/team.html.erb within layouts/application (Duration: 54.5ms | Allocations: 6641)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 12536)
+Completed 200 OK in 88ms (Views: 81.3ms | ActiveRecord: 3.8ms | Allocations: 13096)
+
+
+Started GET "/tdcscsddsc" for ::1 at 2021-05-17 12:40:53 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/tdcscsddsc"):
+  
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2243681679413454000)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (42.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2243681679413454000)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2243681679413454000)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddConfirmableFields (20210517104807)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (127.1ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210517104807"]]
+  [1m[36mTRANSACTION (24.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2243681679413454000)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
