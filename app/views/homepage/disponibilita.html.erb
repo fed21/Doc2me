@@ -145,13 +145,16 @@
                 </div>
             <!-- DEnd ate Picker Input -->
 
-            
+            <!-- For Demo Purpose -->
+                <div class="text-center">
+                    <p class="font-italic text-muted mb-0">La data selezionata è</p>
+                    <h4 id="pickedDate" class="font-weight-bold text-uppercase mb-3">Non selezionato</h4>
+                    <!--<a href="#" class="btn btn-primary btn-sm px-4 rounded-pill text-uppercase font-weight-bold shadow-sm">Confirm Reservation</a> -->
                     
                     <div class="form-group col-lg-12 " id="disp">
                         <button class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
                     </div>
-               
-                
+                </div>
             </div>
             
             <div class="col-md-6 mx-auto" id="map-1">
@@ -276,6 +279,8 @@
     </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
    <%= javascript_pack_tag 'popup.js' %>
    <%= javascript_pack_tag 'index.js' %>
