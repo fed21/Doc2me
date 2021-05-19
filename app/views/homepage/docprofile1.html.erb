@@ -1,0 +1,185 @@
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+    <div style="display: flex; flex-direction:column-reverse;  margin-top: 12%;">
+        <h2><a href=team.html  style="margin-left: 10%;font-weight: bold; color: rgb(27, 139, 105); text-decoration: none; font-family:Arial, Helvetica, sans-serif; font-size: 38px;">Il team</a></h2>
+    </div>
+    <div class="bio-name">  
+        
+        <h1 style="color: #04044c; font-weight: bold; margin-left: 38%;">Dottor. Carl Friedrich Gauss</h1>
+        <div class="bio-img1"></div>
+    </div>
+    <div >
+        <div class="bio-text container">
+        <div >
+            Nacque a Braunschweig nel ducato di Brunswick-Lüneburg (ora parte della Bassa Sassonia, in Germania), figlio unico di una famiglia di bassa estrazione sociale e culturale.[5] Fu battezzato e cresimato in una chiesa vicino alla scuola che frequentava da bambino.[6] Gauss era un bambino prodigio. Esistono diversi aneddoti riguardo alla sua precocità; per esempio, Gauss, almeno secondo la leggenda, a 3 anni avrebbe corretto un errore del padre nel calcolo delle sue finanze.
+
+    Un altro aneddoto, più verosimile, racconta che a 9 anni il suo insegnante, J.G. Büttner, per mettere a tacere i turbolenti allievi ordinò loro di fare la somma dei numeri da 1 a 100. Quasi subito il bimbo Gauss diede la risposta esatta, sorprendendo l'insegnante ed il suo assistente Martin Bartels. Non si è certi di quale metodo abbia adottato Gauss; forse mise in una riga i numeri da 1 a 100 e in una riga sotto i numeri da 100 a 1, e vide che ogni colonna dava come somma 101: Carl moltiplicò 100 × 101 e divise per due, ottenendo il risultato; oppure - ancora più semplicemente - scrisse in fila i numeri da 1 a 50 e in una fila sotto in senso inverso i rimanenti da 51 a 100, ottenendo così per ogni coppia la somma costante di 101: il risultato era quindi 101 x 50.
+
+I dettagli della storiella sono incerti (vedere[7] per la discussione della fonte originaria di Wolfgang Sartorius von Waltershausen e i cambiamenti in altre versioni); Joseph Rotman, nel suo libro A first course in Abstract Algebra, si chiede se ciò sia realmente accaduto. Joaquin Navarro sostiene che in realtà Büttner aveva assegnato un compito ancora più complesso, la somma dei primi 100 numeri della serie 81297 + 81495 + 81693... nella quale ogni termine differisce dal precedente per il valore di 198 e che Gauss lo risolse in pochi minuti come detto prima.[8]
+
+Il Duca di Brunswick, impressionato dalle sue capacità,[3] finanziò il soggiorno di Gauss al Collegium Carolinum (oggi Technische Universität Braunschweig) dal 1792 al 1795, anno in cui passò all'Università di Gottinga, dove studiò fino al 1798.
+
+All'università Gauss riscoprì una serie di importanti teoremi: nel 1796 riuscì a dimostrare che un poligono regolare con un numero di lati che è un primo di Fermat è costruibile con riga e compasso (e, conseguentemente, tutti i poligoni con un numero dei lati che è il prodotto di primi di Fermat distinti e una potenza di due). Questa fu una grande scoperta in un importante campo della matematica; la costruzione dei poligoni aveva occupato i matematici fin dall'epoca degli antichi greci, e la scoperta dette modo a Gauss di scegliere di intraprendere la carriera di matematico anziché di filologo.
+Il 1796 fu probabilmente l'anno più produttivo di Gauss. Riuscì a costruire un eptadecagono,[10] inventò l'aritmetica modulare, importantissimo strumento della teoria dei numeri e dette la prima dimostrazione della legge di reciprocità quadratica; congetturò per primo la validità del teorema dei numeri primi, dando un'idea chiara del modo in cui i numeri primi siano distribuiti fra gli interi; scoprì poi che tutti i numeri naturali sono rappresentabili al più come somma di tre numeri triangolari. Tuttavia Gauss non pubblicò queste due ultime scoperte, le tenne per sé: era affetto da una sorta di mania di perfezionismo, che gli impediva di pubblicare dimostrazioni se non le giudicava rigorose. Scriveva invece le sue scoperte nel suo diario in maniera criptica. Per esempio, la scoperta che ogni intero poteva essere rappresentato come somma al più di tre numeri triangolari, la scrisse così sul suo diario: «Eureka! num= {\displaystyle \Delta +\Delta +\Delta }\Delta +\Delta +\Delta ». Il primo ottobre, pubblicò un risultato sul numero di soluzioni dei polinomi con coefficienti in campi finiti, che 150 anni dopo portò alle congetture di Weil.
+        </div>
+    </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contatti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>

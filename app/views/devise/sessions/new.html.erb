@@ -77,19 +77,14 @@
                                 
                             </div>
 
-                            <% if devise_mapping.rememberable? %>
-                            <div class="field">
-                            <%= f.check_box :remember_me %>
-                            <%= f.label :remember_me %>
-                            </div>
-                            <% end %>
+                            
 
                             
 
                             <!-- Submit Button -->
                             <div class="form-group col-lg-12 mx-auto mb-0" style="margin-top:2%;">
-                                
-                                  <%= f.submit "Accedi" , class:"nav-mybutton",style:"width: 100%;"%>
+                                <br>
+                                  <%= f.submit "Accedi" , class:"nav-mybutton",style:"width: 100%;height:5vh;"%>
                                 
                             </div>
                             <% end %>
@@ -102,12 +97,13 @@
                             </div>
         
                             <!-- Social Login -->
-                            <div class="form-group col-lg-12 mx-auto">
-                                <%= link_to "Accedi con google ", user_google_oauth2_omniauth_authorize_path , class:"nav-mybutton",style:"width: 100%;" %>
+                            <div class="form-group col-lg-12 mx-auto nav-mybutton text-center">
+                                <%= link_to "Accedi con google ", user_google_oauth2_omniauth_authorize_path , class:"nav-mybutton",style:"width:90%;height:15vh;" %>
                             </div>
                                
                             <!-- Already Registered -->
                             <div class="text-center w-100" >
+                            <br>
                                 <p class="text-muted font-weight-bold">Sei un medico? <br><a href="login-doc.html" class="text-primary ml-2">Clicca qui per effettuare il login</a></p>
                                 <p class="text-muted font-weight-bold">Non hai un account? <br><a href="<%=new_user_registration_path%>" class="text-primary ml-2">Clicca qui per registrati su DOC2ME</a></p>
                             </div>

@@ -1,4 +1,67 @@
 <body>
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
     <nav>
         <ul class="ul-nav-logo">
             <li>
@@ -18,11 +81,10 @@
         </ul>
         <ul class="ul-nav">
             <li>
-                <%= link_to controller: "homepage",action:"show" do %>
-                    <p> Home </p>
-                <% end %>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
             </li>
             <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
@@ -32,20 +94,22 @@
                 <a href="/contatti">Contatti</a>
             </li>
             <li>
-                <a class="this" href="/FAQ">FAQ</a>
+                <a href="/FAQ">FAQ</a>
             </li>  
             <li id="but">
                 <a href="<%= user_session_path%>">Login</a>
-            </li>  
+            </li>
         </ul>
-        <button type="button"class="nav-mybutton" id="nav-mybutton"  onclick="window.location.href='<%= user_session_path%>'">login</button>     
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-        </div>       
-    </nav>
-
+        </div> 
+    </nav>  
+    <% end %>
+    
+<div class="header">  
     <div id="maindiv-ped" class="container" >
         <br><br>
         <!--riga 1-->
@@ -54,10 +118,9 @@
                 <div class=" pedi p-4 my-auto jumbotron" > 
                     <div class="pedi-info">
                         <h3>Chi siamo</h3> 
-                        Doc2me è una piattaforma online per prenotazione e gestione di visite mediche.<br>
-                        Essa semplifica la comunicazione fra medico e paziente e offre tariffe fisse applicabili sia con pagamento contante che online.<br>
-                        Il team è composto da medici qualificati che aderendo alla piattaforma si rendono disponibili a turno a ricevere le prenotazioni e svolgere 
-                        le visite stesse.
+                        Doc2me è una piattaforma online per prenotazione e gestione di visite mediche svolte da medici professionisti.<br>
+                        Essa semplifica la comunicazione fra medico e paziente e offre tariffe fisse.<br>
+                        Il team è composto da medici qualificati che aderendo alla piattaforma si rendono disponibili a turno a ricevere le prenotazioni.
                     </div>
                 </div>
             </div>
@@ -65,97 +128,107 @@
                 <div class=" pedi p-4 my-auto jumbotron" > 
                     <div class="pedi-info" >
                         <h3>I nostri obiettivi</h3> 
-                        Doc2me si propone di offrire gli stessi servizi presenti in altri siti web del settore ,con un layout più semplice e lineare, ma aggiungendo funzionalità non presenti su nessun 
-                            altra piattaforma analoga ,come la possibilità di pagare direttamente online, avere tariffe fisse per ogni visita e visualizzare in un profilo personale un report di tutte le prenotazioni effettuate,
-                            con i relativi referti medici.
+                        Doc2me si propone di offrire gli stessi servizi presenti in altri siti web del settore, con un layout più semplice e lineare, ma aggiungendo funzionalità non presenti su nessun 
+                            altra piattaforma analoga ,come la possibilità di pagare direttamente online, avere tariffe fisse per ogni visita e visualizzare in un profilo personale un report di tutte le prenotazioni effettuate.
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+ </div>   
     <div class="container">
         <%=image_tag("Telecommuting-rafiki.png", alt: "Example Image" ,style:"width: 40%; margin: 5%; margin-left: 30%;" )%>
     </div>
    
    <!-- sezione faq-->
+  <div class=" my-text" id="hanging-icons" style="width: 80%; margin-left:10%;">
+     <h2 style="border-bottom:solid; border-color:#2b38ec; font-size:xxx-large; margin-bottom: 2%;">Domande frequenti</h2>
+     </div>
     <section id="faq" class="faq">
         <div class="row">
             <div class="accordion-container">
                 <div class="accordion">
+                
                     <div class="accordion-header">
                         <span>+</span>
-                        <h3>How much will it cost?</h3>
+                        <h3>Cos'è Doc2me?</h3>
                     </div>
                     <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
-                    </div>
-                </div>
-    
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>How To update website?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
-                    </div>
-                </div>
-    
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>is domain provided free?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
-                    </div>
-                </div>
-    
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>how long it takes to design?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
-                    </div>
-                </div>
-    
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>how long it takes to design?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
-                    </div>
-                </div>
-
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>+</span>
-                        <h3>how long it takes to design?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                        <p>Doc2me è una piattaforma online per la gestione e prenotazione di visite mediche. Crea il tuo account e potrai prenotare in pochi click! Doc2me risponde anche a casi d'urgenza velocizzando il contatto con i medici.</p>
                     </div>
                 </div>
                 
                 <div class="accordion">
+                <br>
                     <div class="accordion-header">
                         <span>+</span>
-                        <h3>is it seo freindly?</h3>
+                        <h3>Chi sono i membri del team?</h3>
                     </div>
                     <div class="accordion-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+                        <p>Un team di medici qualificati e con ottima esperienza è disponibile per ogni vostra richiesta con visite in studio, a domicilio o consulenze online. I medici stessi ti invieranno personalmente il referto medico al tuo indirizzo email! </p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                <br>
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>Ho compilato il form, fra quanto riceverò una risposta?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Il form nella sezione Contatti ti permette di parlare direttamente con noi e di riflesso con i nostri medici! Scrivi per chiarimenti sul funzionamento del sito o per altri dubbi ,risponderemo in pochi giorni!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                <br>
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>Qual'è il costo del servizio?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Una prerogativa di Doc2me è la chiarezza sui costi dei servizi offerti. I prezzi sono fissi per ogni tipologia di visita, vedi la sezione Servizi per maggiori info!</p>
+                    </div>
+                </div>
+    
+                <div class="accordion">
+                <br>
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>Doc2me che ruolo ha?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Doc2me sarà la tua interfaccia con i medici, puoi scrivere a noi per parlare con loro, prenotare visite e noi manterremo per te un report delle visite richieste!</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                <br>
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>Cosa devo fare per prenotare una visita?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Per casi d'urgenza puoi seguire sulla home la procedura d'emergenza cliccando sul bottone GO , se invece hai necessità di una visita in studio o a domicilio puoi registrarti e la sezione Servizi diventerà la tua pagina di riferimento!</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                <br>
+                    <div class="accordion-header">
+                        <span>+</span>
+                        <h3>Perchè dovrei registrarmi su Doc2me?</h3>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Dovresti registrarti su Doc2me perchè faciliterà le tue prenotazioni di visite mediche, avrai la possibilità in pochi minuti di entrare in contatto con un medico evitando lunghe attese! </p>
                     </div>
                 </div>
     
             </div>
         </div>
     </section>
+    
     <!-- fine sezione faq-->
     <footer class="footer">
         <div class="container-footer">

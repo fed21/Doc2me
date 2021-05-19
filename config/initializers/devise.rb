@@ -24,7 +24,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'cicchetti.1853840@studenti.uniroma1.it'
+  config.mailer_sender = 'doc2me.app@gmail.com'
 
   
 
@@ -312,5 +312,5 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  config.omniauth :google_oauth2, '772405075620-f3kkst6q27lmf1pkobi5vhikqcppomaq.apps.googleusercontent.com', 'z-2UlFdHHcLkRKwxOZIrXpv1', {}
+  config.omniauth :google_oauth2, '998775144753-a0bta74t8r2tqd40g7v2rs19mjkk5d9c.apps.googleusercontent.com', 'MtGYwVUV3RgF1q0BUw3eppGB', {}
 end

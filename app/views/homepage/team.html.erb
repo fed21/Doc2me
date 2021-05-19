@@ -19,13 +19,13 @@
         </ul>
         <ul class="ul-nav logged-nav">
             <li>
-                <a  href="/" >Home</a>
+                <a  href="/" class="this">Home</a>
             </li>
             <li>
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a href="/team" class="this">Il team</a>
+                <a href="/team">Il team</a>
             </li>
             <li>
                 <a href="/contatti">Contatti</a>
@@ -45,13 +45,12 @@
         </ul>
         <div style="display: flex;" class="logged-nav">
             <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
-                <%= current_user.nome%>
-                
-                <%= current_user.cognome%>
-                Utente
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
             </div>
             <div style=" margin-top: 5%" class="logged-nav">
-                <!--<%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
                 <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
                <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
             </div>
@@ -82,14 +81,14 @@
         </ul>
         <ul class="ul-nav">
             <li>
-                <%= link_to "Home", {controller: "homepage",action:"show"} %>   
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
             </li>
             <li>
             <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a class= "this" href="/team">Il team</a>
+                <a href="/team">Il team</a>
             </li>
             <li>
                 <a href="/contatti">Contatti</a>
@@ -107,8 +106,8 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div> 
-    </nav>
-    <%end%>
+    </nav>  
+    <% end %>
     <div>
     <div class="header">
         <br>
@@ -117,8 +116,9 @@
             <p>
                 Il Team di Doc2me: medici qualificati e competenti pronti ad aiutarti in ogni momento!
                 Ognuno dei professionisti è stato accuratamente selezionato sulla base delle sue esperienze e 
-                del suo background professionale per poterti assistere al meglio per ogni tua evenienza!
-                Clicca sulla loro foto o sul loro nome per poter accedere alla loro bio.
+                del suo background professionale per poterti assistere al meglio per ogni tua evenienza! <br>
+                Leggi la loro breve descrizione per saperne di più. <br>
+                Clicca sulla loro foto o sul loro nome per poter accedere alla loro bio dettagliata.
             </p>
         </div>
     </div>
@@ -129,21 +129,21 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img2 pedi-img-js text-center" style="padding-top: 38%;" ></div></a>
+                    <a href="docprofile1.html"><div class="pedi-img2 pedi-img-js text-center" style="padding-top: 38%;" ></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <a href="docprofile.html"><h3>Carl Gauss</h3> </a>
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                       <h3>Dott. Carl Gauss</h3> 
+                        <p>Johann Friedrich Carl Gauss è stato un matematico, astronomo e fisico tedesco, che ha dato contributi determinanti in analisi matematica, geometria differenziale, geodesia, geofisica, elettrostatica, astronomia e ottica. </p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img3 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile2.html"><div class="pedi-img3 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Fabrizio D'Amore</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Augustin Cauchy</h3> 
+                        <p>Augustin-Louis Cauchy è stato un matematico e ingegnere francese. Ha avviato il progetto della formulazione e dimostrazione rigorosa dei teoremi dell'analisi infinitesimale basato sull'utilizzo delle nozioni di limite e di continuità. </p>
                     </div>
                 </div>
             </div>
@@ -153,21 +153,21 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img4 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile3.html"><div class="pedi-img4 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>FEFFO</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Federico Carmignani</h3> 
+                        <p>Studente di Ingegneria Informatica e Automatica presso l'Università La Sapienza di Roma, proponente e sviluppatore del progetto Doc2me per il corso di Linguaggi e Tecnologie per il Web. </p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile4.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Mario Rossi</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Federico Capomagi</h3> 
+                        <p>Studente di Ingegneria Informatica e Automatica presso l'Università La Sapienza di Roma, proponente e sviluppatore del progetto Doc2me per il corso di Linguaggi e Tecnologie per il Web.</p>
                     </div>
                 </div>
             </div>
@@ -177,21 +177,21 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile5.html"><div class="pedi-img5 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Mario Rossi</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Bill Gates</h3> 
+                        <p>William Henry Gates, conosciuto come Bill Gates, è un imprenditore, programmatore, informatico statunitense. È meglio conosciuto come il principale fondatore di Microsoft Corporation. </p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile6.html"><div class="pedi-img6 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Mario Rossi</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Robert Kahn</h3> 
+                        <p>Robert Kahn, noto anche come Bob Kahn, è un informatico statunitense. Insieme a Vinton Cerf, inventò il protocollo TCP/IP, la tecnologia usata per trasmettere informazioni in Internet. </p>
                     </div>
                 </div>
             </div>
@@ -201,21 +201,21 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile7.html"><div class="pedi-img7 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Mario Rossi</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. Brendan Eich</h3>    
+                        <p>Brendan Eich è un informatico statunitense, creatore del linguaggio di programmazione JavaScript. Ha cofondato il progetto Mozilla,la Mozilla Foundation e la Mozilla Corporation.  </p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class=" pedi p-4 my-auto jumbotron" > 
-                    <a href="docprofile.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
+                    <a href="docprofile8.html"><div class="pedi-img8 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Mario Rossi</h3> 
-                        <p>che c’è tra uscita desiderata e uscita effettiva, per riuscirci una scelta importante è quella del tipo di struttura che vogliamo utilizzare. La struttura può essere di tre tipi: ad anello aperto, controreazione o doppia controreazione. </p>
+                        <h3>Dott. David Hansson</h3> 
+                        <p>David Heinemeier Hansson è un programmatore danese, pilota automobilistico e ideatore del famoso framework di sviluppo web Ruby on Rails e della wiki Instiki. </p>
                     </div>
                 </div>
             </div>
@@ -276,4 +276,3 @@
    <%= javascript_pack_tag 'index.js' %>
    <%= javascript_pack_tag 'doc.js' %>
 </body>
-</html>

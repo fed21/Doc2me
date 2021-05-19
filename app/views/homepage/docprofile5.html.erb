@@ -1,0 +1,224 @@
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+    <div style="display: flex; flex-direction:column-reverse;  margin-top: 12%;">
+        <h2><a href=team.html  style="margin-left: 10%;font-weight: bold; color: rgb(27, 139, 105); text-decoration: none; font-family:Arial, Helvetica, sans-serif; font-size: 38px;">Il team</a></h2>
+    </div>
+    <div class="bio-name">  
+        
+        <h1 style="color: #04044c; font-weight: bold; margin-left: 38%;">Dottor. Bill Gates</h1>
+        <div class="bio-img5"></div>
+    </div>
+    <div >
+        <div class="bio-text container">
+        <div >
+           Nato in una famiglia di origini inglesi, tedesche, irlandesi, scozzesi ed ebree,[22][23] il padre William H. Gates II (1925-2020) era un noto avvocato mentre la madre Mary Maxwell (1929-1994) sedeva nel consiglio di amministrazione di First Interstate BancSystem e United Way ed era professoressa all'Università del Washington. Il nonno materno di Gates, JW Maxwell, era banchiere.[24] In un primo tempo, entrambi i genitori avrebbero desiderato che il piccolo Bill intraprendesse studi giuridici.[25]
+
+Nel 1968, l'anno in cui si iscrisse alla prestigiosa scuola privata Lakeside,[26] Gates ebbe accesso per la prima volta a un computer, ovvero un DEC PDP-10 di proprietà della Computer Center Corporation. La scuola aveva affittato un certo numero di ore di utilizzo con lo scopo di scoprire e correggere i bug.[27] Gates, il compagno di studi Paul Allen e altri studenti (alcuni dei quali diverranno poi dipendenti di Microsoft), divennero inseparabili dal computer. Cominciarono anche ad avere problemi con la scuola, arrivando in ritardo o con i compiti non svolti, marinando la scuola per rimanere invece nel locale del computer. Pare che consumassero così tutte le ore a disposizione della scuola in poche settimane.
+
+Nell'autunno del 1968 la scuola si accordò con una nuova società per offrire un altro computer a disposizione anche degli studenti. Il gruppetto di Gates non impiegò molto tempo per provocare problemi, causando vari blocchi al sistema e superando i sistemi di sicurezza integrati. Così riuscirono a modificare il numero di ore da loro usate al computer. Scoperti, furono banditi per alcune settimane dal computer. Alla fine del 1968, Gates, Allen e altri due del gruppo (Ric Weiland e Kent Evans), fondarono la Lakeside Programmers Group. La stessa società che li aveva banditi li assunse per trovare le debolezze del loro sistema, e in cambio diede loro tempo illimitato per usare il computer. Nel marzo del 1970 la società chiuse e la Lakeside Programmers Group dovette cercare altri modi per ottenere accesso a un computer.
+
+Trovarono la Information Sciences Inc., che li scelse per la creazione di un programma di gestione paghe, promettendo in cambio, oltre all'accesso al computer, anche una royalty se dai programmi del gruppo si fossero avuti dei guadagni. In quel periodo accadde che gli altri tre del gruppo chiesero a Gates di lasciare il gruppo, perché il lavoro non sembrava sufficiente per tutti, ma Gates li convinse a rimanere.
+
+I primi progetti e l'università[modifica | modifica wikitesto]
+(EN)
+«I failed in some subjects in exam, but my friend passed in all. Now he is an engineer in Microsoft and I am the owner of Microsoft.[28][29]»
+(IT)
+«Fui bocciato in alcune materie agli esami, ma il mio amico le passò tutte. Ora lui è un ingegnere alla Microsoft, mentre io sono il proprietario della Microsoft.»
+(Bill Gates)
+Successivamente nel 1972 Bill e Paul fondarono la Traf-O-Data, che progettò un computer per misurare il traffico stradale (ne ricavarono ventimila dollari). La Traf-O-Data durò fino alla fine degli studi di Bill. I due lavorarono insieme anche per informatizzare il sistema di gestione della scuola (ricavando 4.200 dollari). Negli ultimi anni di scuola, ricevettero un'offerta dalla TRW: dovevano non solo trovare le debolezze del loro sistema ma anche implementare i rimedi.
+
+Nel 1973 Gary Kildall scrisse un semplice sistema operativo, il CP/M (Control Program/Monitor), e lasciò i sorgenti accessibili a tutti per scopi didattici. Nell'autunno del 1973, Bill Gates si iscrisse a Legge alla Harvard University, come desideravano i suoi genitori, ma in più si iscrisse anche al corso di matematica. Da studente, come alle scuole superiori, non ottenne risultati di particolare rilievo. E si perse nuovamente nel centro informatico dell'istituto. A Lakeside, Gates, Allen e un loro amico, Paul Gilbert, esperto nel cablaggio elettronico, costruirono un loro computer, usando il processore Intel 8008. Il gruppo ebbe l'opportunità di fare una dimostrazione del prodotto, ma dopo il fallimento della prova, l'idea di fondare una società per produrre hardware di computer fu abbandonata.
+
+Alla fine del primo anno ad Harvard, Gates convinse Allen a traslocare per poter dare seguito ai loro progetti. Nell'estate del 1974, ambedue trovarono lavoro alla Honeywell. Verso la fine dell'estate, Allen insistette sempre più con l'idea che dovevano fondare una società di software.
+
+Nel dicembre 1974 uscì sul mercato americano il primo kit di montaggio per Microcomputer Altair 8800. Gates e Allen intuirono che il mercato dei computer personali stava per esplodere e sarebbe servito software per le nuove macchine. Incominciarono così a sviluppare software usando l'hardware della General Electric, con cui Gates e Allen avevano avuto le prime esperienze, e il linguaggio BASIC. Questo era disponibile anche sulle macchine DEC e Gates, pensò di contattare la MITS, società produttrice dell'Altair, proponendo software specifico per il loro modello Altair 8800. La società si disse molto interessata e Gates, lavorando freneticamente, in otto settimane produsse le modifiche, mentre Allen sviluppò un simulatore dell'Altair sul PDP-10 della scuola. Monte Davidoff si unì al gruppo e scrisse alcuni pacchetti matematici. Successivamente Allen portò il programma alla società per la prima prova sull'Altair: una volta superata la prova la società acquistò il software, che venne commercializzato col nome di Altair BASIC.
+
+La nascita di Microsoft Corp.[modifica | modifica wikitesto]
+
+Bill Gates sul Lago di Como nel 1995
+(EN)
+«In the Future I'll see one computer on every desk and one in every home»
+(IT)
+«Nel futuro vedo un computer su ogni scrivania e uno in ogni casa.[30]»
+(Bill Gates, 1975)
+Ad Albuquerque Bill Gates e Paul Allen il 4 aprile 1975 diedero vita a Micro-soft, creata dopo che Gates abbandonò gli studi presso l'Università di Harvard.
+
+Sempre nel 1975, Gates scrive un articolo sul problema dell'ordinamento delle frittelle (nella letteratura in lingua inglese, Pancake sorting è una variante degli algoritmi di ordinamento in cui l'unica operazione ammessa è invertire gli elementi di una parte iniziale - un prefisso - della successione), proponendo una soluzione migliorata solo nel 2008. Il 1º gennaio del 1979 Bill Gates spostò la Microsoft con i suoi 16 dipendenti a Seattle (Washington). Nelle assunzioni Gates preferì persone intelligenti e senza precedente esperienza di lavoro. Nel 1981, l’anno in cui Microsoft concesse il sistema operativo MS-DOS in licenza a IBM, venne scattata una storica foto, in cui Bill Gates e Paul Allen sono circondati dai primi PC dell’epoca, in pratica derivati dalla fusione di un monitor CRT e una tastiera.
+
+L'espansione portò allo sviluppo di un foglio di calcolo elettronico Multiplan per Apple II e per PC con sistema operativo CP/M nel 1982 e di Microsoft Word nel 1983.
+
+Bruce Horn negli stessi anni era studente ospite alla Xerox e aiutò nella programmazione di Smalltalk (in italiano: conversazioni). Smalltalk era un linguaggio di programmazione sperimentale, object-oriented, ma aveva un'interfaccia grafica con testo selezionato per mezzo di un mouse (a tre tasti), menù di tipo pop-up, finestre (windows). Nel 1980 Bruce Horn portò Smalltalk su una macchina basata su processore Intel 80186, il Mycron-2000. Negli stessi anni la Apple Computer distribuì vari sistemi operativi DOS e la Digital Reaserch scrive il CP/M. Tim Paterson partendo dai sorgenti del CP/M scrive in un paio di mesi il sistema operativo QDOS (Quick and Dirty Operating System) per essere usato sui computer basati sull'Intel 8086 prodotti da Seattle Computer Products al posto del CP/M-86 che la Digital Research tardava a completare.
+
+Tim Paterson mostrò a Microsoft il suo 86-DOS e, nel dicembre 1980, Gates acquistò il sistema operativo SCP-DOS da Seattle Computer Products, chiedendo i diritti per un cliente che non specificava (si trattava dell'IBM, la madre Mary Gates era nel c.d.a. della United Way con il CEO John Opel).[31] Microsoft pagò meno di 100 000 $ per i diritti del sistema operativo, con il nome 86-DOS. Microsoft chiamò Paterson, che la SCP non aveva legato con un contratto esclusivo, per adattare il 86-DOS all'IBM 5150 PC e poi al PC-XT dell'IBM. Il sistema operativo modificato fu chiamato MS-DOS. L'IBM si rifiutò di comperare la licenza di MS-DOS e allora Gates fece un accordo secondo cui avrebbe fornito all'IBM i sistemi operativi per la nuova linea di personal computer. L'IBM a sua volta modificò leggermente il sistema operativo e lo chiamò PC-DOS.
+
+
+Bill Gates (a destra) al IT-Forum di Copenaghen del 2004
+Steve Jobs della Apple vide Smalltalk al PARC della Xerox e ottenne la collaborazione di Bruce Horn dal 1981 al 1984 per sviluppare un calcolatore con interfaccia grafica denominato in seguito Lisa. Non essendoci il tempo per sviluppare un sistema operativo object-oriented su un altro sistema, si mantiene parte delle apparenze esterne. Per esempio Apple adottò un mouse con un solo pulsante invece di tre. Il Lisa fu poi sostituito dal Macintosh. Apple ottenne l'aiuto della Microsoft per scrivere alcune applicazioni per quest'ultimo che così ottenne una visione di primo piano delle API, pezzi del codice sorgente, ecc. della nuova interfaccia grafica. Questo portò allo sviluppo di Microsoft Word per Macintosh nel gennaio 1984 e di Microsoft Excel nel settembre 1985.
+
+Nell'aprile 1983 la Microsoft adottò il mouse in alcune applicazioni come EDIT e poi nel novembre 1983 in un'interfaccia grafica funzionante sul sistema operativo MS-DOS. Questa interfaccia grafica si sviluppò poi nel 1985 in Windows 1.0, via via sviluppata fino alla versione Windows 3.1 nel 1992. L'introduzione di Windows 3.1 segna una delle pietre miliari di un percorso molto controverso che la Microsoft ha scelto. Infatti fino a Windows 3.1 l'interfaccia grafica è compatibile con DR-DOS. La Digital Research infatti rispose nel 1985 con GEM-DOS (GEM = Graphical Environment Manager oltre a significare gemma in inglese) e poi, nel 1988 trasformò CP/M nel DR-DOS. Fino al 1992 la Microsoft si trovò in regime di concorrenza, con varie versioni di sistemi operativi (PC-DOS, DR-DOS, etc.) con distribuzioni di versioni più o meno parallele. Ancora oggi possiamo trovare sul mercato le versioni più recenti, a parte MS-DOS che si è fermato alla versione 7.0. Infatti nell'agosto 1995 la Microsoft introdusse Windows 95, che è il primo sistema operativo grafico dell'azienda ed il secondo che abbia un successo commerciale dopo quello del Macintosh (se si esclude il Commodore Amiga). Negli stessi anni la Microsoft introdusse le versioni per MS-DOS dei vecchi linguaggi FORTRAN (che data dal 1954) e COBOL (che data dal 1959).
+
+Nel 1985 Microsoft e IBM incominciano una collaborazione per la successiva generazione di sistemi operativi, l'OS/2 e IBM distribuisce l'ambiente grafico Topview precursore dell'interfaccia grafica che sarà usata sull'OS/2. Questo è anche l'anno dell'80386. La collaborazione con l'IBM dura fino al 1991, anno in cui Gates decide che non serve più e modifica il nome del proprio OS/2 in Windows NT. Nel marzo 1986 la Microsoft fu quotata in borsa. L'offerta iniziale per azione di 21 000 000 $ fece diventare Bill Gates di colpo un milionario. Nel 1987 all'annuncio di Microsoft e IBM della distribuzione di OS/2 v. 1.0, che avrebbe dovuto sostituire MS-DOS, le azioni raggiungono i 100 000 000 $ di quotazione. Si suppone che Gates sia, sul principio degli anni duemila, l'uomo più ricco del mondo.
+
+Nel giugno 1992, Gates viene premiato con la National Medal of Technology and Innovation dall'allora Presidente degli Stati Uniti d'America George H. W. Bush. Nel 1993, alla distribuzione della versione MS-DOS 6.0 spregiudicatamente include un'applicazione di compressione chiamata DoubleSpace dopo una consulenza con Stac Electronics conclusa senza accordi relativi. Stac Electronics cita in giudizio la Microsoft e vince la causa. La Microsoft è costretta a distribuire MS-DOS 6.21 senza DoubleSpace, ma il danno è fatto. L'anno dopo con MS-DOS 6.22 è incluso DriveSpace che è invece prodotto internamente, anche se il principio è lo stesso.
+        </div>
+    </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contatti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>

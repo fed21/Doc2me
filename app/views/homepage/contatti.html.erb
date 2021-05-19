@@ -1,4 +1,67 @@
 <body>
+ <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
     <nav>
         <ul class="ul-nav-logo">
             <li>
@@ -18,7 +81,7 @@
         </ul>
         <ul class="ul-nav">
             <li>
-                <%= link_to "Home", {controller: "homepage",action:"show"} %>   
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
             </li>
             <li>
             <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
@@ -28,7 +91,7 @@
                 <a href="/team">Il team</a>
             </li>
             <li>
-                <a class= "this" href="/contatti">Contatti</a>
+                <a href="/contatti">Contatti</a>
             </li>
             <li>
                 <a href="/FAQ">FAQ</a>
@@ -43,7 +106,9 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div> 
-    </nav>
+    </nav>  
+    <% end %>
+      <div class="header">
     <div id="maindiv-ped" class="container" >
         <br><br>
         <!--riga 1-->
@@ -53,15 +118,15 @@
                     <div class="pedi-info">
                         <h3>I nostri contatti</h3> 
                         Per qualsiasi domanda, suggerimento o feedback riguardo i nostri servizi e le nostre attività
-                        puoi usare la form qui sotto! Per restare in contatto con noi potete trovarci sui social! <br>
-                        Sei un dottore e vorresti entrare a far parte del team? Contattaci attraverso la form qui sotto!
+                        puoi usare la form qui sotto! <br> Per restare in contatto con noi potete trovarci sui social! <br>
+                        Sei un dottore e vorresti entrare a far parte del team? <br> Contattaci attraverso la form qui sotto!
                     </div>
                 </div>
             </div>
             <div class="col-sm-6" >
                 <div class=" pedi p-4 my-auto jumbotron" style="height: 100%;"> 
                     <div class="pedi-info" >
-                        <h3>I nostri social:</h3>
+                        <h3>I nostri social</h3>
                         <a href="https://www.instagram.com">  
                             <div style="display: flex;">
                                 <div class="social-img" id="contact-instagram"></div>
@@ -79,6 +144,7 @@
             </div>
         </div>
     </div>
+     </div>
     <!--
     <div class="container mail-box">
     <form>
@@ -98,10 +164,11 @@
     -->
 
     <div id="form-contatti">
+    <br>
     <div class=" container col-lg-5 mail-box">
         <form action="#">
             <div class="row">
-                <h2 style="color:#04044c; font-weight: bold; margin-bottom: 1%; margin-left: 2.5%; margin-top: 2%;">Compila la form:</h2>
+                <h2 style="color:#04044c; font-weight: bold; margin-bottom: 1%; margin-left: 2.5%; margin-top: 2%;"> Compila il form per parlare con noi</h2>
                 <!-- First Name -->
                 <div class="input-group col-lg-12 mb-4">
                     <input id="firstName" type="text" name="firstname" placeholder="Nome e Cognome" class="form-control bg-white border-left-0 border-md" style="text-align: start;">
@@ -119,6 +186,7 @@
             </div>
         </form>
     </div>  
+    <br>
     </div>  
 
     

@@ -1,0 +1,202 @@
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+    <div style="display: flex; flex-direction:column-reverse;  margin-top: 12%;">
+        <h2><a href=team.html  style="margin-left: 10%;font-weight: bold; color: rgb(27, 139, 105); text-decoration: none; font-family:Arial, Helvetica, sans-serif; font-size: 38px;">Il team</a></h2>
+    </div>
+    <div class="bio-name">  
+        
+        <h1 style="color: #04044c; font-weight: bold; margin-left: 38%;">Dottor. Federico Carmignani</h1>
+        <div class="bio-img3"></div>
+    </div>
+    <div >
+        <div class="bio-text container">
+        <div >
+           Nel XIV secolo operavano a Roma diverse istituzioni scolastiche, ma senza un ente ufficialmente riconosciuto ed esterno alla corte papale. Con la bolla di Bonifacio VIII In Supremae praeminentia Dignitatis del 20 aprile 1303, viene istituita la prima università di Roma, lo Studium Urbis. I finanziamenti iniziali giungevano dalla tassazione del vino forestiero, oltre alla munificenza di alcuni nobili romani. Quando la sede pontificia fu spostata ad Avignone, la gestione dell'Università fu affidata al Comune di Roma.
+
+Durante tutto il periodo rinascimentale diversi papi richiesero al Comune l'incremento del corpo docente, con l'inserimento prosecutivo di nuove cattedre. Inoltre vennero acquistati diversi edifici del rione Sant'Eustachio, dove durante il Seicento venne costruita la nuova sede, voluta da Alessandro VII, fondatore tra l'altro della stessa Biblioteca Alessandrina, ancora oggi in piena attività; la sede fu istituita presso il Palazzo della Sapienza. Infatti, da appena dieci anni, il nome "Sapienza" era divenuto quello ufficiale. Dopo alcuni anni, Francesco Borromini costruì la chiesa di Sant'Ivo alla Sapienza, la quale, sul portone principale, reca scritto Initium sapientiae timor Domini ("L'inizio della sapienza è il timor di Dio").
+
+Riforme napoleoniche.
+Diverse furono le riforme successive, fra cui le più note quelle di papa Benedetto XIV (1748) e della Repubblica Romana (1798), ma di fondamentale importanza fu quella introdotta dai francesi stanziatisi a Roma dopo la conquista: l'università viene infatti uniformata alla legislazione imperiale francese, e la sede viene spostata al Palazzo del Collegio Romano, per volontà del rettore Giovanni Ferri de Saint-Constant (1811-1815).
+
+Italia post-risorgimentale e fascista.
+
+Città Universitaria su progetto di Marcello Piacentini (1935)
+Durante la fase di passaggio fra lo Stato Pontificio e il Regno d'Italia, garante dell'istituzione fu Terenzio Mamiani, che laicizzò l'ateneo. Il 3 ottobre 1870 fu nominato primo rettore Clito Carlucci, rimasto in carica fino al 1872. Durante il suo mandato Carlucci attuò profonde riforme, prima fra tutte l'introduzione di un istituto di fisiopatologia, nel quale vennero aperti gli insegnamenti di fisiologia sperimentale, istologia e anatomia patologica.
+
+Il 27 agosto, con decreto regio, fu estesa alla Sapienza la legge Casati con conseguente inquadramento nella legislazione nazionale. Fu creato un laboratorio per le esercitazioni chimiche e farmaceutiche e si dotarono il più possibile i gabinetti scientifici già esistenti, soprattutto quelli di mineralogia, geologia e paleontologia. Furono poi istituite molte altre cattedre sia nell'area giuridica sia economica e financo un insegnamento di storia moderna. La Sapienza subì poi un periodo di crisi in concomitanza con il primo conflitto mondiale, a causa degli scontri fra interventisti e neutralisti.
+
+Quando a ottobre 1931, in pieno fascismo, fu richiesto ai docenti universitari l'obbligo di giurare fedeltà, quattro accademici della Sapienza si rifiutarono di sottoscriverlo, perdendo la cattedra: Ernesto Buonaiuti (storia del cristianesimo), Giorgio Levi Della Vida (studi orientali), Gaetano De Sanctis (storia antica) e Vito Volterra (matematica e fisica)[5]. Nel 1935 il nuovo complesso ideato da Marcello Piacentini, la nuova Città Universitaria, fu inaugurato alla presenza dei reali d'Italia.
+
+Italia repubblicana
+Magnifying glass icon mgx2.svg	Lo stesso argomento in dettaglio: Movimento del '77 e Sessantotto.
+Dopo il secondo conflitto mondiale, l'università riprese rapidamente la sua attività e fu realizzata, sempre su progetto di Piacentini, la chiesa della Divina Sapienza.
+
+Il 27 aprile 1966, in occasione del rinnovo dell'organismo rappresentativo degli studenti, attivisti neofascisti del "FUAN-Caravella" provocarono violenti incidenti all'interno della facoltà di Lettere e Filosofia [6]; in tali incidenti rimase ucciso Paolo Rossi, studente di architettura iscritto al PSI, precipitato dal muretto di destra alla sommità della scalinata della facoltà di Lettere. Dopo alcuni giorni, il 2 maggio 1966, a seguito delle richieste di dimissioni, cui si unirono i gruppi del PCI, PSI, PSIUP, PSDI e PRI della Camera dei Deputati,[7] per la prima volta nella storia dell'Università il rettore Giuseppe Ugo Papi si trovò costretto a dimettersi.[5][8]
+
+Due anni più tardi, nel marzo 1968, una sede della facoltà di Architettura fu teatro di uno scontro tra studenti di destra e sinistra con la polizia, che passò alla cronaca, e successivamente alla storia, come battaglia di Valle Giulia. La Sapienza diviene un punto di riferimento nazionale del movimento studentesco del 1968 e rimane un luogo di fermento politico per tutti gli anni settanta. In particolare la Sapienza fu luogo di grande agitazione durante il 1977, in occasione dello sviluppo del movimento che prese il nome da quell'anno. L'Ateneo infatti è teatro di scontri il 17 febbraio durante il comizio del segretario della CGIL Luciano Lama, quando gli studenti della sinistra extraparlamentare contestarono violentemente l'iniziativa del sindacato di irrompere nella città universitaria occupata dal movimento.
+
+Dal 2006 a oggi[modifica | modifica wikitesto]
+Dal novembre del 2006 la Sapienza adotta un nuovo sistema di identità visiva: nel logo la Minerva è stata sostituita da un cherubino, che rimanda all'originaria sede del Palazzo della Sapienza. Nel novembre del 2009 il Senato accademico ha approvato un piano di riorganizzazione, superando la precedente divisione in Atenei federati, i quali comprendevano facoltà simili per argomenti di studio e autonome nella gestione delle risorse.[9] Dopo la riorganizzazione strutturale del 2010, la Sapienza conta undici facoltà,[10] oltre 60 dipartimenti, ventuno musei e cinquanta biblioteche.
+
+        </div>
+    </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contatti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+    <%= javascript_pack_tag 'slide.js' %>

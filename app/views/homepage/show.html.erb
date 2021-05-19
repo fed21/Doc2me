@@ -1,4 +1,3 @@
-
 <body id="body-home" style="overflow-x: hidden;">
     <% if user_signed_in?  %>
     <nav>
@@ -46,13 +45,12 @@
         </ul>
         <div style="display: flex;" class="logged-nav">
             <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
-                <%= current_user.nome%>
-                
-                <%= current_user.cognome%>
-                Utente
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
             </div>
             <div style=" margin-top: 5%" class="logged-nav">
-                <!--<%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
                 <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
                <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
             </div>
@@ -161,7 +159,7 @@
                     <div class="card__copy">
                         <h2>I pazienti</h2> <br>
                         <p>
-                            Doc2me offre la possibilità di prenotare esclusivamente visite d'urgenza per utenti non registrati.<br>
+                            Doc2me offre la possibilità di prenotare solo visite d'urgenza per utenti non registrati.<br>
                             Registrati subito per poter iniziare ad usare i servizi di DOC2ME come prenotare visite in studio, online o a domicilio!
                         </p>
                         
@@ -188,21 +186,21 @@
             
             <%=image_tag("Health professional team-amico.svg", class:"img-home", id:"img-home-team")%>
             <div class="father-about">
-                <a href="team.html" style="text-decoration:  #2beca3 "><h1 class="son-about"> &nbsp Il nostro team &nbsp </h1></a>
+               <h1 class="son-about"> &nbsp Il nostro team &nbsp </h1>
                 <!--<img src="img/Health-icon.svg" style="width: 12%; margin-top: 6%; margin-left: 5%;" class="icon-home">-->
                 <%=image_tag("Health-icon.svg", style:"width: 12%; margin-top: 6%; margin-right: 5%;",class:"icon-home")%>
             </div>
             <div class="aboutus-text">
                 Il team di Doc2me è composto da medici professionisti e qualificati. Un medico di turno sarà sempre a disposizione per visite d'urgenza ,mentre le prenotazioni
-                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire. <br>
+                in studio o a domicilio avverranno tramite una notifica automatica al medico che avra la facoltà di confermare o disdire.
                 L'utente riceverà ad ogni prenotazione una email di riepilogo da Doc2me e potrà pagare online tramite PayPal o in contanti al termine della visita al medico stesso.
-                <br> In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
+                 In caso di urgenza , a valle del contatto telefonico con il medico , esso stesso consiglierà al paziente se proseguire eventualmente con una visita a studio o direttamente a domicilio.
             </div>
             
         </div>
         <div  class=" team-flex" >
             <div class="father-team">    
-                 <h1 class="son-team">&nbsp Chi siamo? </h1> 
+                 <h1 class="son-team">&nbsp Chi siamo </h1> 
                  <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
             </div>
             <div class="team-text">   
@@ -245,7 +243,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>contratti</h4>
+                    <h4>contatti</h4>
                     <ul class="ul-footer">
                         <li><a href="contatti.html">informazioni</a></li>
                         <li><a href="contatti.html">lavora con noi</a></li>
@@ -269,7 +267,3 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
     <%= javascript_pack_tag 'slide.js' %>
-
-
-    
-</body>
