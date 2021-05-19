@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   get '/' => 'homepage#show'
 
   #ogni pagina ha il suo controller e la view associata è visualizzata pur non esistendo il controller stesso poichè eredita ApplicationController
@@ -19,6 +20,17 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks:
   'users/omniauth_callbacks' }
+
+  
+  devise_for :doctors, controllers: {  sessions: 'doctors/sessions' ,
+                                        registrations: 'doctors/registrations',
+                                        confirmations: 'doctors/confirmations',
+                                        mailer: 'doctors/mailer', 
+                                        passwords: 'doctors/passwords', 
+                                        shared: 'doctors/shared', 
+                                        unocks: 'doctors/unlocks',                                       
+}
+   
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -28,6 +28,15 @@
       destroy_user_session_path, :method => :delete%>]
     <% end %>
 
+    <% if doctor_signed_in?%>
+      ciao dottore <%= current_doctor.nome%>
+      <br>
+      EMAIL <%= current_doctor.email%> 
+      [<%= link_to 'Logout', 
+      destroy_doctor_session_path, :method => :delete%>]
+
+    <%end%>
+
   
 
   <% flash.each do |type, msg| %>
