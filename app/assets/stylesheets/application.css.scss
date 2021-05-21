@@ -377,7 +377,7 @@
    .aboutus-text{
       
        width: 55%;
-       font-size: 21px;
+       font-size: 20px;
        margin-top: 10px; margin-right: 5%;
        font-family: 'Poppins',sans-serif;
    }
@@ -407,7 +407,7 @@
    
    .team-text{
        width: 55%;
-       font-size: 21px;
+       font-size: 20px;
        margin-left: 100px;
        margin-top: 1px;
        color:#04044c;
@@ -442,15 +442,16 @@
     width: 20%; 
        
     margin-left: 100%;
-    margin-bottom:20ch;
+    margin-bottom:15ch;
+    margin-top:3%;
        position: absolute;
    }
    
    #img-home-team{
     width: 20%;
     margin-left: -40%;
-    margin-bottom:0,5%;
-    margin-top:2%;
+    margin-bottom:1%;
+    margin-top:4%;
        position: absolute;
    }
    
@@ -1063,7 +1064,7 @@
         position: absolute;
         left:0;
         bottom: -10px;
-        background-color: #165f3d;
+        background:#2b95ec7c;
         height: 2px;
         box-sizing: border-box;
         width: 60px;
@@ -1077,7 +1078,7 @@
         color: #ffffff;
         text-decoration: none;
         font-weight: 300;
-        color: #165f3d;
+        color: #2b95ec7c;
         display: block;
         transition: all 0.3s ease;
     }
@@ -1110,6 +1111,7 @@
        border-radius: 10px;
        padding: 5%;
        margin-right: 7%; margin-top: 5%; margin-bottom: 4%;
+       z-index:0;
    }
    
    .img-login{
@@ -1164,7 +1166,8 @@
        background-color: #c8dce0;
        font-size: 20px;
        color: #04044c;
-       padding: 5%;
+       padding: 2%;
+    
    }
    .bio-img{
    
@@ -1271,7 +1274,7 @@
      }
      
      .faq .row .accordion-container .accordion .accordion-header{
-       background:linear-gradient( rgb(95, 170, 212),rgb(122, 212, 240));
+        background: linear-gradient(#2b95ec7c,white);
        
        box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
        cursor: pointer;
@@ -1303,7 +1306,7 @@
        box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
        font-size: 1.3rem;
        display: none;
-       background:linear-gradient(rgb(219, 224, 226),rgb(66, 200, 241))
+       background: linear-gradient(#2b95ec7c,white);
      }
     
    

@@ -1,4 +1,4 @@
 class Kid < ApplicationRecord
-    belong_to :user
+    belongs_to :user
     has_many :visits
 end

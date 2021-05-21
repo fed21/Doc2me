@@ -7,7 +7,7 @@ $(document).ready(function(){
     $(".bio-img").animate({right: '7%'},{
         duration: 1500
     });
-    $("#team-bio").animate({top: "32%"},{
+    $("#team-bio").animate({top: "12%"},{
         duration: 1800
     });
 });
