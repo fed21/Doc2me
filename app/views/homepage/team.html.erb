@@ -19,13 +19,13 @@
         </ul>
         <ul class="ul-nav logged-nav">
             <li>
-                <a  href="/" class="this">Home</a>
+                <a  href="/" >Home</a>
             </li>
             <li>
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a href="/team">Il team</a>
+                <a href="/team" class="this">Il team</a>
             </li>
             <li>
                 <a href="/contatti">Contatti</a>
@@ -61,6 +61,70 @@
             <div class="line3"></div>
         </div>    
     </nav>
+
+    <% elsif doctor_signed_in?%> 
+     <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" >Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team" class="this">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_doctor.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_doctor.cognome%></span>
+                <span style="font-size:15px;">dottore</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+
     <% else %>
     <nav>
         <ul class="ul-nav-logo">
@@ -81,14 +145,14 @@
         </ul>
         <ul class="ul-nav">
             <li>
-                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+                <%= link_to "Home", {controller: "homepage",action:"show"}  %>   
             </li>
             <li>
             <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a href="/team">Il team</a>
+                <a href="/team" class="this">Il team</a>
             </li>
             <li>
                 <a href="/contatti">Contatti</a>
@@ -132,7 +196,7 @@
                     <a href="docprofile1.html"><div class="pedi-img2 pedi-img-js text-center" style="padding-top: 38%;" ></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                       <h3>Dott. Carl Gauss</h3> 
+                       <h4> Carl Gauss</h4> 
                         <p>Johann Friedrich Carl Gauss è stato un matematico, astronomo e fisico tedesco, che ha dato contributi determinanti in analisi matematica, geometria differenziale, geodesia, geofisica, elettrostatica, astronomia e ottica. </p>
                     </div>
                 </div>
@@ -142,7 +206,7 @@
                     <a href="docprofile2.html"><div class="pedi-img3 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Augustin Cauchy</h3> 
+                        <h4>Augustin Cauchy</h4> 
                         <p>Augustin-Louis Cauchy è stato un matematico e ingegnere francese. Ha avviato il progetto della formulazione e dimostrazione rigorosa dei teoremi dell'analisi infinitesimale basato sull'utilizzo delle nozioni di limite e di continuità. </p>
                     </div>
                 </div>
@@ -156,7 +220,7 @@
                     <a href="docprofile3.html"><div class="pedi-img4 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Federico Carmignani</h3> 
+                        <h4>Federico Carmignani</h4> 
                         <p>Studente di Ingegneria Informatica e Automatica presso l'Università La Sapienza di Roma, proponente e sviluppatore del progetto Doc2me per il corso di Linguaggi e Tecnologie per il Web. </p>
                     </div>
                 </div>
@@ -166,7 +230,7 @@
                     <a href="docprofile4.html"><div class="pedi-img pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Federico Capomagi</h3> 
+                        <h4> Federico Capomagi</h4> 
                         <p>Studente di Ingegneria Informatica e Automatica presso l'Università La Sapienza di Roma, proponente e sviluppatore del progetto Doc2me per il corso di Linguaggi e Tecnologie per il Web.</p>
                     </div>
                 </div>
@@ -180,7 +244,7 @@
                     <a href="docprofile5.html"><div class="pedi-img5 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Bill Gates</h3> 
+                        <h4> Bill Gates</h4> 
                         <p>William Henry Gates, conosciuto come Bill Gates, è un imprenditore, programmatore, informatico statunitense. È meglio conosciuto come il principale fondatore di Microsoft Corporation. </p>
                     </div>
                 </div>
@@ -190,7 +254,7 @@
                     <a href="docprofile6.html"><div class="pedi-img6 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Robert Kahn</h3> 
+                        <h4> Robert Kahn</h4> 
                         <p>Robert Kahn, noto anche come Bob Kahn, è un informatico statunitense. Insieme a Vinton Cerf, inventò il protocollo TCP/IP, la tecnologia usata per trasmettere informazioni in Internet. </p>
                     </div>
                 </div>
@@ -204,7 +268,7 @@
                     <a href="docprofile7.html"><div class="pedi-img7 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. Brendan Eich</h3>    
+                        <h4> Brendan Eich</h4>    
                         <p>Brendan Eich è un informatico statunitense, creatore del linguaggio di programmazione JavaScript. Ha cofondato il progetto Mozilla,la Mozilla Foundation e la Mozilla Corporation.  </p>
                     </div>
                 </div>
@@ -214,8 +278,8 @@
                     <a href="docprofile8.html"><div class="pedi-img8 pedi-img-js text-center" style="padding-top: 38%;"></div></a>
                     <div class="mid"></div>
                     <div class="pedi-info">
-                        <h3>Dott. David Hansson</h3> 
-                        <p>David Heinemeier Hansson è un programmatore danese, pilota automobilistico e ideatore del famoso framework di sviluppo web Ruby on Rails e della wiki Instiki. </p>
+                        <h4> David Hansson</h4> 
+                        <p>David Heinemeier Hansson è un programmatore danese, pilota automobilistico e ideatore e sviluppatore dell'ormai famoso framework di sviluppo web Ruby on Rails e della wiki Instiki. </p>
                     </div>
                 </div>
             </div>

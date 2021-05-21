@@ -61,14 +61,77 @@
             <div class="line3"></div>
         </div>    
     </nav>
-    <% elsif doctor_signed_in?%> si il dottore è loggato. qui la nav bar per dottore loggato
+
+    <% elsif doctor_signed_in?%> 
+     <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/" class="this">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_doctor.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_doctor.cognome%></span>
+                <span style="font-size:15px;">dottore</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+
     <% else %>
     <nav>
         <ul class="ul-nav-logo">
             <li>
                 <div class="logo-image">
                     <%= link_to controller: "homepage",action:"show" do %>
-                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid",style:"margin-bottom:-10%;")%>
                     <% end %>
                  </div>
             </li>
@@ -116,7 +179,7 @@
                 <div style="margin-right: 8%; margin-top: 12.2%;">
                     <%=image_tag("Icon Doctor.png", class:"img-logo",style:"width:80%; max-width:400px;",id:"im")%>
                 </div>
-                <div class="father-urgenza">
+                <div class="father-urgenza" id="father-sos">
                     <br><br>
                     <h1 class="son-urgenza"> Hai un'urgenza? </h1>
                 </div>
@@ -201,7 +264,7 @@
         </div>
         <div  class=" team-flex" >
             <div class="father-team">    
-                 <h1 class="son-team">&nbsp Chi siamo </h1> 
+                 <h1 class="son-team">&nbsp Chi siamo &nbsp  </h1> 
                  <%=image_tag("Good-icon.svg", style:"width: 8%; margin-top: 3%; margin-left: 2%;", class:"icon-home")%>
             </div>
             <div class="team-text">   
@@ -267,5 +330,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
+     <%= javascript_pack_tag 'sos.js' %>
      <%= javascript_pack_tag 'opacita.js' %>
     <%= javascript_pack_tag 'slide.js' %>

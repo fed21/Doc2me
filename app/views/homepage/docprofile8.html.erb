@@ -1,5 +1,5 @@
 <body id="body-home" style="overflow-x: hidden;">
-    <% if user_signed_in?  %>
+   <% if user_signed_in?  %>
     <nav>
         <ul class="ul-nav-logo">
             <li>
@@ -19,13 +19,13 @@
         </ul>
         <ul class="ul-nav logged-nav">
             <li>
-                <a  href="/" class="this">Home</a>
+                <a  href="/">Home</a>
             </li>
             <li>
                 <a href="/servizi">Servizi</a>
             </li>
             <li>
-                <a href="/team">Il team</a>
+                <a href="/team">>Il team</a>
             </li>
             <li>
                 <a href="/contatti">Contatti</a>
@@ -61,6 +61,70 @@
             <div class="line3"></div>
         </div>    
     </nav>
+
+    <% elsif doctor_signed_in?%> 
+     <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="profilo-utente.html">Profilo</a>
+            </li> 
+            <li>
+                <a  href="prenotazione.html">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_doctor.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_doctor.cognome%></span>
+                <span style="font-size:15px;">dottore</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+
     <% else %>
     <nav>
         <ul class="ul-nav-logo">
@@ -81,7 +145,7 @@
         </ul>
         <ul class="ul-nav">
             <li>
-                <%= link_to "Home", {controller: "homepage",action:"show"} , class:"this"  %>   
+                <%= link_to "Home", {controller: "homepage",action:"show"} %>   
             </li>
             <li>
             <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
@@ -108,14 +172,15 @@
         </div> 
     </nav>  
     <% end %>
-    <div style="display: flex; flex-direction:column-reverse;  margin-top: 12%;">
-        <h2><a href=team.html  style="margin-left: 10%;font-weight: bold; color: rgb(27, 139, 105); text-decoration: none; font-family:Arial, Helvetica, sans-serif; font-size: 38px;">Il team</a></h2>
-    </div>
-    <div class="bio-name">  
+    <h2 id="team-bio"><a href=team.html>Il team</a></h2>
+    <div style="display: flex; flex-direction:column-reverse; background-image: url(img/17973908.jpg); height: 30vh;">
         
-        <h1 style="color: #04044c; font-weight: bold; margin-left: 38%;">Dottor. David Hansson</h1>
-        <div class="bio-img8"></div>
     </div>
+    <div class="fluid bio-name">  
+        <h1 class="bio-name-h1" >Dottor.David Hansson</h1>
+        <div class="bio-img8 bio-img"></div>
+    </div>
+    
     <div >
         <div class="bio-text container">
         <div >
@@ -186,3 +251,4 @@ Basecamp is the saner, organized way to manage projects and communicate company-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
     <%= javascript_pack_tag 'slide.js' %>
+    <%= javascript_pack_tag 'bio.js' %>
