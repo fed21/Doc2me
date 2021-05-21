@@ -1,5 +1,5 @@
 class Visit < ApplicationRecord
-    belong_to :user
-    belong_to :kid
-    belong_to :doctor
+    belongs_to :user
+    belongs_to :kid
+    belongs_to :doctor
 end

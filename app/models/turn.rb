@@ -1,3 +1,3 @@
 class Turn < ApplicationRecord
-    belong_to :doctor
+    belongs_to :doctor
 end
