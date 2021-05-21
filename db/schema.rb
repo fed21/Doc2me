@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_142104) do
+ActiveRecord::Schema.define(version: 2021_05_21_142447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,29 @@ ActiveRecord::Schema.define(version: 2021_05_19_142104) do
     t.index ["reset_password_token"], name: "index_doctors_on_reset_password_token", unique: true
   end
 
+  create_table "kids", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.bigint "user_id"
+    t.string "birth_place"
+    t.date "birth_date"
+    t.string "sesso"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_kids_on_user_id"
+  end
+
+  create_table "turns", force: :cascade do |t|
+    t.bigint "doctor_id"
+    t.datetime "start"
+    t.datetime "end"
+    t.integer "day"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["doctor_id", "day"], name: "index_turns_on_doctor_id_and_day", unique: true
+    t.index ["doctor_id"], name: "index_turns_on_doctor_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -46,12 +69,12 @@ ActiveRecord::Schema.define(version: 2021_05_19_142104) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "nome"
     t.string "cognome"
     t.string "telefono"
@@ -59,4 +82,23 @@ ActiveRecord::Schema.define(version: 2021_05_19_142104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "visits", force: :cascade do |t|
+    t.bigint "doctor_id"
+    t.datetime "data_ora"
+    t.string "tipo_visita"
+    t.string "stato_visita"
+    t.bigint "user_id"
+    t.bigint "kid_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["doctor_id"], name: "index_visits_on_doctor_id"
+    t.index ["kid_id"], name: "index_visits_on_kid_id"
+    t.index ["user_id"], name: "index_visits_on_user_id"
+  end
+
+  add_foreign_key "kids", "users"
+  add_foreign_key "turns", "doctors"
+  add_foreign_key "visits", "doctors"
+  add_foreign_key "visits", "kids"
+  add_foreign_key "visits", "users"
 end
