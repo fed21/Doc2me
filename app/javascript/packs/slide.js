@@ -6,7 +6,7 @@ $(document).ready(function(){
           wH = $(window).height(),
           wS = $(this).scrollTop();
       if (wS > (hT+hH/2-wH)){
-          $("#img-home-team").animate({left: '52%'}, 'slow');
+          $("#img-home-team").animate({left: '52%'}, {duration: 1700});
       }
    });
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
           wH = $(window).height(),
           wS = $(this).scrollTop();
       if (wS > (hT+hH/2-wH)){
-          $("#img-home-chi").animate({right: '12%'}, 'slow');
+          $("#img-home-chi").animate({right: '12%'}, {duration: 1700});
       }
    });
 });

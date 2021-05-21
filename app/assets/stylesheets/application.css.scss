@@ -403,6 +403,7 @@
        text-decoration: underline; 
        display: flex;
        text-align: center;
+       
    }
    
    .team-text{
@@ -461,6 +462,7 @@
            flex-wrap: wrap;
            flex-direction: column;
            align-content: center; 
+           
        }
        .urgenza-text{
            width: 100%;
@@ -504,7 +506,7 @@
        .team-flex{
            height: 100%;
            display: flex;
-           flex-direction: column;
+           flex-direction: row;
            align-content: center;
        }
    
@@ -524,6 +526,7 @@
        .img-logo{
            display: none;
        }
+       
    }
    
    @media screen and (max-width: 760px) {
@@ -571,11 +574,12 @@
        }
    
        .father-team{
-           margin-right: 95%;
+           
+           margin-left:10%;
        }
        
        .team-text{
-           margin-left: -10%;
+           margin-left: 10%;
        }
    
        .about-text{
@@ -783,31 +787,7 @@
    }
    
    /*contatti*/
-   /*
-   .contact{
-       margin-top: 2%; margin-bottom: 1%;
-       background-color:white ;
-       width: 50%; height: 550px;
-       
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-   }
-   .contact-item1{
-       height: 100%;
-       
-       display: flex;
-       flex-direction: column;
-       width: 40%;
-   }
-   .contact-item20{
-       margin-top: 1%;
-       margin-left: 1%;
-       display: flex;
-       flex-direction: column;
-       width: 60%;
-   }
-   */
+
    .contact-item2{
        border-radius: 10px;
        margin: 0.25em;
@@ -822,6 +802,13 @@
        margin-left: 30%; ;
    }
    
+   #cover-contatti1{
+    margin-left: 15vh; margin-top: 11%; margin-bottom: 10.5%;
+   }
+
+   #cover-contatti2{
+    margin-left: 15vh; margin-top: 11%; margin-bottom: 10.5%;
+}
    .mail-box{
        background-color:#8ce4c2cc;
        
@@ -835,7 +822,8 @@
        margin-top: 2%; margin-bottom: 2%;
    }
    
-   @media screen and (max-width: 760px) {
+   @media screen and (max-width: 400px) {
+   
        #form-contatti{
            padding: 3%;
        }
@@ -866,7 +854,8 @@
    }
    */
    .p-social{
-       margin-top: 4%;
+       margin-top:4%;
+       margin-left:2%;
    }
    
    .social-img{
@@ -1129,6 +1118,9 @@
      }
    /* docprofile bio */
   
+   #bio-name-text{
+       display:none;
+   }
 
    #team-bio{
     margin-left: 10%;  
@@ -1171,9 +1163,7 @@
    }
    .bio-img{
    
-    margin-left: 110%;
-    
-
+       margin-left: 110%;
     }
    
    .bio-img1{
@@ -1182,7 +1172,6 @@
        width: 280px; height: 280px;
        background-image: asset-url("gauss.jpg");
        background-size: cover;
-       
        border: 2px solid #2e2e69;
    
    }
@@ -1249,6 +1238,15 @@
     background-size: cover;
     
     border: 2px solid #2e2e69;
+   }
+   @media screen and (max-width:1568px){
+    #bio-name-text{
+        display:block;
+    }
+    .bio-name-h1{
+        display:none;
+
+    }
    }
    /*faq section*/ 
    
@@ -1369,13 +1367,16 @@
        }
    }
    
-   @media screen and (max-width: 764px) {
+   @media screen and (max-height:1000px) {
        #map-1{
            display: none;
        }
        #map-2{
            display: block;
-           margin-bottom: 30vh;
+           margin-top:2ch;
+           margin-bottom:2ch;
+           
+           
        }
        
    }
