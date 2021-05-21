@@ -35,8 +35,6 @@ document.getElementById("sosinvio").addEventListener("mouseover",function(event)
           alert("Devi inserire un indirizzo mail corretto");
           return false;
        }
-    
-       
+ 
     })
-    //-->
    

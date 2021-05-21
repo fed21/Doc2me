@@ -1,20 +1,34 @@
 $(document).ready(function () {
-    var show=1;
+  
     var show=0;
-    $('#disp').click(function(){
-        $('#disp-panel').show();
-        if (show==0){
+    
+    var data_valid =/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+   
+$('#disp').click(function(){
+        var date= document.getElementById("reservationDate").value;
+        console.log(date);
+       
+        if(show==0){
+
+            if (!$("#reservationDate").val() || (!data_valid.test(date)) ){
+            alert("seleziona una data prima di continuare");
+            }
+    
+            else{
             $('#disp-panel').show();
             show=1;
             console.log(show);
-        }
-      else{
+            }
 
+        }  
+
+        else{
             $('#disp-panel').hide();
             show=0;
       }  
-       
-        
-        console.log(show);
     });
 });
+
+
+
+    

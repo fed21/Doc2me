@@ -172,13 +172,13 @@
         </div> 
     </nav>  
     <% end %>
-    <div style="display: flex; flex-direction:column-reverse;  margin-top: 12%;">
-        <h2><a href=team.html  style="margin-left: 10%;font-weight: bold; color: rgb(27, 139, 105); text-decoration: none; font-family:Arial, Helvetica, sans-serif; font-size: 38px;">Il team</a></h2>
-    </div>
-    <div class="bio-name">  
+    <h2 id="team-bio"><a href=team.html>Il team</a></h2>
+    <div style="display: flex; flex-direction:column-reverse; background-image: url(img/17973908.jpg); height: 30vh;">
         
-        <h1 style="color: #04044c; font-weight: bold; margin-left: 38%;">Dottor. Robert Kahn</h1>
-        <div class="bio-img6"></div>
+    </div>
+    <div class="fluid bio-name">  
+        <h1 class="bio-name-h1" >Dottor. Robert Kahn</h1>
+        <div class="bio-img6 bio-img"></div>
     </div>
     <div >
         <div class="bio-text container">
@@ -256,3 +256,4 @@ Il 26 maggio 2006 l'Università di Pisa gli ha conferito, insieme a Vinton Cerf,
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
     <%= javascript_pack_tag 'slide.js' %>
+    <%= javascript_pack_tag 'bio.js' %>
