@@ -13,7 +13,12 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+  #Per invio email in locale 
   config.action_mailer.default_url_options = { host:'localhost', port: 3000} 
+  #Per invio email in heroku
+  #config.action_mailer.default_url_options = {:host=>'sendgridproof.herokuapp.com'}
+  
+  
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?

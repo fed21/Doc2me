@@ -14,7 +14,13 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
+
+  #Per email in locale
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+
+  #Per email in heroku
+  #config.action_mailer.default_url_options = {:host=>'sendgridproof.herokuapp.com'}
+  
   config.action_controller.perform_caching = true
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
