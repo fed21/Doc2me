@@ -197,6 +197,7 @@
                     Richiedi una consulenza online con uno dei nostri medici.
                     Inserisci i dati richiesti ,scegli quando vuoi che la visita avvenga e invia la richiesta!
                 </p>
+                <% if user_signed_in?  %>
                 <div id="richiedi1">
                     <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
                       <!--vue js proprietà per transizione-->
@@ -229,6 +230,10 @@
                         </div>
                     </transition>
                 </div>
+                
+                <% else %> 
+                <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                <% end %>
             </div>
         </div>
         <div class="card">
@@ -242,7 +247,11 @@
 
                  </p>
                 <div >
+                   <% if user_signed_in?  %>
                     <button type="button"class="nav-mybutton" onclick="window.location.href='disponibilita.html'">disponibilità</button>
+                    <%else%>
+                    <button type="button"class="nav-mybutton">disponibilità</button>
+                    <%end%>
                 </div>
             </div>
         </div>
@@ -256,6 +265,7 @@
                     Richiedi una visita a domicilio con uno dei nostri medici. Inserisci il tuo indirizzo, il giorno, l'ora e attendi
                    la conferma per email dal medico!
                 </p>
+                <% if user_signed_in?  %>
                 <div id="richiedi2">
                     <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
                       <!--vue js proprietà per transizione-->
@@ -291,6 +301,9 @@
                         </div>
                     </transition>
                 </div>
+                <% else %> 
+                <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                <% end %>
             </div>
         </div>
     </section>
