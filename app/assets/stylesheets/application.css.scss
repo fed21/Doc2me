@@ -1385,47 +1385,78 @@
    }
    
    /*profile*/
+
+#profilo-card{
+   padding: 3%; padding-left: 7%; 
+    margin-bottom: 2%; margin-top: 33vh; margin-left: 150%;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+#profile-header{
+    margin-top:-20%; 
+    color: #04044c; 
+    position: relative; 
+    margin-left: 1%;
+}
+
+.ul-profile{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.li-2{
+    margin-left: 14%;
+}
+
+#h-profile{
+    background-color: #b1c9ce; 
+    height: 30vh;
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .ul-profile{
+        margin-top: -2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .li-2{
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #h-profile{
+        height: 40vh;
+    }
+
+    #profilo-card {
+        margin-right: 5%;
+        margin-left: 148%;
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+    #profile-header{
+        display: none;
+    }
    
-   .ul-profile{
-       margin-top: 2%;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-   }
-   
-   
-   .li-2{
-       margin-left: 14%;
-   }
-   
-   .contact-profile{
-       display: inline;
-       color: #04044c;
-       text-align: center;
-       margin: 2%;
-   }
-   
-   .button-prof{
-       margin-right: 52vh;
-   }
-   
-   @media screen and (max-width: 1200px) {
-       .button-prof{
-           margin-right: auto;
-       }
-       .ul-profile{
-           margin-top: 2%;
-           display: flex;
-           flex-direction: column;
-           flex-wrap: wrap;
-           align-items: flex-start;
-           align-content: flex-start;
-       }
-       .li-2{
-           margin-left: 0%;
-       }
-       
-   }
+}
+
+@media screen and (max-width: 415px) {
+    #h-profile{
+        height: 50vh;
+    }
+}
    
    /*prenotazione*/
    

@@ -15,8 +15,8 @@ class HomepageController < ApplicationController
         if (@contact.save)
             #send email
            SosMailer.avviso_form(@contact).deliver
-
-            redirect_to "/sos" , notice: "OK SALVATA FORM"
+              
+            redirect_to "/sos"
         
         else
             render :new
@@ -26,5 +26,17 @@ class HomepageController < ApplicationController
 
 
     end
+     
+    def profilo
+        if (user_signed_in?)
+            
+        
+        elsif (doctor_signed_in?)
+           
+
+        else
+            redirect_to "/"
+        end
+    end 
     
 end

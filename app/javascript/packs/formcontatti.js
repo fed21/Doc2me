@@ -4,6 +4,7 @@ document.getElementById("contattiinvio").addEventListener("mouseover",function(e
     // Variabili associate ai campi del modulo
        var nome=document.getElementById("firstname").value;
        var email = document.getElementById("email").value;
+       var testo = document.getElementById("text").value;
 
        var nome_valid = /^([A-Za-z ]{1,})+$/;
        if ((nome == "") || (nome == "undefined") || (!nome_valid.test(nome))) {
@@ -19,6 +20,14 @@ document.getElementById("contattiinvio").addEventListener("mouseover",function(e
           alert("Devi inserire un indirizzo mail corretto");
           return false;
        }
- 
+       
+       if (testo == "" || testo == "undefined")
+       {
+         alert("Devi inserire un messaggio da inviarci!");
+         return false;
+       }
+
+
+
     })
    

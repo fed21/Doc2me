@@ -1,0 +1,294 @@
+<body id="body-home" style="overflow-x: hidden;">
+    <% if user_signed_in?  %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="/profilo" class="this">Profilo</a>
+            </li> 
+            <li>
+                <a  href="/">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_user.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_user.cognome%></span>
+                <span style="font-size:15px;">utente</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+
+    <% elsif doctor_signed_in?%> 
+     <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to "/" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to "/" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav logged-nav">
+            <li>
+                <a  href="/">Home</a>
+            </li>
+            <li>
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a  href="/FAQ">FAQ</a>
+            </li> 
+            <li>
+                <a  href="/profilo" class="this">Profilo</a>
+            </li> 
+            <li>
+                <a  href="/">Prenotazioni</a>
+            </li> 
+            <li id="but-logged">
+                <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            </li>
+        </ul>
+        <div style="display: flex;" class="logged-nav">
+            <div style="margin-right: 10%; margin-top: 5%; color: #04044c; font-weight: bold;">    
+                <span style="font-size:20px; text-transform:capitalize;"><%= current_doctor.nome%></span>
+               <span  style="font-size:20px;text-transform:capitalize;"> <%= current_doctor.cognome%></span>
+                <span style="font-size:15px;">dottore</span>
+            </div>
+            <div style=" margin-top: 5%" class="logged-nav">
+                <!-- <%= link_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton"%>
+                <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='index.html'">logout</button> -->
+               <%= button_to 'Logout', destroy_user_session_path, :method => :delete  , class:"nav-mybutton" , type: "button" , id: "nav-mybutton" , style:"width:200%;height:6ch;"%>
+            </div>
+        </div>   
+        <div class="burger" id="logged-burger"> 
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>    
+    </nav>
+
+    <% else %>
+    <nav>
+        <ul class="ul-nav-logo">
+            <li>
+                <div class="logo-image">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <%=image_tag("Icon Doctor.png", alt: "Example Image" , class:"img-fluid",style:"margin-bottom:-10%;")%>
+                    <% end %>
+                 </div>
+            </li>
+            <li>
+                <div  class="mylogo">
+                    <%= link_to controller: "homepage",action:"show" do %>
+                    <p> DOC2ME </p>
+                    <% end %>
+                </div>
+            </li>
+        </ul>
+        <ul class="ul-nav">
+            <li>
+                <%= link_to "Home", {controller: "homepage",action:"show"}%>   
+            </li>
+            <li>
+            <!-- per il momento ho mappato servizi in /servizi poi vedremo -->
+                <a href="/servizi">Servizi</a>
+            </li>
+            <li>
+                <a href="/team">Il team</a>
+            </li>
+            <li>
+                <a href="/contatti">Contatti</a>
+            </li>
+            <li>
+                <a href="/FAQ">FAQ</a>
+            </li>  
+            <li id="but">
+                <a href="<%= user_session_path%>">Login</a>
+            </li>
+        </ul>
+        <button type="button"class="nav-mybutton" id="nav-mybutton" onclick="window.location.href='<%= user_session_path%>'">login</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </nav>  
+    <% end %>
+
+
+<% if user_signed_in? %>
+<div class="header" id="h-profile">
+        <br>
+        <h1 style="margin-top: 3%;">Il tuo profilo</h1>
+        <div class="container" >
+            <p>
+               Nel box qui sotto puoi trovare tutti i dati forniti a doc2me in fase di registrazione.
+               I tuoi dati sono preziosi per noi per poterti offrire la miglior esperienza possibile e 
+               non vengono impiegati al di fuori delle pure necessita di funzionamento dei servizi offerti
+               da DOC2ME.<br> Per qualsiasi dubbio sul trattamento dei tuoi dati puoi contattarci tramite l'apposita
+               form che puoi trovare nella sezione contatti!
+            </p> 
+        </div>
+    </div>
+    <h1 id="profile-header"> I tuoi dati</h1>
+     
+    <div class="container">
+        <div class="row  py-5">
+            <div   class="col-8 md-auto card " id="profilo-card">
+                <div style="margin-bottom:2%;">
+                    <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; margin-top: 1%; text-transform:capitalize;"><%=current_user.nome%> <span style="text-transform:capitalize;"> <%=current_user.cognome%> </span></h1>
+                </div>
+            
+                <ul class="ul-profile">
+                    <li> <b>Telefono:</b> <%=current_user.telefono%> </li>
+                    <li class="li-2"> <b>Email:</b> <%=current_user.email%></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h5 style="text-align: center; margin-bottom: 4%; text-decoration: underline;">doc2me.app@gmail.com</h5>
+    
+    <%elsif doctor_signed_in? %>
+    <div class="header" id="h-profile">
+        <br>
+        <h1 style="margin-top: 3%;">Il tuo profilo</h1>
+        <div class="container" >
+            <p>
+               Nel box qui sotto puoi trovare tutti i dati forniti a doc2me in fase di registrazione.
+               I tuoi dati sono preziosi per noi per poterti offrire la miglior esperienza possibile e 
+               non vengono impiegati al di fuori delle pure necessita di funzionamento dei servizi offerti
+               da DOC2ME.<br> Per qualsiasi dubbio sul trattamento dei tuoi dati puoi contattarci tramite l'apposita
+               form che puoi trovare nella sezione contatti!
+            </p> 
+        </div>
+    </div>
+    <h1 id="profile-header"> I tuoi dati</h1>
+     
+    <div class="container">
+        <div class="row  py-5">
+            <div   class="col-8 md-auto card " id="profilo-card">
+                <div style="margin-bottom:2%;">
+                    <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; margin-top: 1%;text-transform:capitalize;"><%=current_doctor.nome%><span style="text-transform:capitalize;"> <%=current_doctor.cognome%> </span></h1>
+                </div>
+            
+                <ul class="ul-profile">
+                    <li> <b>Telefono:</b> <%=current_doctor.telefono%></li>
+                    <li class="li-2"> <b>Email:</b> <%=current_doctor.email%></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h5 style="text-align: center; margin-bottom: 4%; text-decoration: underline;">doc2me.app@gmail.com</h5>
+    <%else%>
+    
+    <%end%>
+    
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h4>Home</h4>
+                    <ul class="ul-footer">
+                        <li><a href="sos.html">go</a></li>
+                        <li><a href="servizi.html">come funziona</a></li>
+                        <li><a href="team.html">il team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>team</h4>
+                    <ul class="ul-footer">
+                        <li><a href="team.html">i nostri medici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servizi</h4>
+                    <ul class="ul-footer">
+                        <li><a href="disponibilita.html">le visite</a></li>
+                        <li><a href="servizi.html">tariffe</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>contatti</h4>
+                    <ul class="ul-footer">
+                        <li><a href="contatti.html">informazioni</a></li>
+                        <li><a href="contatti.html">lavora con noi</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FAQ</h4>
+                    <ul class="ul-footer">
+                        <li><a href="#">terms</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dove siamo</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <%= javascript_pack_tag 'index.js' %>
+     <%= javascript_pack_tag 'profile.js' %>
+    
