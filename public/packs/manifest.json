@@ -50,6 +50,14 @@
         "/packs/js/doc-67f94a45dbc271d69d29.js.map"
       ]
     },
+    "formcontatti": {
+      "js": [
+        "/packs/js/formcontatti-32e9128fe283da270fec.js"
+      ],
+      "js.map": [
+        "/packs/js/formcontatti-32e9128fe283da270fec.js.map"
+      ]
+    },
     "formsos": {
       "js": [
         "/packs/js/formsos-ea6b61ff152a3530755a.js"
@@ -107,6 +115,8 @@
       ]
     }
   },
+  "formcontatti.js": "/packs/js/formcontatti-32e9128fe283da270fec.js",
+  "formcontatti.js.map": "/packs/js/formcontatti-32e9128fe283da270fec.js.map",
   "formsos.js": "/packs/js/formsos-ea6b61ff152a3530755a.js",
   "formsos.js.map": "/packs/js/formsos-ea6b61ff152a3530755a.js.map",
   "index.js": "/packs/js/index-1ccb2d70d27f5deadcf7.js",
