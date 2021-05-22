@@ -60,10 +60,10 @@
     },
     "formsos": {
       "js": [
-        "/packs/js/formsos-ea6b61ff152a3530755a.js"
+        "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js"
       ],
       "js.map": [
-        "/packs/js/formsos-ea6b61ff152a3530755a.js.map"
+        "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js.map"
       ]
     },
     "index": {
@@ -117,8 +117,8 @@
   },
   "formcontatti.js": "/packs/js/formcontatti-32e9128fe283da270fec.js",
   "formcontatti.js.map": "/packs/js/formcontatti-32e9128fe283da270fec.js.map",
-  "formsos.js": "/packs/js/formsos-ea6b61ff152a3530755a.js",
-  "formsos.js.map": "/packs/js/formsos-ea6b61ff152a3530755a.js.map",
+  "formsos.js": "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js",
+  "formsos.js.map": "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js.map",
   "index.js": "/packs/js/index-1ccb2d70d27f5deadcf7.js",
   "index.js.map": "/packs/js/index-1ccb2d70d27f5deadcf7.js.map",
   "jquery.js": "/packs/js/jquery-269bfb713f79fb0b319c.js",

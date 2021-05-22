@@ -2,7 +2,7 @@
 document.getElementById("contattiinvio").addEventListener("mouseover",function(event){
     
     // Variabili associate ai campi del modulo
-       var nome=document.getElementById("firstName").value;
+       var nome=document.getElementById("firstname").value;
        var email = document.getElementById("email").value;
 
        var nome_valid = /^([A-Za-z ]{1,})+$/;

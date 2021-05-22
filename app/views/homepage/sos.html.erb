@@ -183,7 +183,7 @@
                 <!-- Registeration Form -->
                 <div class=" login" style=" width:70%; margin-left:16%; margin-top:5%;margin-bottom:5%;">
                     
-                   <form accept-charset="UTF-8" method="post">
+                   <%= form_with scope: @contact, url: "/oksos", local: true do |f| %>
                             
                         
                         <div class="row align-items-center" >
@@ -200,25 +200,25 @@
                             <!-- First Name -->
                             
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                <input  id="firstName" type="text" name="firstname" placeholder="Nome" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                                <input  id="firstname" type="text" name="contact[firstname]" placeholder="Nome" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
                             </div>
         
                             <!-- Last Name -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                <input  id="lastName" type="text" name="lasttname" placeholder="Cognome" class="form-control bg-white border-left-0 border-md" style="text-align: start" />
+                                <input  id="lastname" type="text" name="[contact]lastname" placeholder="Cognome" class="form-control bg-white border-left-0 border-md" style="text-align: start" />
                         
                             </div>
         
                             <!-- Email Address -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
                                 
-                         <input  id="email" type="text" name="email" placeholder="Email" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                         <input  id="email" type="text" name="contact[email]" placeholder="Email" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
                             
                             </div>
         
                             <!-- Telephone -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                 <input id="tel" type="text" name="tel" placeholder="Telefono" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                                 <input id="tel" type="text" name="contact[tel]" placeholder="Telefono" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
                             </div>
 
                             <!-- Submit Button -->
@@ -229,12 +229,14 @@
                             </div>
         
                         </div>
-                 </form>
+                <% end %>
                 </div>
             </div>
         </div>
     </main>
    
+
+
     <footer class="footer">
         <div class="container-footer">
             <div class="row-footer">

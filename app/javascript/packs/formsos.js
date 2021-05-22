@@ -2,8 +2,8 @@
 document.getElementById("sosinvio").addEventListener("mouseover",function(event){
     
     // Variabili associate ai campi del modulo
-       var nome=document.getElementById("firstName").value;
-       var cognome=document.getElementById("lastName").value;
+       var nome=document.getElementById("firstname").value;
+       var cognome=document.getElementById("lastname").value;
        var telefono = document.getElementById("tel").value;
        var email = document.getElementById("email").value;
 
