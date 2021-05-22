@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   #ogni pagina ha il suo controller e la view associata è visualizzata pur non esistendo il controller stesso poichè eredita ApplicationController
   get '/contatti' => 'homepage#contatti'
+  post '/okcontatti' => 'homepage#createcontatti'
+
   get '/servizi' => 'homepage#servizi'
   get '/FAQ' => 'homepage#FAQ'
   get '/team' => 'homepage#team'
