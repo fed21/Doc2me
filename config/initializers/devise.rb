@@ -312,5 +312,7 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
+  #Bisogna settare da Google console come url di redirezionamento Heroku e non localhost
+  #Ad ora funziona solo da Heroku!
   config.omniauth :google_oauth2, '998775144753-a0bta74t8r2tqd40g7v2rs19mjkk5d9c.apps.googleusercontent.com', 'MtGYwVUV3RgF1q0BUw3eppGB', {}
 end
