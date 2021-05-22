@@ -12,7 +12,7 @@ $('#disp').click(function(){
         if(show==0){
 
             if (!$("#reservationDate").val() || (!data_valid.test(date)) ){
-            alert("Seleziona una data prima di continuare");
+            alert("Seleziona una data valida prima di continuare");
             }
     
             else{
