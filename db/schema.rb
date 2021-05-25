@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_203505) do
+ActiveRecord::Schema.define(version: 2021_05_25_164750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-#tabella per form di sos
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -45,7 +44,6 @@ ActiveRecord::Schema.define(version: 2021_05_22_203505) do
     t.index ["reset_password_token"], name: "index_doctors_on_reset_password_token", unique: true
   end
 
-#tabella per form di contatti
   create_table "forms", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -64,6 +62,14 @@ ActiveRecord::Schema.define(version: 2021_05_22_203505) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_kids_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.boolean "paid", default: false
+    t.string "token"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "turns", force: :cascade do |t|
@@ -87,12 +93,12 @@ ActiveRecord::Schema.define(version: 2021_05_22_203505) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "nome"
     t.string "cognome"
     t.string "telefono"
