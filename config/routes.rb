@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   get '/contatti' => 'homepage#contatti'
   post '/okcontatti' => 'homepage#createcontatti'
 
-  get '/servizi' => 'homepage#servizi'
+  get '/servizi' => 'visits#servizi'
+  post '/okservizi1' => 'visits#createservizi1'
+  post '/okservizi2' => 'visits#createservizi2'
+
   get '/FAQ' => 'homepage#FAQ'
   get '/team' => 'homepage#team'
   

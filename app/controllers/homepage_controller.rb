@@ -16,7 +16,7 @@ class HomepageController < ApplicationController
 
 
     def createcontatti
-        @form=Form.new(form_params)
+        @form=Form.new(form_params) 
         if (@form.save)
             #send email
            ContattiMailer.avviso_form1(@form).deliver

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2021_05_25_164750) do
+=======
+ActiveRecord::Schema.define(version: 2021_05_27_153618) do
+>>>>>>> Stashed changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,11 +78,11 @@ ActiveRecord::Schema.define(version: 2021_05_25_164750) do
 
   create_table "turns", force: :cascade do |t|
     t.bigint "doctor_id"
-    t.datetime "start"
-    t.datetime "end"
     t.integer "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "start"
+    t.integer "end"
     t.index ["doctor_id"], name: "index_turns_on_doctor_id"
   end
 
