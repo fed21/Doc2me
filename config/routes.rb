@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get '/docprofile8' => 'homepage#docprofile8'
 
   devise_for :users, controllers: { omniauth_callbacks:
-  'users/omniauth_callbacks' }
+  'users/omniauth_callbacks'}
 
   
   devise_for :doctors, controllers: {  sessions: 'doctors/sessions' ,
@@ -38,6 +38,10 @@ Rails.application.routes.draw do
                                         shared: 'doctors/shared', 
                                         unocks: 'doctors/unlocks',                                       
 }
+
+  resources :users do
+    resource :kids, only: [:create,:destroy]
+  end
    
   
   
