@@ -211,7 +211,7 @@
                                         <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
+                                        <input id="ora" type="time" min="08:00:00" max="20:00:00" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     
                                     <!-- figlio -->
@@ -235,7 +235,13 @@
                 
                 <% else %> 
                 <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
-                <% end %>
+                <% end %><br>
+                <% flash.each do |type, msg| %>
+                        <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
+                            <%= msg %>
+                        </div>
+                        <%end%>
+                        
             </div>
         </div>
         <div class="card">
@@ -274,32 +280,32 @@
                     <transition name="slide" appear>
                         <div class="modal modal2" v-if="showModal">
                             
-                            <form action="#" style="margin:1%;">
+                            <%= form_with scope: @visit, url: "/okservizi2", local: true do |f| %>
                                 <div class="row ">
                                     <!-- data e ora -->
                                     <div class="input-group col-lg-12 mb-4">
                                         <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
+                                        <input id="ora" type="time" name="ora" min="08:00:00" max="20:00:00" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <!-- inirizzo -->
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="indirizzo" type="indirizzo" name="indirizzo" placeholder="indirizzo" class="form-control bg-white border-left-0 border-md" required>
+                                        <input id="indirizzo" type="text" name="indirizzo" placeholder="indirizzo" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <!-- figlio -->
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-nome" type="text" name="figlio" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
+                                        <input id="figlio-nome" type="text" name="figlionome" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-cognome" type="text" name="figlio" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
+                                        <input id="figlio-cognome" type="text" name="figliocognome" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                 </div>
                                 <div style="margin-top: 3%; margin-left: 10%;">
                                     <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
                                     <button class="nav-mybutton" @click="showModal = false">Esci</button>
                                 </div>
-                            </form>
+                            <% end %>
                         </div>
                     </transition>
                 </div>
