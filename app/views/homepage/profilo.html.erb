@@ -192,7 +192,7 @@
      
     <div class="container">
         <div class="row  py-5">
-            <div   class="col-8 md-auto card " id="profilo-card">
+            <div   class="col-8 md-auto card profilo-card" >
                 <div style="margin-bottom:2%;">
                     <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; margin-top: 1%; text-transform:capitalize;"><%=current_user.nome%> <span style="text-transform:capitalize;"> <%=current_user.cognome%> </span></h1>
                 </div>
@@ -204,70 +204,75 @@
             </div>
         </div>
     </div>
-    <h5 style="text-align: center; margin-bottom: 4%; text-decoration: underline;">doc2me.app@gmail.com</h5>
+    
+    
+    <h1 style="text-align: center; color: #04044c; margin: 2%; ">I tuoi Figli</h1>
+    
+        
+        
     
     <% if @user.kids.empty? %>
-    <h3> No kids yet! </h3>
-    <% end %>
-
+    <h2 style="text-align: center; color: #04044c; margin: 2%; ">Non hai ancora aggiunto nessun figlio, clicca sul bottone per farlo!</h2>
+    <% else %>
+    
     <%@user.kids.each do |kid| %>
-	<p>
-		<bf>Name: </bf><%= kid.name %> <br>
-		<bf>Surname: </bf><%= kid.surname %> <br>
-	    <bf>Sesso: </bf><%=kid.sesso %> <br>
-        <bf>birth-date: </bf><%=kid.birth_date %> <br>
-        <bf>birth-place: </bf><%=kid.birth_place %> <br>
-    </p>
-
-	<p>
-  	<ul>
-  	
-  	<li> <%= link_to 'Elimina Figlio', user_kids_path(kid.user_id , kid),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
-	</li>
-	</ul>
-
+	
+    <div class="container">
+        <div class="row  ">
+            <div   class="col-8 md-auto card profilo-card" style="margin-top: 2vh;">
+                <div style="margin-bottom:2%;">
+                    <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; ; text-transform:capitalize;"><%= kid.name %> <span style="text-transform:capitalize;"> <%= kid.surname %>  </span></h1>
+                </div>
+            
+                <ul class="ul-profile">
+                    <li> <b>Sesso:</b> <%=kid.sesso %>  </li>
+                    <li class="li-3"> <b>Data di nascita:</b> <%=kid.birth_date %></li>
+                    <li class="li-3"> <b>Citta di nascita:</b> <%=kid.birth_place %></li>
+                    <li> <%= link_to 'Elimina Figlio', user_kids_path(kid.user_id , kid),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+	                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <% end %>
-
-
-    <h2> Aggiungi Figlio</h2>
-
-    <%= form_with model: [ @user, @user.kids.build ] do |form| %>
-    <p>
-        <%= form.label :name %><br>
-        <%= form.text_area :name %>
-    </p>
-    <p>
-        <%= form.label :surname %><br>
-        <%= form.text_area :surname %>
-    </p>
-    <p>
-        <%= form.label :sesso %><br>
-        <%= form.text_area :sesso %>
-    </p>
-    <p>
-        <%= form.label :birth_place %><br>
-        <%= form.text_area :birth_place %>
-    </p>
-
-    <p>
-        <%= form.label :birth_date %><br>
-        <%= form.date_field :birth_date %>
-    </p>
-
-    <p>
-        
-        <%= form.submit "Aggiungi Figlio" %>
-    </p>
-    <% end %>
-
-
-
-
-
-
-
+    <%end%>
+    
+    <div id="richiedi1">
+    <button type="button"class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
+        <!--vue js proprietà per transizione-->
+    <transition name="slide" appear>
+            <div class="modal modal4" v-if="showModal">
+                            
+                <%= form_with model: [ @user, @user.kids.build ] do |form| %>
+                    <div class="row ">
+                        <!-- form aggiungi figlio-->
+                        <div class="input-group col-lg-12 mb-4">
+                            <input id="name" type="text-area" name="name" placeholder="nome" class="form-control bg-white border-left-0 border-md" required>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <input id="surname" type="text-area" name="surname" placeholder="cognome" class="form-control bg-white border-left-0 border-md" required>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <input id="sesso" type="text-area" name="sesso" placeholder="sesso" class="form-control bg-white border-left-0 border-md" required>
+                        </div>       
+                        <div class="input-group col-lg-12 mb-4">
+                            <input id="birth_date" type="date" name="birth_date" placeholder="data di nascita" class="form-control bg-white border-left-0 border-md" required>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <input id="birth_place" type="text-area" name="birth_place" placeholder="citta di nascita" class="form-control bg-white border-left-0 border-md" required>
+                        </div>
+                    </div>
+                    <div style="margin-top: 3%; margin-left: 5%;">
+                        <button class="nav-mybutton" type="submit">Aggiungi</button>
+                        <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
+                    </div>
+                <% end %>
+            </div>
+        </transition>
+        </div>
+    <h5 style="text-align: center; margin-bottom: 4%; margin-top:2%; text-decoration: underline;">doc2me.app@gmail.com</h5>
     <%elsif doctor_signed_in? %>
     <div class="header" id="h-profile">
         <br>
@@ -351,6 +356,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
-     <%= javascript_pack_tag 'profile.js' %>
+    <%= javascript_pack_tag 'profile.js' %>
+    <%= javascript_pack_tag 'popup.js' %>
     

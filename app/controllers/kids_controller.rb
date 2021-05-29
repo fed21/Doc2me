@@ -16,7 +16,7 @@ class KidsController < ApplicationController
     end
     private
     def kids_params
-      p = params.require(:kid).permit(:name,:surname,:sesso, :birth_date, :birth_place)
+      p = params.permit(:name,:surname,:sesso, :birth_date, :birth_place)
       {:name=> p[:name], :surname=>p[:surname], :user_id=>session[:user_id],:sesso=>p[:sesso],
       :birth_date=>p[:birth_date],:birth_place=>p[:birth_place]}
     end

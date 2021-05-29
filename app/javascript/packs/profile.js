@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#profilo-card").animate({right: '132.5%'},{
+    $(".profilo-card").animate({right: '132.5%'},{
         duration: 2000
     });
     $("#profile-header").animate({top: '40%'},{
