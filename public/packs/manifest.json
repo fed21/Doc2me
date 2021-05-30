@@ -92,18 +92,18 @@
     },
     "popup": {
       "js": [
-        "/packs/js/popup-52bdbb90bef4793a35e2.js"
+        "/packs/js/popup-08f99bcbbf70470ddc79.js"
       ],
       "js.map": [
-        "/packs/js/popup-52bdbb90bef4793a35e2.js.map"
+        "/packs/js/popup-08f99bcbbf70470ddc79.js.map"
       ]
     },
     "profile": {
       "js": [
-        "/packs/js/profile-63840c9d44b71a785c90.js"
+        "/packs/js/profile-0dbdc0982a7fab9d6962.js"
       ],
       "js.map": [
-        "/packs/js/profile-63840c9d44b71a785c90.js.map"
+        "/packs/js/profile-0dbdc0982a7fab9d6962.js.map"
       ]
     },
     "slide": {
@@ -133,10 +133,10 @@
   "jquery.js.map": "/packs/js/jquery-269bfb713f79fb0b319c.js.map",
   "opacita.js": "/packs/js/opacita-2c188a8237607727eb5e.js",
   "opacita.js.map": "/packs/js/opacita-2c188a8237607727eb5e.js.map",
-  "popup.js": "/packs/js/popup-52bdbb90bef4793a35e2.js",
-  "popup.js.map": "/packs/js/popup-52bdbb90bef4793a35e2.js.map",
-  "profile.js": "/packs/js/profile-63840c9d44b71a785c90.js",
-  "profile.js.map": "/packs/js/profile-63840c9d44b71a785c90.js.map",
+  "popup.js": "/packs/js/popup-08f99bcbbf70470ddc79.js",
+  "popup.js.map": "/packs/js/popup-08f99bcbbf70470ddc79.js.map",
+  "profile.js": "/packs/js/profile-0dbdc0982a7fab9d6962.js",
+  "profile.js.map": "/packs/js/profile-0dbdc0982a7fab9d6962.js.map",
   "slide.js": "/packs/js/slide-efd2ab6ae81d57bc4bc4.js",
   "slide.js.map": "/packs/js/slide-efd2ab6ae81d57bc4bc4.js.map",
   "sos.js": "/packs/js/sos-86350e9b3b29641d836d.js",

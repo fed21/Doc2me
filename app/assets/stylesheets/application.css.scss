@@ -694,6 +694,21 @@
        overflow-x: hidden;
       }
       
+      #richiedi3 {
+        position: relative;
+    
+        overflow-x: hidden;
+       }
+    
+    input[type="date"]:before {
+        content: attr(placeholder) !important;
+        color: #aaa;
+        margin-right: 0.5em;
+    }
+    input[type="date"]:focus:before,
+    input[type="date"]:valid:before {
+    content: "";
+    }
     
    
    .modal {
@@ -1386,7 +1401,7 @@
    
    /*profile*/
 
-#profilo-card{
+.profilo-card{
    padding: 3%; padding-left: 7%; 
     margin-bottom: 2%; margin-top: 33vh; margin-left: 150%;
     display: flex;
@@ -1410,6 +1425,9 @@
 .li-2{
     margin-left: 14%;
 }
+.li-3{
+    margin-left: 5%;
+}
 
 #h-profile{
     background-color: #b1c9ce; 
@@ -1427,7 +1445,7 @@
         align-content: flex-start;
     }
 
-    .li-2{
+    .li-2 , .li-3 {
         margin-left: 0%;
     }
 }

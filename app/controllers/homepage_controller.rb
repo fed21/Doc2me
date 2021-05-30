@@ -54,6 +54,8 @@ class HomepageController < ApplicationController
      
     def profilo
         if (user_signed_in?)
+            @user=current_user
+            
             
         
         elsif (doctor_signed_in?)
