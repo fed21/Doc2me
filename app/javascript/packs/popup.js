@@ -21,3 +21,14 @@ new Vue({
     }
     
 })
+
+var v=new Vue({
+    /*lega all'elemento html richiedi l'oggetto vue creato con new */
+    el: '#richiedi3',
+    data () {
+        return {
+            showModal: false
+        }
+    }
+    
+})
