@@ -1,7 +1,22 @@
 class VisitsController < ApplicationController
+    
+    
     def servizi
        
     end 
+
+    def prenotazioni
+        if !user_signed_in? && !doctor_signed_in?
+            redirect_to '/'
+        else
+            if user_signed_in?
+                @p = Visit.where(:user_id => current_user.id)          
+            else
+                @p = Visit.where(:doctor_id => current_doctor.id)
+            end
+        end
+        
+    end
 
    
     def createservizi1
@@ -69,7 +84,7 @@ class VisitsController < ApplicationController
                 if son[0] != nil
 
                     sonid = son.first[:id]
-                    dora= DateTime.new(2021,06,07,10,00)
+                    dora= DateTime.new(2021,06,07,hou,00)
                     Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'domicilio', :user_id=>current_user.id, :kid_id=>sonid)                        
                     Formservizi2Mailer.servizi2_form2(@emaildoc, current_user, params[:date], @hour, params[:indirizzo]).deliver
                     redirect_to '/servizi'        
@@ -84,5 +99,11 @@ class VisitsController < ApplicationController
             redirect_to "/servizi", notice: "Inserire una nuova data"
         end
 
+    end
+
+    def destroy
+        @v=Visit.find(params[:format])
+        @v.destroy
+        redirect_to "/prenotazioni"
     end
 end
