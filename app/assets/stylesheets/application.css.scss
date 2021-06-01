@@ -915,6 +915,7 @@
        display: flex;
        flex-direction: column;
        text-align: center;
+       
    
    }
    
@@ -1413,6 +1414,7 @@
     width: 100%;
 }
 #profile-header{
+
     margin-top:-22%; 
     color: #04044c; 
     position: relative; 
@@ -1446,6 +1448,7 @@
 #h-profile{
     background-color: #b1c9ce; 
     height: 30vh;
+    margin-bottom: 5%;
 }
 
 @media screen and (max-width: 1200px) {
