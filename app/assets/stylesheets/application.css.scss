@@ -692,13 +692,17 @@
        align-items: center;
    
        overflow-x: hidden;
-      }
-      
-      #richiedi3 {
+    }
+
+    #richiedi2 {
         position: relative;
-    
         overflow-x: hidden;
-       }
+    }
+
+    #richiedi3 {
+        position: relative;
+        overflow-x: hidden;
+    }
     
     input[type="date"]:before {
         content: attr(placeholder) !important;
@@ -1409,10 +1413,20 @@
     width: 100%;
 }
 #profile-header{
-    margin-top:-20%; 
+    margin-top:-22%; 
     color: #04044c; 
     position: relative; 
     margin-left: 1%;
+    display: flex;
+    align-content: space-between;
+}
+
+#figli-header{
+    text-align: center; 
+    color: #04044c; 
+    margin: 2%; 
+    position: relative;
+    margin-left: -140%;
 }
 
 .ul-profile{

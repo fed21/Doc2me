@@ -21,7 +21,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # PUT /resource
    def update
-     super
+     user=current_user
+     name=params[:user][:nome]
+     cognome=params[:user][:cognome]
+     telefono=params[:user][:telefono]
+     user.update(nome: name , cognome: cognome , telefono: telefono)
+     redirect_to profilo_path(user)
      
    end
 
