@@ -9,11 +9,15 @@ Rails.application.routes.draw do
   post '/okcontatti' => 'homepage#createcontatti'
 
   get '/servizi' => 'visits#servizi'
+  delete '/servizi' => 'visits#destroy'
   post '/okservizi1' => 'visits#createservizi1'
   post '/okservizi2' => 'visits#createservizi2'
+  
 
   get '/FAQ' => 'homepage#FAQ'
   get '/team' => 'homepage#team'
+
+  get '/prenotazioni' => 'visits#prenotazioni'
   
   #sos form post e get
   get '/sos' => 'homepage#sos'

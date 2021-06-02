@@ -9,8 +9,9 @@ $('#disp').click(function(){
         var dataselezionata= document.getElementById("pickedDate");
         dataselezionata.innerHTML=date;
         
+        
         if(show==0){
-
+            
             if (!$("#reservationDate").val() || (!data_valid.test(date))){
             alert("Seleziona una data valida prima di continuare");
             }
@@ -18,7 +19,6 @@ $('#disp').click(function(){
             else{
             $('#disp-panel').show();
             show=1;
-           
             }
 
         }  
@@ -30,6 +30,8 @@ $('#disp').click(function(){
       }  
     });
 });
+
+
 
 
 

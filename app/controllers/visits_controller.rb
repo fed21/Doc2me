@@ -1,7 +1,22 @@
 class VisitsController < ApplicationController
+    
+    
     def servizi
        
     end 
+
+    def prenotazioni
+        if !user_signed_in? && !doctor_signed_in?
+            redirect_to '/'
+        else
+            if user_signed_in?
+                @p = Visit.where(:user_id => current_user.id)          
+            else
+                @p = Visit.where(:doctor_id => current_doctor.id)
+            end
+        end
+        
+    end
 
    
     def createservizi1
@@ -95,5 +110,11 @@ class VisitsController < ApplicationController
             redirect_to "/servizi", notice: "Inserire una nuova data"
         end
 
+    end
+
+    def destroy
+        @v=Visit.find(params[:format])
+        @v.destroy
+        redirect_to "/prenotazioni"
     end
 end
