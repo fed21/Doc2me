@@ -8,6 +8,11 @@ $(document).ready(function(){
     $("#profile-header").animate({left: '30.4%'},{
         duration: 1500
     });
-    $("#profile-header").css({'textShadow':'1px  1px 4px #78dbb5'})
+    $("#figli-header").animate({left: '73%'},{
+        duration: 2500
+    });
+    $("#profile-header").css({'textShadow':'1px  1px 4px #78dbb5'});
+    $("#figli-header").css({'textShadow':'1px  1px 4px #78dbb5'});
+
     
 });

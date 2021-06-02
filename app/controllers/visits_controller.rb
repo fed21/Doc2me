@@ -25,16 +25,22 @@ class VisitsController < ApplicationController
         @datereq = datereq
         @cu = current_user.id
         
+        
         if (datereq > d)
             @hour = params[:ora]
             hour=params[:ora].split(':')[0].to_i
+            minuti=params[:ora].split(':')[1].to_i
+            anno=params[:date].split("-")[0].to_i
+            mese=params[:date].split("-")[1].to_i
+            giorno=params[:date].split("-")[2].to_i
             wday= datereq.to_date.wday
-            turn=Turn.where(:day=> wday)
+           
             
             
-            turn=turn.where('turns.start <= ? AND turns.end > ?',hour,hour)
+            turn=Turn.where('turns.start <= ? AND turns.end > ? AND turns.day=?',hour,hour,wday)
+             
             if turn[0] != nil
-                iddoc=turn[0][:id]
+                iddoc=turn[0][:doctor_id]
                 
                 @emaildoc=Doctor.where(:id=> iddoc)[0][:email]
                 # current_user.id
@@ -43,10 +49,10 @@ class VisitsController < ApplicationController
                 if son[0] != nil
 
                     sonid = son.first[:id]
-                    dora= DateTime.new(2021,06,07,10,00)
+                    dora= DateTime.new(anno,mese,giorno,hour,minuti)
                     Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'online', :user_id=>current_user.id, :kid_id=>sonid)                        
                     Formservizi1Mailer.servizi1_form1(@emaildoc, current_user, params[:date], @hour).deliver
-                    redirect_to '/servizi'        
+                    redirect_to '/servizi', notice: "Visita prenotata con successo"       
                 else
                     redirect_to "/servizi", notice: "Nessun figlio trovato"
                 end           
@@ -66,16 +72,21 @@ class VisitsController < ApplicationController
         @datereq = datereq
         @cu = current_user.id
         
+        
         if (datereq > d)
             @hour = params[:ora]
             hour=params[:ora].split(':')[0].to_i
+            minuti=params[:ora].split(':')[1].to_i
+            anno=params[:date].split("-")[0].to_i
+            mese=params[:date].split("-")[1].to_i
+            giorno=params[:date].split("-")[2].to_i
             wday= datereq.to_date.wday
             turn=Turn.where(:day=> wday)
             
             
-            turn=turn.where('turns.start <= ? AND turns.end > ?',hour,hour)
+            turn=Turn.where('turns.start <= ? AND turns.end > ? AND turns.day=?',hour,hour,wday)
             if turn[0] != nil
-                iddoc=turn[0][:id]
+                iddoc=turn[0][:doctor_id]
                 
                 @emaildoc=Doctor.where(:id=> iddoc)[0][:email]
                 # current_user.id
@@ -84,10 +95,10 @@ class VisitsController < ApplicationController
                 if son[0] != nil
 
                     sonid = son.first[:id]
-                    dora= DateTime.new(2021,06,07,hou,00)
+                    dora= DateTime.new(anno,mese,giorno,hour,minuti)
                     Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'domicilio', :user_id=>current_user.id, :kid_id=>sonid)                        
                     Formservizi2Mailer.servizi2_form2(@emaildoc, current_user, params[:date], @hour, params[:indirizzo]).deliver
-                    redirect_to '/servizi'        
+                    redirect_to '/servizi' , notice: "Visita prenotata con successo"        
                 else
                     redirect_to "/servizi", notice: "Nessun figlio trovato"
                 end           

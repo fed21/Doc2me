@@ -2,10 +2,15 @@ class KidsController < ApplicationController
     def create
         
         @user = User.find(params[:user_id])
+        son = @user.kids.where('kids.name = ? AND kids.surname = ?', params[:kid][:name], params[:kid][:surname])
         
-    
-        @kid = @user.kids.create(kids_params)
-        redirect_to profilo_path(@user)
+        if son[0] == nil
+            @kid = @user.kids.create(kids_params)
+            redirect_to profilo_path(@user)
+        
+        else
+            redirect_to profilo_path(@user), notice: "Figlio gia esistente"
+        end
     end
 
     def destroy
@@ -21,3 +26,4 @@ class KidsController < ApplicationController
       :birth_date=>p[:birth_date],:birth_place=>p[:birth_place]}
     end
 end
+

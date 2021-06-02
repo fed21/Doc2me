@@ -177,7 +177,7 @@
 <% if user_signed_in? %>
 <div class="header" id="h-profile">
         <br>
-        <h1 style="margin-top: 3%;">Il tuo profilo</h1>
+        <h1 style="margin-top: 4%;">I tuoi dati</h1>
         <div class="container" >
             <p>
                Nel box qui sotto puoi trovare tutti i dati forniti a doc2me in fase di registrazione.
@@ -187,8 +187,42 @@
                form che puoi trovare nella sezione contatti!
             </p> 
         </div>
-    </div>
-    <h1 id="profile-header"> I tuoi dati</h1>
+</div>
+
+
+<div id='profile-header'>
+    <h1> Il tuo Profilo</h1>
+    <div id="richiedi2" style="width:50%; margin-left: 10%;">
+        <div>  
+            <button type="button"class="nav-mybutton"  @click="showModal = true" style="margin-left: 5%; width 50%;">Modifica</button>
+        </div>
+
+        <transition name="slide" appear>
+            <div class="modal modal3" v-if="showModal">
+                            
+                <%= form_with url: user_registration_path, model: @user do |form| %>
+                    <div class="row ">
+                        <!-- form modifica profilo -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <%= form.text_field :nome ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"nome"%>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <%= form.text_field :cognome ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome"%>
+                        </div>
+                        <div class="input-group col-lg-12 mb-4">
+                            <%= form.text_field :telefono ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome"%>
+                        </div>
+                    </div>
+                    <div style="margin-top: 3%; margin-left: 5%;">
+                        <button class="nav-mybutton" type="submit">Modifica</button>
+                        <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
+                    </div>
+                    
+                <% end %>
+            </div>
+        </transition>
+    </div>  
+</div>
      
     <div class="container">
         <div class="row  py-5">
@@ -204,14 +238,22 @@
             </div>
         </div>
     </div>
+      
     
-    
-    <h1 style="text-align: center; color: #04044c; margin: 2%; ">I tuoi Figli</h1>
+    <hr>
     
     <div id="richiedi3">  
-    <div style="display: flex;justify-content: center;align-items: center;">  
-    <button type="button"class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
+    <div style="display: flex; justify-content: center;align-items: center;" id="figli-header"> 
+        <h1 >I tuoi Figli</h1>
+        <button style="margin-left: 5%;" type="button"class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
     </div>
+    
+    <% flash.each do |type, msg| %>
+                        <div class="alert alert-info container" style="margin-top:10px; border-radius:10px; 
+                        display: flex;justify-content: center;align-items: center;">
+                            <%= msg %>
+                        </div>
+    <%end%>
     <% if @user.kids.empty? %>
     <h2 style="text-align: center; color: #04044c; margin: 2%; ">Non hai ancora aggiunto nessun figlio, clicca sul bottone per farlo!</h2>
     <% else %>
@@ -220,15 +262,15 @@
 	
     <div class="container">
         <div class="row  ">
-            <div   class="col-8 md-auto card profilo-card" style="margin-top: 2vh;">
+            <div   class="col-8 md-auto card profilo-card" style="margin-top: 0vh;">
                 <div style="margin-bottom:2%;">
                     <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; ; text-transform:capitalize;"><%= kid.name %> <span style="text-transform:capitalize;"> <%= kid.surname %>  </span></h1>
                 </div>
             
-                <ul class="ul-profile">
+                <ul class="ul-profile" style="display:flex; justify-content: center; flex-direction: column;">
                     <li> <b>Sesso:</b> <%=kid.sesso %>  </li>
-                    <li class="li-3"> <b>Data di nascita:</b> <%=kid.birth_date %></li>
-                    <li class="li-3"> <b>Citta di nascita:</b> <%=kid.birth_place %></li>
+                    <li> <b>Data di nascita:</b> <%=kid.birth_date %></li>
+                    <li> <b>Citta di nascita:</b> <%=kid.birth_place %></li>
                     <li> <%= link_to 'Elimina Figlio', user_kids_path(kid.user_id , kid),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
@@ -277,6 +319,7 @@
                         <button class="nav-mybutton" type="submit">Aggiungi</button>
                         <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
                     </div>
+                    
                 <% end %>
             </div>
         </transition>
@@ -286,7 +329,7 @@
     <%elsif doctor_signed_in? %>
     <div class="header" id="h-profile">
         <br>
-        <h1 style="margin-top: 3%;">Il tuo profilo</h1>
+        <h1 style="margin-top: 3%;">I tuoi dati</h1>
         <div class="container" >
             <p>
                Nel box qui sotto puoi trovare tutti i dati forniti a doc2me in fase di registrazione.
@@ -297,7 +340,7 @@
             </p> 
         </div>
     </div>
-    <h1 id="profile-header"> I tuoi dati</h1>
+    <h1 id="profile-header"> Il tuo profilo</h1>
      
     <div class="container">
         <div class="row  py-5">

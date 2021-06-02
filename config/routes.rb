@@ -33,8 +33,14 @@ Rails.application.routes.draw do
   get '/docprofile7' => 'homepage#docprofile7'
   get '/docprofile8' => 'homepage#docprofile8'
 
-  devise_for :users, controllers: { omniauth_callbacks:
-  'users/omniauth_callbacks'}
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
+                                    sessions: 'users/sessions' ,
+                                    registrations: 'users/registrations',
+                                    confirmations: 'users/confirmations',
+                                    mailer: 'users/mailer', 
+                                    passwords: 'users/passwords', 
+                                    shared: 'users/shared', 
+                                    unocks: 'users/unlocks', }
 
   
   devise_for :doctors, controllers: {  sessions: 'doctors/sessions' ,

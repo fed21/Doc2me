@@ -9,7 +9,7 @@ class Formservizi2Mailer < ActionMailer::Base
       @hour = hour
         
   
-      mail to: @emaildoc , subject: "RICHIESTA VISITA ONLINE DOC2ME"
+      mail to: @emaildoc , subject: "RICHIESTA VISITA DOMICILIO DOC2ME"
       
     end
   end
