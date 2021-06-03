@@ -1,3 +1,33 @@
+<script src="https://www.paypal.com/sdk/js?client-id=ASdq7iEyucp804GHdGDsuhL1htb1dVa39RFyDtYF5noSAIYc3l6_sLW0DtK3HGqLzl4GlChhdk-EBEle&currency=EUR"></script>
+<script>
+
+  paypal.Buttons({
+    env: 'sandbox',
+    createOrder: (data, actions) => {
+      var feffo = actions.order.create({
+        purchase_units: [{
+          description: "Prova Pagamento",
+          amount: {
+            value: '5.00'
+          }
+        }]
+      });
+      return feffo;  
+    },
+
+    onApprove: async (data, actions) => {
+      const or = await actions.order.capture();
+      const response = await fetch('capture_order', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "applicazione/json"
+        }
+      });
+      const responseData = await response.json();
+      
+    }
+  }).render('#paypal-button-container');
+</script>
 <body id="body-home" style="overflow-x: hidden;">
     <% if user_signed_in?  %>
     <nav>
@@ -184,11 +214,7 @@
     
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-2 icons-prenotazione">
-                <a href="servizi.html"><button class="nav-mybutton  button-prenotazione">Prenota visita</button></a>
-                <a href="#"><button class="nav-mybutton  button-prenotazione">Pagamenti visite</button></a>
-            </div>
-            <div class="col-lg-7 card card-prenotazione" >
+            <div class="col-lg-12 card card-prenotazione" >
                 <!-- Fixed header table-->
                 <div class="table-responsive">
                     <table class="table table-fixed">
@@ -198,6 +224,8 @@
                         <td>Dottore</td>
                         <td>Stato Visita</td>
                         <td>Tipo Visita</td>
+                        <td>Data</td>
+                        <td>Ora</td>
                         <td>Annulla visita</td>
                     </thead>
                     <tbody>
@@ -208,6 +236,8 @@
                         <td><%= Doctor.where(:id=>visita.doctor_id)[0][:nome] %> <%= Doctor.where(:id=>visita.doctor_id)[0][:cognome] %></td>
                         <td><%= visita.stato_visita %></td>
                         <td><%= visita.tipo_visita %></td>
+                        <td><% if  visita.data_ora.day < 10%>0<% end %><%= visita.data_ora.day %>-<% if  visita.data_ora.month < 10%>0<% end %><%= visita.data_ora.month %>-<%= visita.data_ora.year %></td>
+                        <td><% if  visita.data_ora.hour < 10%>0<% end %><%= visita.data_ora.hour %>:<% if  visita.data_ora.min < 10%>0<% end %><%= visita.data_ora.min %></td>
                         <td><%= link_to 'Annulla visita', servizi_path(visita.id , visita),
                             method: :delete,
                             data: { confirm: "Sei sicuro?" } %>
@@ -218,6 +248,24 @@
                     </table>
                 </div>
                 <!-- End -->
+            </div>
+            <div class="container" style="display: flex; justify-content: center; align-items: center;">
+                    <a href="servizi.html"><button class="nav-mybutton  button-prenotazione">Prenota visita</button></a>
+                    <div id="richiedi1">
+                                <button type="button"class="nav-mybutton"  @click="showModal = true">Pagamenti visite</button>
+                                  <!--vue js proprietà per transizione-->
+                                <transition name="slide" appear>
+                                    <div id="paypal-button-container"></div>
+                                    <div class="modal modal3" v-if="showModal">
+                                        
+                                        <button class="nav-mybutton" @click="showModal = false">Esci</button>
+                                    </div>
+                                </transition>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
             </div>
             <div class="col-lg-8 mx-auto" style="color: #04044c;">
                 <h2><b>-</b> &nbsp Paga con paypal o direttamente al dottore </h2>
@@ -237,126 +285,30 @@
     
     <div class="container py-5">
         <div class="row">
-            <div class="col-lg-2 icons-prenotazione">
-                <div id="richiedi1">
-                    <button type="button"class="nav-mybutton button-prenotazione"  @click="showModal = true">Aggiungi visita</button>
-                      <!--vue js proprietà per transizione-->
-                    <transition name="slide" appear>
-                        <div class="modal modal4" v-if="showModal">
-                            
-                            <form action="#" style="margin: 1%;">
-                                <div class="row ">
-                                    <!-- data e ora -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <!-- figlio -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-nome" type="text" name="figlio" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-cognome" type="text" name="figlio" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="tipo" type="text" name="tipo" placeholder="tipo di visita" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 3%; margin-left: 10%;">
-                                    <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
-                                    <button class="nav-mybutton" @click="showModal = false">Esci</button>
-                                </div>
-                            </form>
-                        </div>
-                    </transition>
-                </div>
-                <div id="richiedi2">
-                    <button type="button"class="nav-mybutton  button-prenotazione"  @click="showModal = true">Annulla visita</button>
-                      <!--vue js proprietà per transizione-->
-                    <transition name="slide" appear>
-                        <div class="modal modal3" v-if="showModal">
-                            
-                            <form action="#" style="margin: 1%;">
-                                <div class="row ">
-                                    <!-- data e ora -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <!-- figlio -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-nome" type="text" name="figlio" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-cognome" type="text" name="figlio" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 3%; margin-left: 10%;">
-                                    <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
-                                    <button class="nav-mybutton" @click="showModal = false">Esci</button>
-                                </div>
-                            </form>
-                        </div>
-                    </transition>
-                </div>
-                <div id="richiedi3">
-                    <button type="button"class="nav-mybutton  button-prenotazione"  @click="showModal = true">Modifica visita</button>
-                      <!--vue js proprietà per transizione-->
-                    <transition name="slide" appear>
-                        <div class="modal modal3" v-if="showModal">
-                            
-                            <form action="#" style="margin: 1%;">
-                                <div class="row ">
-                                    <!-- data e ora -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <!-- figlio -->
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-nome" type="text" name="figlio" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                    <div class="input-group col-lg-12 mb-4">
-                                        <input id="figlio-cognome" type="text" name="figlio" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 3%; margin-left: 10%;">
-                                    <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
-                                    <button class="nav-mybutton" @click="showModal = false">Esci</button>
-                                </div>
-                            </form>
-                        </div>
-                    </transition>
-                </div>
-            </div>
-            <div class="col-lg-7 card card-prenotazione" >
+            <div class="col-lg-12 card card-prenotazione" >
                 <!-- Fixed header table-->
                 <div class="table-responsive">
                     <table class="table table-fixed">
-                        <thead>
-                            <tr>
-                                <td>ID Visita</td>
-                                <td>Figlio</td>
-                                <td>Dottore</td>
-                                <td>Stato Visita</td>
-                                <td>Tipo Visita</td>
-                                <td>Annulla visita</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% @p.each do |visita| %>
+                    <thead>
+                        <td>ID Visita</td>
+                        <td>Figlio</td>
+                        <td>Genitore</td>
+                        <td>Stato Visita</td>
+                        <td>Tipo Visita</td>
+                        <td>Data</td>
+                        <td>Ora</td>
+                        <td>Annulla</td>
+                    </thead>
+                    <tbody>
+                        <% @p.each do |visita| %>
                         <tr>
                         <td><%= visita.id %></td>
                         <td><%= Kid.where(:id=>visita.kid_id)[0][:name] %> <%= Kid.where(:id=>visita.kid_id)[0][:surname] %></td>
-                        <td><%= User.where(:id=>visita.user_id)[0][:email] %></td>
+                        <td><%= Doctor.where(:id=>visita.doctor_id)[0][:email] %> <%= Doctor.where(:id=>visita.doctor_id)[0][:cognome] %></td>
                         <td><%= visita.stato_visita %></td>
                         <td><%= visita.tipo_visita %></td>
+                        <td><% if  visita.data_ora.day < 10%>0<% end %><%= visita.data_ora.day %>-<% if  visita.data_ora.month < 10%>0<% end %><%= visita.data_ora.month %>-<%= visita.data_ora.year %></td>
+                        <td><% if  visita.data_ora.hour < 10%>0<% end %><%= visita.data_ora.hour %>:<% if  visita.data_ora.min < 10%>0<% end %><%= visita.data_ora.min %></td>
                         <td><%= link_to 'Annulla visita', servizi_path(visita.id , visita),
                             method: :delete,
                             data: { confirm: "Sei sicuro?" } %>
@@ -365,6 +317,37 @@
                     <% end %>
                     </tbody>
                     </table>
+                </div>
+                <!-- End -->
+            </div>
+            <div class="container">
+                <div id="richiedi2">
+                    <button type="button"class="nav-mybutton button-prenotazione"  @click="showModal = true">Modifica stato visita</button>
+                      <!--vue js proprietà per transizione-->
+                    <transition name="slide" appear>
+                        <div class="modal modal4" v-if="showModal">
+                            
+                            <form action="#" style="margin: 1%;">
+                                <div class="row ">
+                                    <!-- data e ora -->
+                                    
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="tipo" type="text" name="tipo" placeholder="id visita" class="form-control bg-white border-left-0 border-md" required>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 3%; margin-left: 10%;">
+                                    
+                                    <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
+                                    <button class="nav-mybutton" @click="showModal = false">Esci</button>
+                                </div>
+                            </form>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <% end %>
 
 
@@ -419,4 +402,6 @@
     <%= javascript_pack_tag 'index.js' %>
     <%= javascript_pack_tag 'sos.js' %>
     <%= javascript_pack_tag 'opacita.js' %>
-    <%= javascript_pack_tag 'slide.js' %>
+    <%= javascript_pack_tag 'popup.js' %>
+
+    

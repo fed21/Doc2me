@@ -18,7 +18,7 @@ class VisitsController < ApplicationController
         
     end
 
-   
+
     def createservizi1
         d = Date.today.strftime("%Y-%m-%d")
         datereq=params[:date]

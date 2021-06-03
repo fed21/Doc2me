@@ -15,6 +15,10 @@ class OrdersController < ApplicationController
   
 
   def capture_order
+    vis = Visit.where(:user_id => current_user.id)[0]
+    #vis = Visit.order(:data_ora).order(:stato_visita).first
+    
+    vis.update(stato_visita: 'pagata')
     # orde = Order.find(5)
     # @user
     # orde = (select * from Visite, prenota where and prenota.genitore = @user.id and Visite.pagata=false).first
