@@ -52,18 +52,18 @@
     },
     "formcontatti": {
       "js": [
-        "/packs/js/formcontatti-f5b3ac9ce0b9d28cda59.js"
+        "/packs/js/formcontatti-6dd91186bffb3ee336b1.js"
       ],
       "js.map": [
-        "/packs/js/formcontatti-f5b3ac9ce0b9d28cda59.js.map"
+        "/packs/js/formcontatti-6dd91186bffb3ee336b1.js.map"
       ]
     },
     "formsos": {
       "js": [
-        "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js"
+        "/packs/js/formsos-09b4a561d380d1320da6.js"
       ],
       "js.map": [
-        "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js.map"
+        "/packs/js/formsos-09b4a561d380d1320da6.js.map"
       ]
     },
     "index": {
@@ -123,10 +123,10 @@
       ]
     }
   },
-  "formcontatti.js": "/packs/js/formcontatti-f5b3ac9ce0b9d28cda59.js",
-  "formcontatti.js.map": "/packs/js/formcontatti-f5b3ac9ce0b9d28cda59.js.map",
-  "formsos.js": "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js",
-  "formsos.js.map": "/packs/js/formsos-ea8edbcc6ff19f6bac5b.js.map",
+  "formcontatti.js": "/packs/js/formcontatti-6dd91186bffb3ee336b1.js",
+  "formcontatti.js.map": "/packs/js/formcontatti-6dd91186bffb3ee336b1.js.map",
+  "formsos.js": "/packs/js/formsos-09b4a561d380d1320da6.js",
+  "formsos.js.map": "/packs/js/formsos-09b4a561d380d1320da6.js.map",
   "index.js": "/packs/js/index-1ccb2d70d27f5deadcf7.js",
   "index.js.map": "/packs/js/index-1ccb2d70d27f5deadcf7.js.map",
   "jquery.js": "/packs/js/jquery-269bfb713f79fb0b319c.js",

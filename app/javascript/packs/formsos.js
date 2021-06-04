@@ -1,5 +1,5 @@
 
-document.getElementById("sosinvio").addEventListener("mouseover",function(event){
+document.getElementById("sosinvio").addEventListener("click",function(event){
     
     // Variabili associate ai campi del modulo
        var nome=document.getElementById("firstname").value;
