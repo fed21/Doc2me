@@ -19,6 +19,12 @@ class VisitsController < ApplicationController
     end
 
 
+    def setpagata
+        
+    #vis = Visit.order(:data_ora).order(:stato_visita).first
+    
+    end
+
     def createservizi1
         d = Date.today.strftime("%Y-%m-%d")
         datereq=params[:date]

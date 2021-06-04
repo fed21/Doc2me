@@ -32,3 +32,14 @@ var v=new Vue({
     }
     
 })
+
+new Vue({
+    /*lega all'elemento html richiedi l'oggetto vue creato con new */
+    el: '#richiedi4',
+    data () {
+        return {
+            showModal: true
+        }
+    }
+    
+})

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete '/servizi' => 'visits#destroy'
   post '/okservizi1' => 'visits#createservizi1'
   post '/okservizi2' => 'visits#createservizi2'
+  post '/dajecosi' => 'visits#setpagata'
   post :create_order, :to => 'orders#create_order'
   post '/capture_order', :to => 'orders#capture_order'
 

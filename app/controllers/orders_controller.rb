@@ -15,25 +15,10 @@ class OrdersController < ApplicationController
   
 
   def capture_order
-    vis = Visit.where(:user_id => current_user.id)[0]
+    vis = Visit.where('user_id = ? AND stato_visita = ?', current_user.id, 'non pagata')[0]
     #vis = Visit.order(:data_ora).order(:stato_visita).first
     
     vis.update(stato_visita: 'pagata')
-    # orde = Order.find(5)
-    # @user
-    # orde = (select * from Visite, prenota where and prenota.genitore = @user.id and Visite.pagata=false).first
-    # orde.update(price: 300)
-    # request = PayPalCheckoutSdk::Orders::OrdersCaptureRequest::new params[:order_id]
-      # begin
-      #   response = @client.execute request
-      #   order = Order.find_by :token => params[:order_id]
-      #   order.paid = response.result.status == 'COMPLETED'
-      #   if order.save
-      #     return render :json => {:status => response.result.status}, :status => :ok
-      #   end
-      # rescue PayPalHttp::HttpError => ioe
-      #   # HANDLE THE ERROR
-      # end
   end
 
     private
