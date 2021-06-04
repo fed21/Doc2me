@@ -4,7 +4,7 @@ class SosMailer < ActionMailer::Base
   def avviso_form(contact)
     @contact=contact
 
-    mail to: "carmignanifederico@gmail.com" , subject: "SOS DOC2ME"
+    mail to: "doc2me.app@gmail.com" , subject: "SOS DOC2ME"
     
   end
 end

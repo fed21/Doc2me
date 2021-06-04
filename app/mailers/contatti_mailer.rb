@@ -4,7 +4,7 @@ class ContattiMailer < ActionMailer::Base
     def avviso_form1(form)
       @form=form
   
-      mail to: "carmignanifederico@gmail.com" , subject: "FORM CONTATTI DOC2ME"
+      mail to: "doc2me.app@gmail.com" , subject: "FORM CONTATTI DOC2ME"
       
     end
   end

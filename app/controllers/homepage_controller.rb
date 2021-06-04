@@ -41,10 +41,10 @@ class HomepageController < ApplicationController
             #send email
            SosMailer.avviso_form(@contact).deliver
               
-            redirect_to "/sos"
+            redirect_to "/sos" ,notice: "Sos inviato con successo. Un nostro medico ti ricontatterà al più presto!"
         
         else
-            render :sos
+            render :sos , notice: "Ops qualcosa è andato storto. Riprova."
             
         end
         

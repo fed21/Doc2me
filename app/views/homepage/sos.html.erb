@@ -37,7 +37,7 @@
                 <a  href="/profilo">Profilo</a>
             </li> 
             <li>
-                <a  href="/">Prenotazioni</a>
+                <a  href="/prenotazioni">Prenotazioni</a>
             </li> 
             <li id="but-logged">
                 <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
@@ -100,7 +100,7 @@
                 <a  href="/profilo">Profilo</a>
             </li> 
             <li>
-                <a  href="/">Prenotazioni</a>
+                <a  href="/prenotazioni">Prenotazioni</a>
             </li> 
             <li id="but-logged">
                 <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
@@ -174,7 +174,13 @@
     <% end %>
 
     
- <main style="height:90vh">
+ <main style="height:100vh">
+        <% flash.each do |type, msg| %>
+                        <div class="alert alert-info container" style="margin-top:5%; border-radius:10px; 
+                        display: flex;justify-content: center;align-items: center;">
+                            <%= msg %>
+                        </div>
+        <%end%>
         <div class="container" style="width: 100%; margin-bottom: 15%;">
             <div class="row py-5 mt-4 align-items-center" ></div>
                 
@@ -200,25 +206,26 @@
                             <!-- First Name -->
                             
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                <input  id="firstname" type="text" name="contact[firstname]" placeholder="Nome" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                                <input  id="firstname" type="text" name="contact[firstname]" placeholder="Nome" class="form-control bg-white border-left-0 border-md" style="text-align: start" required/> 
                             </div>
         
                             <!-- Last Name -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                <input  id="lastname" type="text" name="contact[lastname]" placeholder="Cognome" class="form-control bg-white border-left-0 border-md" style="text-align: start" />
+                                <input  id="lastname" type="text" name="contact[lastname]" placeholder="Cognome" class="form-control bg-white border-left-0 border-md" style="text-align: start" required/>
                         
                             </div>
         
                             <!-- Email Address -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
                                 
-                         <input  id="email" type="text" name="contact[email]" placeholder="Email" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                         <input  id="email" type="email" name="contact[email]" placeholder="Email" class="form-control bg-white border-left-0 border-md" style="text-align: start" required/> 
                             
                             </div>
         
                             <!-- Telephone -->
                             <div class="input-group col-lg-12 mx-auto mb-4">
-                                 <input id="tel" type="text" name="contact[tel]" placeholder="Telefono" class="form-control bg-white border-left-0 border-md" style="text-align: start" /> 
+                                 <input id="tel" type="tel" name="contact[tel]" placeholder="Telefono" class="form-control bg-white border-left-0 border-md" style="text-align: start" 
+                                 pattern="^([0-9]{9,10})+$" required/> 
                             </div>
 
                             <!-- Submit Button -->
