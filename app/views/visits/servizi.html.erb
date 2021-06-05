@@ -234,7 +234,7 @@
                 </div>
                 
                 <% else %> 
-                <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                <button type="button"class="nav-mybutton"  @click="showModal = true" onclick="window.location.href='/users/sign_in'">richiedi</button>
                 <% end %><br>
                 <% flash.each do |type, msg| %>
                         <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
@@ -258,8 +258,8 @@
                    <% if user_signed_in?  %>
                     <button type="button"class="nav-mybutton" onclick="window.location.href='disponibilita.html'">disponibilità</button>
                     <%else%>
-                    <button type="button"class="nav-mybutton">disponibilità</button>
-                    <%end%>
+                    <button type="button"class="nav-mybutton" onclick="window.location.href='/users/sign_in'">disponibilità</button>
+                    <%end%><br><br>
                 </div>
             </div>
         </div>
@@ -310,8 +310,13 @@
                     </transition>
                 </div>
                 <% else %> 
-                <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
-                <% end %>
+                <button type="button"class="nav-mybutton"  @click="showModal = true" onclick="window.location.href='/users/sign_in'">richiedi</button>
+                <% end %><br>
+                 <% flash.each do |type, msg| %>
+                        <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
+                            <%= msg %>
+                        </div>
+                <%end%>
             </div>
         </div>
     </section>
