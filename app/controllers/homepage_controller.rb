@@ -1,6 +1,7 @@
 class HomepageController < ApplicationController
     skip_before_action :verify_authenticity_token
-    
+
+
     def sos
          @contact=Contact.new
     end
@@ -65,5 +66,19 @@ class HomepageController < ApplicationController
             redirect_to "/"
         end
     end 
+
+
+    def disponibilita
+        if params[:date]==nil
+            @occupati = nil
+        else
+            datapass = params[:date]
+            datamin = datapass+(" 00:00:00")
+            datamax = datapass+(" 23:59:59")
+            @occupati = Visit.where('data_ora <= ? AND data_ora >= ?', datamax, datamin)
+            @occupati = @occupati.map {|x| x.data_ora.hour}
+        end
+    
+    end
     
 end

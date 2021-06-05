@@ -197,14 +197,10 @@
                 </div>
 
             <!-- Date Picker Input -->
+            <%= form_with url: "/disponibilita", local: true do |f| %>
                 <div class="form-group mb-4">
                     <div class="datepicker date input-group p-0 shadow-sm">
-                        <input type="text" placeholder="Choose a reservation date" class="form-control py-4 px-4" id="reservationDate">
-                        <div class="input-group-append">
-                            <span class="input-group-text px-4">
-                                <i class="fa fa-clock-o"></i>
-                            </span>
-                        </div>
+                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
                     </div>
                 </div>
            
@@ -214,76 +210,90 @@
                  
                     
                     <div class="form-group col-lg-12 " id="disp">
-                        <button class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
+                        <button type="submit" class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
                     </div>
                 </div>
+            <% end %>
+
             </div>
+            
             
             <div class="col-md-6 mx-auto" id="map-1">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="180%" style="border:0; margin-top:3ch;" allowfullscreen="" loading="lazy"></iframe>
             </div>
            
             <div  class="col-lg-6 mx-lg-0 mx-auto card-disp" id="disp-container" style="margin-top: 1%; margin-bottom: 3%;">
-                <div class="rounded-0 border-0 shadow" id="disp-panel">
-                    <div class=" p-5">
-                        <div style="overflow-y: scroll;" >
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Orario</th>
-                                        <th scope="col">Stato</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">9:00</th>
-                                        <td>Occupato</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">10:00</th>
-                                        <td>
-                                            <input type="submit" style="background-color:darkgreen;" value="Disponibile"/>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                            <div id="richiedi1">
-                                <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
-                                  <!--vue js proprietà per transizione-->
-                                <transition name="slide" appear>
-                                    <div class="modal modal3" v-if="showModal">
+                <% if @occupati == nil %>
+                    <h1>Seleziona nuova data</h1>
+                <% else %>
+                    <h1>C'è qualcosa evviva</h1>
+                    <div class="rounded-0 border-0 shadow">
+                        <div class=" p-5">
+                            <div style="overflow-y: scroll;" >
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Orario</th>
+                                            <th scope="col">Stato</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for i in 9..18 do %>
+                                        <% if @occupati.include?(i)  %>
+
+                                        <tr>
+                                            <th scope="row"><%= i %>:00</th>
+                                            <td>Occupato</td>
+                                        </tr>
+                                        <% else %>
+                                        <tr>
+                                            <th scope="row"><%= i %>:00</th>
+                                            <td>Disponibile</td>
+                                        </tr>
+                                        <% end %>
+                                    <% end %>
                                         
-                                        <form action="#" style="margin: 1%;">
-                                            <div class="row ">
-                                                <!-- data e ora -->
-                                                <div class="input-group col-lg-12 mb-4">
-                                                    <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
-                                                </div>
-                                                <div class="input-group col-lg-12 mb-4">
-                                                    <input id="ora" type="time" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
-                                                </div>
-                                                
-                                                <!-- figlio -->
-                                                <div class="input-group col-lg-12 mb-4">
-                                                    <input id="figlionome" type="text" name="figlio" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                                </div>
-                                                <div class="input-group col-lg-12 mb-4">
-                                                    <input id="figlionome" type="text" name="figlio" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
-                                                </div>
-                                            </div>
-                                            <div style="margin-top: 3%; margin-left: 10%;">
-                                                <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
-                                                <button class="nav-mybutton" @click="showModal = false">Esci</button>
-                                            </div>
-                                        </form>
+                                    </tbody>
+                                </table>
+                                
+                                <div id="richiedi1">
+                                    <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                                    <!--vue js proprietà per transizione-->
+                                    <transition name="slide" appear>
+                                        <div class="modal modal3" v-if="showModal">
+                                            
+                                            <%= form_with scope: @visit, url: "/okservizi1", local: true do |f| %>
+                                                <div class="row ">
+                                    <!-- data e ora -->
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
-                                </transition>
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="ora" type="time" min="08:00:00" max="20:00:00" name="ora" placeholder="ora" class="form-control bg-white border-left-0 border-md" required>
+                                    </div>
+                                    
+                                    <!-- figlio -->
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="figlionome" type="text" name="figlionome" placeholder="nome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
+                                    </div>
+                                    <div class="input-group col-lg-12 mb-4">
+                                        <input id="figliocognome" type="text" name="figliocognome" placeholder="cognome paziente da visitare" class="form-control bg-white border-left-0 border-md" required>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 3%; margin-left: 10%;">
+                                    <button class="nav-mybutton" type="submit">Invia </button>
+                                    
+
+                                    <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
+                                </div>
+                                            <% end %>
+                                        </div>
+                                    </transition>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <%end%>
             </div> 
             <div class="col-md-6 mx-auto" id="map-2">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="180vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

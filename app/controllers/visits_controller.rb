@@ -19,9 +19,16 @@ class VisitsController < ApplicationController
     end
 
 
-    def setpagata
-        
-    #vis = Visit.order(:data_ora).order(:stato_visita).first
+    def altervisit
+    
+        visid = params[:idvisita]
+        vis = Visit.where('id = ? AND doctor_id = ?', visid, current_doctor.id)[0]
+        if vis != nil
+            vis.update(stato_visita: 'pagata')
+            redirect_to '/prenotazioni'
+        else
+            redirect_to '/prenotazioni', notice: 'Visita non trovata'
+        end
     
     end
 
