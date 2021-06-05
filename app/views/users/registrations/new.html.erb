@@ -264,6 +264,11 @@
                 </div>
             </div>
         </div>
+        <% if user_signed_in?  %>
+            <% if current_user.email=="doc2me.app@gmail.com"%>
+                <h2 class="text-center">clicca qui per registrare un nuovo dottore</h2>
+            <%end%>
+        <%end%>
     </main>
     <footer class=" footer">
         <div class="container-footer">

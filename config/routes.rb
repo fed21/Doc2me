@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get '/prenotazioni' => 'visits#prenotazioni'
   
+
   #sos form post e get
   get '/sos' => 'homepage#sos'
   post "/oksos" => 'homepage#createsos'

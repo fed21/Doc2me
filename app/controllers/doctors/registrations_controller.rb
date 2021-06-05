@@ -1,6 +1,23 @@
 # frozen_string_literal: true
 
 class Doctors::RegistrationsController < Devise::RegistrationsController
+  
+  def new
+    if (user_signed_in?)
+      if (current_user.email=="doc2me.app@gmail.com")
+        
+      else
+        redirect_to "/"
+        return
+      end
+    else
+      redirect_to "/"
+      return
+    end
+    super
+  end
+ 
+  
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -59,4 +76,5 @@ class Doctors::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+ 
 end
