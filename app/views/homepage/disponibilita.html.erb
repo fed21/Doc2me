@@ -200,14 +200,14 @@
             <%= form_with url: "/disponibilita", local: true do |f| %>
                 <div class="form-group mb-4">
                     <div class="datepicker date input-group p-0 shadow-sm">
-                        <input id="date" type="date" name="date" placeholder="data" class="form-control bg-white border-left-0 border-md" required>
+                        <% d = Date.today %>
+                        <!-- <%= %> '=' necessario per prendere il valore effettivo della variabile e per poterla utilizzare -->
+                        <input id="date" type="date" name="date" min=<%= d %> placeholder="data" class="form-control bg-white border-left-0 border-md" required>
+                        
                     </div>
                 </div>
            
                 <div class="text-center">
-                    <p class="font-italic text-muted mb-0">La data selezionata è</p>
-                    <h4 id="pickedDate" class="font-weight-bold text-uppercase mb-3">Non selezionato</h4>
-                 
                     
                     <div class="form-group col-lg-12 " id="disp">
                         <button type="submit" class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
@@ -225,8 +225,12 @@
             <div  class="col-lg-6 mx-lg-0 mx-auto card-disp" id="disp-container" style="margin-top: 1%; margin-bottom: 3%;">
                 <% if @occupati == nil %>
                     <h1>Seleziona nuova data</h1>
+                    <% flash.each do |type, msg| %>
+                        <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
+                            <%= msg %>
+                        </div>
+                <%end%>
                 <% else %>
-                    <h1>C'è qualcosa evviva</h1>
                     <div class="rounded-0 border-0 shadow">
                         <div class=" p-5">
                             <div style="overflow-y: scroll;" >
@@ -262,7 +266,7 @@
                                     <transition name="slide" appear>
                                         <div class="modal modal3" v-if="showModal">
                                             
-                                            <%= form_with scope: @visit, url: "/okservizi1", local: true do |f| %>
+                                            <%= form_with scope: @visit, url: "/okservizi3", local: true do |f| %>
                                                 <div class="row ">
                                     <!-- data e ora -->
                                     <div class="input-group col-lg-12 mb-4">
@@ -294,7 +298,7 @@
                         </div>
                     </div>
                 <%end%>
-            </div> 
+            </div>
             <div class="col-md-6 mx-auto" id="map-2">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.859591124094!2d12.460394874597359!3d41.91713546609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f60f31b74c16d%3A0xeb24764bd52036eb!2sVia%20Oslavia%2C%2014%2C%2000195%20Roma%20RM!5e0!3m2!1sit!2sit!4v1619522626225!5m2!1sit!2sit" width="100%" height="180vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>    
