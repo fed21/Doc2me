@@ -10,9 +10,9 @@ class VisitsController < ApplicationController
             redirect_to '/'
         else
             if user_signed_in?
-                @p = Visit.where(:user_id => current_user.id)          
+                @p = Visit.where(:user_id => current_user.id).order(:data_ora)         
             else
-                @p = Visit.where(:doctor_id => current_doctor.id)
+                @p = Visit.where(:doctor_id => current_doctor.id).order(:data_ora)     
             end
         end
         
@@ -184,6 +184,17 @@ class VisitsController < ApplicationController
     def destroy
         @v=Visit.find(params[:format])
         @v.destroy
-        redirect_to "/prenotazioni"
+        if(user_signed_in?)
+            dottore = @v.doctor_id
+            email_doc = Doctor.where(:id=>dottore)[0][:email]
+            redirect_to "/prenotazioni" ,notice: "annullata" +email_doc
+            #email to doctor
+        elsif(doctor_signed_in?)
+            utente = @v.user_id
+            email_utente = User.where(:id=>utente)[0][:email]
+            redirect_to "/prenotazioni" ,notice: "annullata" +email_utente
+            #email to user
+        end
+        
     end
 end

@@ -211,13 +211,13 @@
                         <td><% if  visita.data_ora.day < 10%>0<% end %><%= visita.data_ora.day %>-<% if  visita.data_ora.month < 10%>0<% end %><%= visita.data_ora.month %>-<%= visita.data_ora.year %></td>
                         <td><% if  visita.data_ora.hour < 10%>0<% end %><%= visita.data_ora.hour %>:<% if  visita.data_ora.min < 10%>0<% end %><%= visita.data_ora.min %></td>
                         <td>
-                        <% if visita.data_ora > Date.today && visita.stato_visita != 'pagata'%>
+                        <% if visita.data_ora.strftime("%Y-%m-%d") > Date.today.strftime("%Y-%m-%d") && visita.stato_visita != 'pagata'%>
                                 <%= link_to 'Annulla visita', servizi_path(visita.id , visita),
                                 method: :delete,
                                 data: { confirm: "Sei sicuro?" } %>
                             <% else %>
                                 
-                            <% end %>
+                        <% end %>
 	                    </td>
                         </tr>
                     <% end %>
