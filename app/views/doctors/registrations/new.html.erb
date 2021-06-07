@@ -37,8 +37,14 @@
             <li>
                 <a  href="../profilo.html">Profilo</a>
             </li> 
+
+             <li>
+                <a  href="/prenotazioni">Prenotazioni</a>
+            </li> 
             <li>
-                <a  href="#">Registra</a>
+                <% if current_user.email=="doc2me.app@gmail.com"%>
+                    <a  href="../doctors/sign_up" class="this">Registra medico</a>
+                <%end%>
             </li> 
             <li id="but-logged">
                 <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>

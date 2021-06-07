@@ -36,11 +36,12 @@
             <li>
                 <a  href="/profilo" class="this">Profilo</a>
             </li> 
+             <li>
+                <a  href="/prenotazioni">Prenotazioni</a>
+            </li> 
             <li>
                 <% if current_user.email=="doc2me.app@gmail.com"%>
-                    <a  href="../doctors/sign_up">Registra</a>
-                <%else%>
-                    <a  href="/prenotazioni">Prenotazioni</a>
+                    <a  href="../doctors/sign_up">Registra medico</a>
                 <%end%>
             </li> 
             <li id="but-logged">
@@ -331,7 +332,7 @@
     
     <h5 style="text-align: center; margin-bottom: 4%; margin-top:2%; text-decoration: underline;">doc2me.app@gmail.com</h5>
     </div>
-    
+
     <%elsif doctor_signed_in? %>
     <div class="header" id="h-profile">
         <br>
