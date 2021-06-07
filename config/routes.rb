@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   delete '/servizi' => 'visits#destroy'
   post '/okservizi1' => 'visits#createservizi1'
   post '/okservizi2' => 'visits#createservizi2'
-  post '/dajecosi' => 'visits#setpagata'
+  post '/okservizi3' => 'visits#createservizi3'
+  post '/cambiastvis' => 'visits#altervisit'
   post :create_order, :to => 'orders#create_order'
   post '/capture_order', :to => 'orders#capture_order'
 
@@ -35,6 +36,8 @@ Rails.application.routes.draw do
   get '/docprofile6' => 'homepage#docprofile6'
   get '/docprofile7' => 'homepage#docprofile7'
   get '/docprofile8' => 'homepage#docprofile8'
+
+  post '/disponibilita' => 'homepage#disponibilita'
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                                     sessions: 'users/sessions' ,

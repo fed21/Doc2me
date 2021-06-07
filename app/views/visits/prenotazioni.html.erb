@@ -210,9 +210,14 @@
                         <td><%= visita.tipo_visita %></td>
                         <td><% if  visita.data_ora.day < 10%>0<% end %><%= visita.data_ora.day %>-<% if  visita.data_ora.month < 10%>0<% end %><%= visita.data_ora.month %>-<%= visita.data_ora.year %></td>
                         <td><% if  visita.data_ora.hour < 10%>0<% end %><%= visita.data_ora.hour %>:<% if  visita.data_ora.min < 10%>0<% end %><%= visita.data_ora.min %></td>
-                        <td><%= link_to 'Annulla visita', servizi_path(visita.id , visita),
-                            method: :delete,
-                            data: { confirm: "Sei sicuro?" } %>
+                        <td>
+                        <% if visita.data_ora > Date.today && visita.stato_visita != 'pagata'%>
+                                <%= link_to 'Annulla visita', servizi_path(visita.id , visita),
+                                method: :delete,
+                                data: { confirm: "Sei sicuro?" } %>
+                            <% else %>
+                                
+                            <% end %>
 	                    </td>
                         </tr>
                     <% end %>
@@ -289,9 +294,14 @@
                         <td><%= visita.tipo_visita %></td>
                         <td><% if  visita.data_ora.day < 10%>0<% end %><%= visita.data_ora.day %>-<% if  visita.data_ora.month < 10%>0<% end %><%= visita.data_ora.month %>-<%= visita.data_ora.year %></td>
                         <td><% if  visita.data_ora.hour < 10%>0<% end %><%= visita.data_ora.hour %>:<% if  visita.data_ora.min < 10%>0<% end %><%= visita.data_ora.min %></td>
-                        <td><%= link_to 'Annulla visita', servizi_path(visita.id , visita),
-                            method: :delete,
-                            data: { confirm: "Sei sicuro?" } %>
+                        <td>
+                            <% if visita.data_ora > Date.today && visita.stato_visita != 'pagata'%>
+                                <%= link_to 'Annulla visita', servizi_path(visita.id , visita),
+                                method: :delete,
+                                data: { confirm: "Sei sicuro?" } %>
+                            <% else %>
+                                
+                            <% end %>
 	                    </td>
                         </tr>
                     <% end %>
@@ -307,10 +317,9 @@
                     <transition name="slide" appear>
                         <div class="modal modal4" v-if="showModal">
                             
-                            <form action="#" style="margin: 1%;">
+                            <%= form_with scope: @visit, url: "/cambiastvis", local: true do |f| %>
                                 <div class="row ">
                                     <!-- data e ora -->
-                                <%= form_with scope: @visit, url: "/okservizi1", local: true do |f| %>
                                     <div class="input-group col-lg-12 mb-4">
                                         <input id="tipo" type="text" name="idvisita" placeholder="id visita" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
@@ -318,12 +327,17 @@
                                 <div style="margin-top: 3%; margin-left: 10%;">
                                     
                                     <button class="nav-mybutton" @click="showModal = false" type="submit">Invia </button>
-                                <% end %>
+                                
                                     <button class="nav-mybutton" @click="showModal = false">Esci</button>
                                 </div>
-                            </form>
+                            <% end %>
                         </div>
                     </transition>
+                    <% flash.each do |type, msg| %>
+                        <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
+                            <%= msg %>
+                        </div>
+                <%end%>
                 </div>
             </div>
 
@@ -379,6 +393,7 @@
             </div>
         </div>
     </footer>
+    </body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <%= javascript_pack_tag 'index.js' %>
     <%= javascript_pack_tag 'sos.js' %>
