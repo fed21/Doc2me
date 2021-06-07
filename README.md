@@ -1,2 +1,2 @@
 # Rails-Heroku
-Repo per sviluppo e live deploy RoR application DOC2ME
+Repo per sviluppo e live deployment RoR application DOC2ME

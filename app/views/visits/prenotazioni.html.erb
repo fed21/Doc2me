@@ -229,16 +229,45 @@
             <div class="container" style="display: flex; justify-content: center; align-items: center;">
                     <a href="servizi.html"><button class="nav-mybutton  button-prenotazione">Prenota visita</button></a>
                     
-                                <script>
-                                    $(document).ready(function(){
-                                        $('#openModal').click(function(){
-                                            $('#modal').fadeIn();
-                                        });
-                                        $('#closeModal').click(function(){
-                                            $('#modal').fadeOut();
-                                        });
-                                    })
-                                </script>
+                    <script>
+                                $(document).ready(function(){
+                                paypal.Buttons({
+                                env: 'sandbox',
+                                createOrder: (data, actions) => {
+                                var feffo = actions.order.create({
+                                    purchase_units: [{
+                                    description: "Prova Pagamento",
+                                    amount: {
+                                        value: '50.00'
+                                    }
+                                    }]
+                                });
+                                return feffo;  
+                                },
+
+                                onApprove: async (data, actions) => {
+                                const or = await actions.order.capture();
+                                const response = await fetch('capture_order', {
+                                    method: 'POST',
+                                    headers: {
+                                    "Content-Type": "applicazione/json"
+                                    }
+                                }).then(function(){
+                                    window.location.reload();
+                                });
+
+                                }
+                                }).render('#paypal-button-container');
+                                $('#openModal').click(function(){
+                                $('#modal').fadeIn();
+                                });
+                                $('#closeModal').click(function(){
+                                $('#modal').fadeOut();
+                                });
+                                                                                                    
+                                                                                        
+                                })
+                    </script>
                                 <button type="button" class="nav-mybutton" id="openModal">Pagamenti visite</button>
                                   <!--vue js proprietà per transizione-->
                                     <div class="modal modalPagamento" id="modal">
@@ -253,9 +282,9 @@
             </div> 
             </div>
             <div class="col-lg-8 mx-auto" style="color: #04044c;">
-                <h2><b>-</b> &nbsp Paga con paypal o direttamente al dottore </h2>
-                <h2><b>-</b> &nbsp Prenota una nuova visita quando vuoi</h2>
-                <h2><b>-</b> &nbsp Annulla le visite da remoto in qualsisi momento</h2>
+                <h4><b>-</b> &nbsp Paga con paypal o direttamente al dottore </h4>
+                <h4><b>-</b> &nbsp Prenota una nuova visita quando vuoi</h4>
+                <h4><b>-</b> &nbsp Annulla le visite da remoto in qualsiasi momento</h4>
             </div>
         </div>
     </div>
@@ -399,35 +428,6 @@
     <%= javascript_pack_tag 'sos.js' %>
     <%= javascript_pack_tag 'opacita.js' %>
     <%= javascript_pack_tag 'popup.js' %>
-    <script>
-
-  paypal.Buttons({
-    env: 'sandbox',
-    createOrder: (data, actions) => {
-      var feffo = actions.order.create({
-        purchase_units: [{
-          description: "Prova Pagamento",
-          amount: {
-            value: '5.00'
-          }
-        }]
-      });
-      return feffo;  
-    },
-
-    onApprove: async (data, actions) => {
-      const or = await actions.order.capture();
-      const response = await fetch('capture_order', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "applicazione/json"
-        }
-      }).then(function(){
-          window.location.reload();
-      });
-
-    }
-  }).render('#paypal-button-container');
-</script>
+   
 
     

@@ -67,7 +67,7 @@ class VisitsController < ApplicationController
                     Formservizi1Mailer.servizi1_form1(@emaildoc, current_user, params[:date], @hour).deliver
                     redirect_to '/servizi', notice: "Visita prenotata con successo"       
                 else
-                    redirect_to "/servizi", notice: "Nessun figlio trovato"
+                    redirect_to "/servizi", notice: "Nessun figlio trovato, prova a inserirlo con iniziali in minuscolo!"
                 end           
             else
                 redirect_to "/servizi", notice: "Nessun medico lavora nel turno indicato"
@@ -113,7 +113,7 @@ class VisitsController < ApplicationController
                     Formservizi2Mailer.servizi2_form2(@emaildoc, current_user, params[:date], @hour, params[:indirizzo]).deliver
                     redirect_to '/servizi' , notice: "Visita prenotata con successo"        
                 else
-                    redirect_to "/servizi", notice: "Nessun figlio trovato"
+                    redirect_to "/servizi", notice: "Nessun figlio trovato, prova a inserirlo con iniziali in minuscolo!"
                 end           
             else
                 redirect_to "/servizi", notice: "Nessun medico lavora nel turno indicato"
@@ -169,7 +169,7 @@ class VisitsController < ApplicationController
 
                            
                 else
-                    redirect_to "/disponibilita", notice: "Nessun figlio trovato"
+                    redirect_to "/disponibilita", notice: "Nessun figlio trovato, prova a inserirlo con iniziali in minuscolo!"
                 end           
             else
                 redirect_to "/disponibilita", notice: "Nessun medico lavora nel turno indicato"
@@ -184,16 +184,27 @@ class VisitsController < ApplicationController
     def destroy
         @v=Visit.find(params[:format])
         @v.destroy
+        
         if(user_signed_in?)
             dottore = @v.doctor_id
             email_doc = Doctor.where(:id=>dottore)[0][:email]
-            redirect_to "/prenotazioni" ,notice: "annullata" +email_doc
-            #email to doctor
+            tipo=@v.tipo_visita
+            datehour= @v.data_ora
+            date=datehour.strftime("%Y-%m-%d")
+            hour=datehour.strftime('%I:%M')
+            UtenteeliminavisitaMailer.utenteeliminavisita(email_doc,current_user,date,hour,tipo).deliver
+            redirect_to "/prenotazioni" ,notice: "visita annullata" +email_doc
+
         elsif(doctor_signed_in?)
             utente = @v.user_id
             email_utente = User.where(:id=>utente)[0][:email]
-            redirect_to "/prenotazioni" ,notice: "annullata" +email_utente
-            #email to user
+            tipo=@v.tipo_visita
+            datehour= @v.data_ora
+            date=datehour.strftime("%Y-%m-%d")
+            hour=datehour.strftime('%I:%M')
+            MedicoeliminavisitaMailer.medicoeliminavisita(email_utente,current_doctor,date,hour,tipo).deliver
+            redirect_to "/prenotazioni" ,notice: "visita annullata" +email_utente
+           
         end
         
     end

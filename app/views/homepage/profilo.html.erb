@@ -37,9 +37,6 @@
                 <a  href="/profilo" class="this">Profilo</a>
             </li> 
             <li>
-                <a  href="/prenotazioni">Prenotazioni</a>
-            </li> 
-            <li>
                 <% if current_user.email=="doc2me.app@gmail.com"%>
                     <a  href="../doctors/sign_up">Registra</a>
                 <%else%>
@@ -218,7 +215,7 @@
                             <%= form.text_field :cognome ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome"%>
                         </div>
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.text_field :telefono ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome"%>
+                            <%= form.text_field :telefono ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"telefono"%>
                         </div>
                     </div>
                     <div style="margin-top: 3%; margin-left: 5%;">
@@ -263,7 +260,7 @@
                         </div>
     <%end%>
     <% if @user.kids.empty? %>
-    <h2 style="text-align: center; color: #04044c; margin: 2%; ">Non hai ancora aggiunto nessun figlio, clicca sul bottone per farlo!</h2>
+    <h5 style="text-align: center; color: #04044c; margin: 2%; font-weight:bold; ">Non hai ancora aggiunto nessun figlio, clicca sul bottone per farlo!</h5>
     <% else %>
     
     <%@user.kids.each do |kid| %>
@@ -334,6 +331,7 @@
     
     <h5 style="text-align: center; margin-bottom: 4%; margin-top:2%; text-decoration: underline;">doc2me.app@gmail.com</h5>
     </div>
+    
     <%elsif doctor_signed_in? %>
     <div class="header" id="h-profile">
         <br>
