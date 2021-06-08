@@ -1,7 +1,6 @@
 class HomepageController < ApplicationController
     skip_before_action :verify_authenticity_token
 
-
     def sos
          @contact=Contact.new
     end
@@ -69,6 +68,11 @@ class HomepageController < ApplicationController
 
 
     def disponibilita
+        #se non sei un utente registrato (visitatore o dottore) sia nella get che nella post(eventualmente simulata con programmi esterni) vieni reindirizzato al login
+        if (! user_signed_in?)
+             redirect_to new_user_session_path   #helper method ruby
+        end
+    
         if params[:date]==nil
             @occupati = nil
         else
