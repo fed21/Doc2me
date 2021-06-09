@@ -58,19 +58,21 @@ group :development do
   gem 'spring'
 end
 
+ gem 'rexml' # Xml support for rspec
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-
+  gem 'cucumber-rails', :require=> false #cucumber
+  gem 'launchy'
   # ***FC*** Three gems used for unit testing with rspec
-  gem 'rspec-rails'
+  #remove gem 'rspec-rails' to use cucumber testing for incompatibility
+  gem 'rspec-rails' 
   gem 'rails-controller-testing' # In order to test our controllers
-  gem 'rexml' # Xml support for rspec
   gem 'database_cleaner' #for cleaning db
-  gem 'cucumber-rails', require: false #cucumber
+  
   
 end
 

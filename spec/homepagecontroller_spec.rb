@@ -9,9 +9,9 @@ describe HomepageController, type: :controller do
     #Since the controller makes a query to the db we have to create in testing db a visit in that date, automatically cleared by dbcleaner (see RAILS_ENV=test rails c and the tables of the db in testing env empty ath the end of the testing)
     before (:all) do
      
-        User.create!(:id=>1, :email=> 'proof@proof.it', :password => 'prova1')
+        User.create!(:id=>1, :email=> 'prova@prova.it', :password => 'prova1')
 
-        Doctor.create!(:id =>1, :email=> 'proof@proof.it', :password => 'prova1')
+        Doctor.create!(:id =>1, :email=> 'prova@prova.it', :password => 'prova1')
 
         Kid.create!(:id =>1, :user_id=>1)
 
@@ -46,7 +46,7 @@ describe HomepageController, type: :controller do
 
         user = users(:user1) # use of the fixture user1
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
-        user.confirm
+        user.confirm #In order to add confirmation_token necessary to add a user in our app
 
         #otherwise we could use the following line instead of the last two in order to manipulate user_signed_in control without sign_in
         #allow_any_instance_of(Devise::Controllers::Helpers).to receive(:user_signed_in?).and_return(true)
@@ -67,7 +67,7 @@ describe HomepageController, type: :controller do
 
         user = users(:user1) # use of the fixture user1
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
-        user.confirm
+        user.confirm #In order to add confirmation_token necessary to add a user in our app
 
         #otherwise we could use the following line instead of the last two in order to manipulate user_signed_in control without sign_in
         #allow_any_instance_of(Devise::Controllers::Helpers).to receive(:user_signed_in?).and_return(true)
@@ -88,7 +88,7 @@ describe HomepageController, type: :controller do
 
         user = users(:user1) # use of the fixture user1
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
-        user.confirm
+        user.confirm #In order to add confirmation_token necessary to add a user in our app
 
         #otherwise we could use the following line instead of the last two in order to manipulate user_signed_in control without sign_in
         #allow_any_instance_of(Devise::Controllers::Helpers).to receive(:user_signed_in?).and_return(true)
@@ -109,7 +109,7 @@ describe HomepageController, type: :controller do
 
         user = users(:user1) # use of the fixture user1
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
-        user.confirm
+        user.confirm #In order to add confirmation_token necessary to add a user in our app
 
         #otherwise we could use the following line instead of the last two in order to manipulate user_signed_in control without sign_in
         #allow_any_instance_of(Devise::Controllers::Helpers).to receive(:user_signed_in?).and_return(true)

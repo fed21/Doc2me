@@ -204,7 +204,7 @@
                 </p>
                 <% if user_signed_in?  %>
                 <div id="richiedi1">
-                    <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                    <button type="button" class="nav-mybutton" name="richiedionline" @click="showModal = true">richiedi</button>
                       <!--vue js proprietà per transizione-->
                     <transition name="slide" appear>
                         <div class="modal modal1" v-if="showModal">
@@ -261,9 +261,9 @@
                  </p>
                 <div >
                    <% if user_signed_in?  %>
-                    <button type="button"class="nav-mybutton" onclick="window.location.href='disponibilita.html'">disponibilità</button>
+                    <button type="button"class="nav-mybutton" name="richiedistudio1" onclick="window.location.href='disponibilita.html'">disponibilità</button>
                     <%else%>
-                    <button type="button"class="nav-mybutton" onclick="window.location.href='/users/sign_in'">disponibilità</button>
+                    <button type="button"class="nav-mybutton" name="richiedistudio2" onclick="window.location.href='/users/sign_in'">disponibilità</button>
                     <%end%><br><br>
                 </div>
             </div>
@@ -280,7 +280,7 @@
                 </p>
                 <% if user_signed_in?  %>
                 <div id="richiedi2">
-                    <button type="button"class="nav-mybutton"  @click="showModal = true">richiedi</button>
+                    <button type="button"class="nav-mybutton" name="richiedidomicilio" @click="showModal = true">richiedi</button>
                       <!--vue js proprietà per transizione-->
                     <transition name="slide" appear>
                         <div class="modal modal2" v-if="showModal">

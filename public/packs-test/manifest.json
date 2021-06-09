@@ -1,0 +1,144 @@
+{
+  "application.js": "/packs-test/js/application-b1c9afe38eb678c005a0.js",
+  "application.js.map": "/packs-test/js/application-b1c9afe38eb678c005a0.js.map",
+  "bio.js": "/packs-test/js/bio-7023e7bc2874e83670a8.js",
+  "bio.js.map": "/packs-test/js/bio-7023e7bc2874e83670a8.js.map",
+  "cont.js": "/packs-test/js/cont-3263b72dabf8ce0dc042.js",
+  "cont.js.map": "/packs-test/js/cont-3263b72dabf8ce0dc042.js.map",
+  "disp.js": "/packs-test/js/disp-251f122f53d3c126e3f7.js",
+  "disp.js.map": "/packs-test/js/disp-251f122f53d3c126e3f7.js.map",
+  "doc.js": "/packs-test/js/doc-1a202e96e8a12214636e.js",
+  "doc.js.map": "/packs-test/js/doc-1a202e96e8a12214636e.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs-test/js/application-b1c9afe38eb678c005a0.js"
+      ],
+      "js.map": [
+        "/packs-test/js/application-b1c9afe38eb678c005a0.js.map"
+      ]
+    },
+    "bio": {
+      "js": [
+        "/packs-test/js/bio-7023e7bc2874e83670a8.js"
+      ],
+      "js.map": [
+        "/packs-test/js/bio-7023e7bc2874e83670a8.js.map"
+      ]
+    },
+    "cont": {
+      "js": [
+        "/packs-test/js/cont-3263b72dabf8ce0dc042.js"
+      ],
+      "js.map": [
+        "/packs-test/js/cont-3263b72dabf8ce0dc042.js.map"
+      ]
+    },
+    "disp": {
+      "js": [
+        "/packs-test/js/disp-251f122f53d3c126e3f7.js"
+      ],
+      "js.map": [
+        "/packs-test/js/disp-251f122f53d3c126e3f7.js.map"
+      ]
+    },
+    "doc": {
+      "js": [
+        "/packs-test/js/doc-1a202e96e8a12214636e.js"
+      ],
+      "js.map": [
+        "/packs-test/js/doc-1a202e96e8a12214636e.js.map"
+      ]
+    },
+    "formcontatti": {
+      "js": [
+        "/packs-test/js/formcontatti-0ec72fa2ef4dce2328c8.js"
+      ],
+      "js.map": [
+        "/packs-test/js/formcontatti-0ec72fa2ef4dce2328c8.js.map"
+      ]
+    },
+    "formsos": {
+      "js": [
+        "/packs-test/js/formsos-595d0050dc9a4aaf836a.js"
+      ],
+      "js.map": [
+        "/packs-test/js/formsos-595d0050dc9a4aaf836a.js.map"
+      ]
+    },
+    "index": {
+      "js": [
+        "/packs-test/js/index-d36907585e5337139242.js"
+      ],
+      "js.map": [
+        "/packs-test/js/index-d36907585e5337139242.js.map"
+      ]
+    },
+    "jquery": {
+      "js": [
+        "/packs-test/js/jquery-de98b5f1fa990042f9a4.js"
+      ],
+      "js.map": [
+        "/packs-test/js/jquery-de98b5f1fa990042f9a4.js.map"
+      ]
+    },
+    "opacita": {
+      "js": [
+        "/packs-test/js/opacita-9f0e6183eea30f1c7816.js"
+      ],
+      "js.map": [
+        "/packs-test/js/opacita-9f0e6183eea30f1c7816.js.map"
+      ]
+    },
+    "popup": {
+      "js": [
+        "/packs-test/js/popup-e2e30691f889bf84efce.js"
+      ],
+      "js.map": [
+        "/packs-test/js/popup-e2e30691f889bf84efce.js.map"
+      ]
+    },
+    "profile": {
+      "js": [
+        "/packs-test/js/profile-2248d9ed88d93515b0da.js"
+      ],
+      "js.map": [
+        "/packs-test/js/profile-2248d9ed88d93515b0da.js.map"
+      ]
+    },
+    "slide": {
+      "js": [
+        "/packs-test/js/slide-718dc36a5c7e61688114.js"
+      ],
+      "js.map": [
+        "/packs-test/js/slide-718dc36a5c7e61688114.js.map"
+      ]
+    },
+    "sos": {
+      "js": [
+        "/packs-test/js/sos-43e681c714eb5601478d.js"
+      ],
+      "js.map": [
+        "/packs-test/js/sos-43e681c714eb5601478d.js.map"
+      ]
+    }
+  },
+  "formcontatti.js": "/packs-test/js/formcontatti-0ec72fa2ef4dce2328c8.js",
+  "formcontatti.js.map": "/packs-test/js/formcontatti-0ec72fa2ef4dce2328c8.js.map",
+  "formsos.js": "/packs-test/js/formsos-595d0050dc9a4aaf836a.js",
+  "formsos.js.map": "/packs-test/js/formsos-595d0050dc9a4aaf836a.js.map",
+  "index.js": "/packs-test/js/index-d36907585e5337139242.js",
+  "index.js.map": "/packs-test/js/index-d36907585e5337139242.js.map",
+  "jquery.js": "/packs-test/js/jquery-de98b5f1fa990042f9a4.js",
+  "jquery.js.map": "/packs-test/js/jquery-de98b5f1fa990042f9a4.js.map",
+  "opacita.js": "/packs-test/js/opacita-9f0e6183eea30f1c7816.js",
+  "opacita.js.map": "/packs-test/js/opacita-9f0e6183eea30f1c7816.js.map",
+  "popup.js": "/packs-test/js/popup-e2e30691f889bf84efce.js",
+  "popup.js.map": "/packs-test/js/popup-e2e30691f889bf84efce.js.map",
+  "profile.js": "/packs-test/js/profile-2248d9ed88d93515b0da.js",
+  "profile.js.map": "/packs-test/js/profile-2248d9ed88d93515b0da.js.map",
+  "slide.js": "/packs-test/js/slide-718dc36a5c7e61688114.js",
+  "slide.js.map": "/packs-test/js/slide-718dc36a5c7e61688114.js.map",
+  "sos.js": "/packs-test/js/sos-43e681c714eb5601478d.js",
+  "sos.js.map": "/packs-test/js/sos-43e681c714eb5601478d.js.map"
+}
