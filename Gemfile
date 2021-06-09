@@ -64,6 +64,14 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
+  # ***FC*** Three gems used for unit testing with rspec
+  gem 'rspec-rails'
+  gem 'rails-controller-testing' # In order to test our controllers
+  gem 'rexml' # Xml support for rspec
+  gem 'database_cleaner' #for cleaning db
+  gem 'cucumber-rails', require: false #cucumber
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

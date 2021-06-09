@@ -68,21 +68,23 @@ class HomepageController < ApplicationController
 
 
     def disponibilita
-        #se non sei un utente registrato (visitatore o dottore) sia nella get che nella post(eventualmente simulata con programmi esterni) vieni reindirizzato al login
-        if (! user_signed_in?)
-             redirect_to new_user_session_path   #helper method ruby
+        
+        #if you are not a registered user (doctor or visitor) in get request such as in the post (eventually simulated with external programs) you will be redirect to login
+        if (!user_signed_in?)
+            redirect_to new_user_session_path  #helper method offered by ruby on rails
+        
+        else 
+            if (params[:date]==nil)
+                @occupati=nil
+            else 
+                datapass = params[:date]
+                datamin = datapass+("00:00:00")
+                datamax = datapass+("23:59:59")
+                @occupati = Visit.where('data_ora <= ? AND data_ora >= ?', datamax, datamin)
+                @occupati = @occupati.map {|x| x.data_ora.hour}
+            end
         end
-    
-        if params[:date]==nil
-            @occupati = nil
-        else
-            datapass = params[:date]
-            datamin = datapass+(" 00:00:00")
-            datamax = datapass+(" 23:59:59")
-            @occupati = Visit.where('data_ora <= ? AND data_ora >= ?', datamax, datamin)
-            @occupati = @occupati.map {|x| x.data_ora.hour}
-        end
-    
+     
     end
     
 end

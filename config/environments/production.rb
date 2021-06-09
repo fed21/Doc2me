@@ -16,10 +16,10 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
 
   #Per email in locale
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
 
   #Per email in heroku
-  #config.action_mailer.default_url_options = {:host=>'sendgridproof.herokuapp.com'}
+  config.action_mailer.default_url_options = {:host=>'sendgridproof.herokuapp.com'}
   
   config.action_controller.perform_caching = true
 
