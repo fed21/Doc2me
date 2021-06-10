@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#profile-header").animate({top: '40%'},{
         duration: 1800
     });
-    $("#profile-header").animate({left: '30.4%'},{
+    $("#profile-header").animate({left: '33.4%'},{
         duration: 1500
     });
     $("#figli-header").animate({left: '73%'},{
