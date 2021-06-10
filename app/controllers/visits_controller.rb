@@ -10,9 +10,9 @@ class VisitsController < ApplicationController
             redirect_to '/'
         else
             if user_signed_in?
-                @p = Visit.where(:user_id => current_user.id).order(:data_ora)         
+                @p = Visit.where(:user_id => current_user.id).order(:data_ora)     
             else
-                @p = Visit.where(:doctor_id => current_doctor.id).order(:data_ora)     
+                @p = Visit.where(:doctor_id => current_doctor.id).order(:data_ora)
             end
         end
         

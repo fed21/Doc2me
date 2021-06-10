@@ -78,8 +78,8 @@ class HomepageController < ApplicationController
                 @occupati=nil
             else 
                 datapass = params[:date]
-                datamin = datapass+("00:00:00")
-                datamax = datapass+("23:59:59")
+                datamin = datapass+(" 00:00:00")
+                datamax = datapass+(" 23:59:59")
                 @occupati = Visit.where('data_ora <= ? AND data_ora >= ?', datamax, datamin)
                 @occupati = @occupati.map {|x| x.data_ora.hour}
             end

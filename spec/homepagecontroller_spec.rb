@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-# ***FC*** Description of test on homepage controller , using fixtures defined in 'spec/fixtures'
+# ***FC*** Description of test on homepage controller, using fixtures defined in 'spec/fixtures'
 
 describe HomepageController, type: :controller do
     
@@ -40,11 +40,11 @@ describe HomepageController, type: :controller do
 
     #Case 2: registered user but no date inserted
   
-    it  "if you are a registered user but no data is send  it should not set any occupied hours from database" do
+    it  "if you are a registered user but no data is send it should not set any occupied hours from database" do
        
         #these three lines are in order to test devise sign_in
 
-        user = users(:user1) # use of the fixture user1
+        user = users(:user) # use of the fixture user
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
         user.confirm #In order to add confirmation_token necessary to add a user in our app
 
@@ -65,7 +65,7 @@ describe HomepageController, type: :controller do
         
         #these three lines are in order to test devise sign_in
 
-        user = users(:user1) # use of the fixture user1
+        user = users(:user) # use of the fixture user
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
         user.confirm #In order to add confirmation_token necessary to add a user in our app
 
@@ -86,7 +86,7 @@ describe HomepageController, type: :controller do
           
         #these three lines are in order to test devise sign_in
 
-        user = users(:user1) # use of the fixture user1
+        user = users(:user) # use of the fixture user
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
         user.confirm #In order to add confirmation_token necessary to add a user in our app
 
@@ -107,7 +107,7 @@ describe HomepageController, type: :controller do
              
         #these three lines are in order to test devise sign_in
 
-        user = users(:user1) # use of the fixture user1
+        user = users(:user) # use of the fixture user
         sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
         user.confirm #In order to add confirmation_token necessary to add a user in our app
 
@@ -121,6 +121,7 @@ describe HomepageController, type: :controller do
         expect(assigns(:occupati)).to eql([10])
 
     end
-end 
+    end 
+
 
 end

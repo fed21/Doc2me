@@ -215,7 +215,7 @@
                 <div class="text-center">
                     
                     <div class="form-group col-lg-12 " id="disp">
-                        <button type="submit" class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
+                        <button type="submit" name="datesubmit"class="btn nav-mybutton" style="width: 100%;" >Scegli una data</button>
                     </div>
                 </div>
             <% end %>
@@ -228,14 +228,14 @@
             </div>
            
             <div  class="col-lg-6 mx-lg-0 mx-auto card-disp" id="disp-container" style="margin-top: 1%; margin-bottom: 3%;">
-                <% if @occupati == nil %>
+                <%if @occupati == nil%>
                     <h5>Seleziona una data</h5>
                     <% flash.each do |type, msg| %>
                         <div class="alert alert-info" style="margin-top:10px; border-radius:10px">
                             <%= msg %>
                         </div>
                 <%end%>
-                <% else %>
+                <%else%>
                     <div class="rounded-0 border-0 shadow">
                         <div class=" p-5">
                             <div style="overflow-y: scroll;" >

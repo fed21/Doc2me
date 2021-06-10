@@ -68,11 +68,15 @@ group :test do
   gem 'cucumber-rails', :require=> false #cucumber
   gem 'launchy'
   # ***FC*** Three gems used for unit testing with rspec
-  #remove gem 'rspec-rails' to use cucumber testing for incompatibility
+  
   gem 'rspec-rails' 
   gem 'rails-controller-testing' # In order to test our controllers
   gem 'database_cleaner' #for cleaning db
   
+
+
+ 
+ 
   
 end
 

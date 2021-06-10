@@ -7,7 +7,7 @@
 
 # ***FC*** Fixtures are like active records which are automatically inserted into the test db and removed after testing
 
-user1:
+user:
 # column: value
   
   email: prova1@prova1.com
@@ -19,7 +19,7 @@ user1:
 
 
 
-user2: 
+doctor: 
 # column: value
 
   email: prova2@prova2.com
