@@ -1,4 +1,4 @@
-Feature: Disponibilità
+Feature: Disponibilità page
     To see the timetables on a certain date
     As a registered user
     I want to have an input for the date to choose

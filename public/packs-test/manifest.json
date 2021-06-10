@@ -100,10 +100,10 @@
     },
     "profile": {
       "js": [
-        "/packs-test/js/profile-2248d9ed88d93515b0da.js"
+        "/packs-test/js/profile-05dd5e30b45c5727b799.js"
       ],
       "js.map": [
-        "/packs-test/js/profile-2248d9ed88d93515b0da.js.map"
+        "/packs-test/js/profile-05dd5e30b45c5727b799.js.map"
       ]
     },
     "slide": {
@@ -135,8 +135,8 @@
   "opacita.js.map": "/packs-test/js/opacita-9f0e6183eea30f1c7816.js.map",
   "popup.js": "/packs-test/js/popup-e2e30691f889bf84efce.js",
   "popup.js.map": "/packs-test/js/popup-e2e30691f889bf84efce.js.map",
-  "profile.js": "/packs-test/js/profile-2248d9ed88d93515b0da.js",
-  "profile.js.map": "/packs-test/js/profile-2248d9ed88d93515b0da.js.map",
+  "profile.js": "/packs-test/js/profile-05dd5e30b45c5727b799.js",
+  "profile.js.map": "/packs-test/js/profile-05dd5e30b45c5727b799.js.map",
   "slide.js": "/packs-test/js/slide-718dc36a5c7e61688114.js",
   "slide.js.map": "/packs-test/js/slide-718dc36a5c7e61688114.js.map",
   "sos.js": "/packs-test/js/sos-43e681c714eb5601478d.js",

@@ -1,7 +1,7 @@
 Given('I am on the doctors login page') do
 
     visit "/doctors/sign_in"
-
+    
 end
 
 When('I click on the link {string}') do |string|

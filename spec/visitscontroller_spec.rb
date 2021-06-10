@@ -1,6 +1,6 @@
 require 'rails_helper.rb'
 
-# ***FC*** Description of test on homepage controller, using fixtures defined in 'spec/fixtures'
+# ***FC*** Description of test on visit controller method "prenotazioni", using fixtures defined in 'spec/fixtures'
 
 describe VisitsController, type: :controller do
 
@@ -25,7 +25,7 @@ describe VisitsController, type: :controller do
 
         it "if you are a registered doctor with no visits for you it should retrieve your 0 visits"  do
             
-            #simulating doctor with a user fixture 
+            #simulating a doctor with a user fixture 
             doctor = users(:doctor) # use of the fixture doctor
             sign_in doctor  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
             doctor.confirm  #In order to add confirmation_token necessary to add a doctor in our app

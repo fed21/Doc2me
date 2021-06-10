@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   #sos form post e get
   get '/sos' => 'homepage#sos'
   post "/oksos" => 'homepage#createsos'
+  
   get '/profilo' => 'homepage#profilo'
   get '/disponibilita' => 'homepage#disponibilita'
   get '/docprofile1' => 'homepage#docprofile1'

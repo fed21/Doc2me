@@ -1,5 +1,8 @@
-Feature: Prenotazioni
-
+Feature: Prenotazioni page
+     If I am a registered doctor
+     I can see my visits
+     On page Prenotazioni
+     
            Scenario: Doctor is not authenticated
                 Given I am not authenticated
                 When I insert URL: /prenotazioni 
@@ -19,5 +22,6 @@ Feature: Prenotazioni
                 Then I am in Prenotazioni page
                 And I see my visits
             
+
 
 ####################################################################################################################
