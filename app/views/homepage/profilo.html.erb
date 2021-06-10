@@ -200,7 +200,7 @@
     <h1> Il tuo Profilo</h1>
     <div id="richiedi2" style="width:50%; margin-left: 10%;">
         <div>  
-            <button type="button"class="nav-mybutton"  @click="showModal = true" style="margin-left: 5%; width 50%;">Modifica</button>
+            <button type="button"class="nav-mybutton" id="modifica" @click="showModal = true" style="margin-left: 5%; width 50%;">Modifica</button>
         </div>
 
         <transition name="slide" appear>
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                     <div style="margin-top: 3%; margin-left: 5%;">
-                        <button class="nav-mybutton" type="submit">Modifica</button>
+                        <button class="nav-mybutton" id="modificasubmit" type="submit">Modifica</button>
                         <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
                     </div>
                     
