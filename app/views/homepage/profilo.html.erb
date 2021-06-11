@@ -313,7 +313,8 @@
                             <%= form.collection_select :sesso, ["Maschio","Femmina"],:to_s , :to_s,:class =>"form-control bg-white border-left-0 border-md", :required => true%>
                         </div>       
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.date_field :birth_date ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true%>
+                            <% d = Date.today %>
+                            <%= form.date_field :birth_date ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true ,:max =>  d %>
                             <!--<input id="birth_date" type="date" name="birth_date" placeholder="data di nascita" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                         <div class="input-group col-lg-12 mb-4">
