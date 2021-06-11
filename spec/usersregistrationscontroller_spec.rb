@@ -23,6 +23,7 @@ describe UpdateStub do
         #Case 1: unregistered user : it is not possibile to reach "profilo" page if he is not registered and so authenticated
 
         describe HomepageController, type: :controller do
+            
             it "if you are not a registered user it should redirect you to the '/'" do
                 
                 subject= get :profilo
@@ -53,8 +54,6 @@ describe UpdateStub do
                 #!! comment line 43 and 48 to see that the telephone is not changed from 3213213212 and set line 51 to "expect(updated). to eql ("prova") to see the telephone number
 
 
-
-                
 
             end
        

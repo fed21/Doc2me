@@ -182,7 +182,13 @@ class VisitsController < ApplicationController
     end
 
     def destroy
+        
         @v=Visit.find(params[:format])
+
+        if @v.user_id != current_user.id
+            redirect_to "/"
+        end
+
         @v.destroy
         
         if(user_signed_in?)

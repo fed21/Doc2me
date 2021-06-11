@@ -1,8 +1,25 @@
 require 'rails_helper.rb'
 
-# ***FC*** Description of test on homepage controller method "disponibilita", using fixtures defined in 'spec/fixtures'
+# ***FC*** Description of test on sign_in, sign_out and homepage controller method "disponibilita", using fixtures defined in 'spec/fixtures'
 
 describe HomepageController, type: :controller do
+    
+    #Import all fixtures
+        
+    fixtures :all
+
+    context "Sign_in and Sign_out:" do
+
+        it "As an unregistered user I want to signup, login and then logout from the actual session" do
+
+            user = users(:user) # use of the fixture user
+            sign_in user  #helper method given by 'config.include Devise::Test::ControllerHelpers, :type => :controller' in 'rails_helper'
+            user.confirm #In order to add confirmation_token necessary to add a user in our app
+            sign_out user #In order to sign_out
+
+        end
+
+    end
     
     context "In page 'disponibilità'" do
    
@@ -13,15 +30,15 @@ describe HomepageController, type: :controller do
 
             Doctor.create!(:id =>1, :email=> 'prova@prova.it', :password => 'prova1')
 
-            Kid.create!(:id =>1, :user_id=>1)
+            Kid.create!(:id =>2, :user_id=>1)
 
-            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-21 10:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 1)
+            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-21 10:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 2)
 
-            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-21 12:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 1)
+            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-21 12:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 2)
 
-            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-22 10:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 1)
+            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-22 10:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 2)
 
-            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-24 18:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 1)
+            Visit.create!(:doctor_id=> 1, :data_ora=> "2021-07-24 18:00:00.000000000 +0000", :tipo_visita=>'online', :stato_visita=> 'non pagata', :user_id=> 1, :kid_id => 2)
         
         end
 

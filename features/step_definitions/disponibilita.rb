@@ -75,11 +75,6 @@ Then('I see the timetables of that day empty') do
    expect(page).to have_xpath(xpath_query)
    end
 
-   #utile dopo
-   #within "#disponibile"
-   #within('td', :id=> "occupato")
-   #page.should have_content ":00"
-
 end
 
 Given('Visit on {string} hour {string}') do |string, string2|
