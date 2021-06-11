@@ -58,14 +58,20 @@ class VisitsController < ApplicationController
                 @emaildoc=Doctor.where(:id=> iddoc)[0][:email]
                 # current_user.id
                 son = Kid.where(:user_id=>current_user.id)
-                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome], params[:figliocognome])
+                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome].downcase.titleize, params[:figliocognome].downcase.titleize)
                 if son[0] != nil
-
+                    
                     sonid = son.first[:id]
                     dora= DateTime.new(anno,mese,giorno,hour,minuti)
-                    Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'online', :user_id=>current_user.id, :kid_id=>sonid)                        
-                    Formservizi1Mailer.servizi1_form1(@emaildoc, current_user, params[:date], @hour).deliver
-                    redirect_to '/servizi', notice: "Visita prenotata con successo"       
+
+                    check = Visit.where(:data_ora => dora)
+                    if check[0]!= nil
+                        redirect_to "/servizi", notice: "Orario non disponibile" 
+                    else
+                        Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'online', :user_id=>current_user.id, :kid_id=>sonid)                        
+                        Formservizi1Mailer.servizi1_form1(@emaildoc, current_user, params[:date], @hour).deliver
+                        redirect_to '/servizi', notice: "Visita prenotata con successo" 
+                    end      
                 else
                     redirect_to "/servizi", notice: "Nessun figlio trovato, prova a inserirlo con iniziali in minuscolo!"
                 end           
@@ -104,14 +110,20 @@ class VisitsController < ApplicationController
                 @emaildoc=Doctor.where(:id=> iddoc)[0][:email]
                 # current_user.id
                 son = Kid.where(:user_id=>current_user.id)
-                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome], params[:figliocognome])
+                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome].downcase.titleize, params[:figliocognome].downcase.titleize)
                 if son[0] != nil
 
                     sonid = son.first[:id]
                     dora= DateTime.new(anno,mese,giorno,hour,minuti)
-                    Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'domicilio', :user_id=>current_user.id, :kid_id=>sonid)                        
-                    Formservizi2Mailer.servizi2_form2(@emaildoc, current_user, params[:date], @hour, params[:indirizzo]).deliver
-                    redirect_to '/servizi' , notice: "Visita prenotata con successo"        
+
+                    check = Visit.where(:data_ora => dora)
+                    if check[0]!= nil
+                        redirect_to "/servizi", notice: "Orario non disponibile" 
+                    else
+                        Visit.create!(:doctor_id=>iddoc, :data_ora=>dora, :stato_visita=>'non pagata', :tipo_visita=>'domicilio', :user_id=>current_user.id, :kid_id=>sonid)                        
+                        Formservizi2Mailer.servizi2_form2(@emaildoc, current_user, params[:date], @hour, params[:indirizzo]).deliver
+                        redirect_to '/servizi' , notice: "Visita prenotata con successo"
+                    end        
                 else
                     redirect_to "/servizi", notice: "Nessun figlio trovato, prova a inserirlo con iniziali in minuscolo!"
                 end           
@@ -149,7 +161,7 @@ class VisitsController < ApplicationController
                 @emaildoc=Doctor.where(:id=> iddoc)[0][:email]
 
                 son = Kid.where(:user_id=>current_user.id)
-                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome], params[:figliocognome])
+                son = son.where('kids.name = ? AND kids.surname = ?', params[:figlionome].downcase.titleize, params[:figliocognome].downcase.titleize)
                 if son[0] != nil
 
                     

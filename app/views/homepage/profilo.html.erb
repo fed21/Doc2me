@@ -298,12 +298,12 @@
                     <div class="row ">
                         <!-- form aggiungi figlio-->
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.text_field :name, :name=>'namefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"nome", :required => true%>
+                            <%= form.text_field :name, :id=>'namefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"nome", :required => true%>
                             <!--<input id="name" type="text-area" name="name" placeholder="nome" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                         <div class="input-group col-lg-12 mb-4">
                             <!--<input id="surname" type="text-area" name="surname" placeholder="cognome" class="form-control bg-white border-left-0 border-md" required>-->
-                            <%= form.text_field :surname ,:name=>'surnamefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome",:required => true%>
+                            <%= form.text_field :surname ,:id=>'surnamefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome",:required => true%>
                         </div>
                         <div class="input-group col-lg-12 mb-4">
                             <!--<input id="sesso" type="text-area" name="sesso" placeholder="sesso" class="form-control bg-white border-left-0 border-md" required>-->
@@ -313,11 +313,12 @@
                             <%= form.collection_select :sesso,["Maschio","Femmina"],:to_s , :to_s,:class =>"form-control bg-white border-left-0 border-md", :required => true%>
                         </div>       
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.date_field :birth_date, :name=>'datefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true%>
+                            <% d = Date.today %>
+                            <%= form.date_field :birth_date ,:id=>'datefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true ,:max =>  d %>
                             <!--<input id="birth_date" type="date" name="birth_date" placeholder="data di nascita" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.text_field :birth_place, :name=>'placefiglioadd' ,:class=>"form-control bg-white border-left-0 border-md",:placeholder =>"Città di nascita" ,:required => true%>
+                            <%= form.text_field :birth_place, :id=>'placefiglioadd' ,:class=>"form-control bg-white border-left-0 border-md",:placeholder =>"Città di nascita" ,:required => true%>
                             <!--<input id="birth_place" type="text-area" name="birth_place" placeholder="citta di nascita" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                     </div>

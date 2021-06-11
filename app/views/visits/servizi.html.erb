@@ -212,8 +212,10 @@
                              <%= form_with scope: @visit, url: "/okservizi1", local: true do |f| %>
                                 <div class="row ">
                                     <!-- data e ora -->
+
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
+                                        <% d = Date.today %>
+                                        <input id="date" type="date" name="date" min= <%= d +1  %> placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
                                         
@@ -318,7 +320,8 @@
                                 <div class="row ">
                                     <!-- data e ora -->
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
+                                        <% d = Date.today %>
+                                        <input id="date" type="date" name="date" min= <%= d+1 %> placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
                                         <select name="ora" id="ora">

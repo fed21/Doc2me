@@ -207,7 +207,7 @@
                     <div class="datepicker date input-group p-0 shadow-sm">
                         <% d = Date.today %>
                         <!-- <%= %> '=' necessario per prendere il valore effettivo della variabile data di oggi d e per poterla utilizzare -->
-                        <input id="date" type="date" name="date" min=<%= d %> placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
+                        <input id="date" type="date" required name="date" min=<%= d+1 %> placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" value=<%=@dat%>>
                         
                     </div>
                 </div>
@@ -239,6 +239,7 @@
                     <div class="rounded-0 border-0 shadow">
                         <div class=" p-5">
                             <div style="overflow-y: scroll;" >
+                                <h1> Data: <%= @data%></h1>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -275,7 +276,8 @@
                                                 <div class="row ">
                                     <!-- data e ora -->
                                     <div class="input-group col-lg-12 mb-4">
-                                        <input id="date" type="date" name="date" placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
+                                        <% d = Date.today %>
+                                        <input id="date" type="date" min=<%= d+1 %> name="date" placeholder="data (yyyy-mm-dd)" class="form-control bg-white border-left-0 border-md" required>
                                     </div>
                                     <div class="input-group col-lg-12 mb-4">
                                         <select name="ora" id="ora">
