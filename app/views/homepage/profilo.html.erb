@@ -251,7 +251,7 @@
     <div id="richiedi3">  
     <div style="display: flex; justify-content: center;align-items: center;" id="figli-header"> 
         <h1 >I tuoi Figli</h1>
-        <button style="margin-left: 5%;" type="button"class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
+        <button id='addchild' style="margin-left: 5%;" type="button" class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
     </div>
     
     <% flash.each do |type, msg| %>
@@ -270,14 +270,14 @@
         <div class="row  ">
             <div   class="col-8 md-auto card profilo-card" style="margin-top: 0vh;">
                 <div style="margin-bottom:2%;">
-                    <h1 style="font-weight: bold; text-align: justify; margin-bottom: 2%; ; text-transform:capitalize;"><%= kid.name %> <span style="text-transform:capitalize;"> <%= kid.surname %>  </span></h1>
+                    <h1 class="boxfiglio" id="boxfiglio" style="font-weight: bold; text-align: justify; margin-bottom: 2%; ; text-transform:capitalize;"><%= kid.name %> <span style="text-transform:capitalize;"> <%= kid.surname %>  </span></h1>
                 </div>
             
                 <ul class="ul-profile" style="display:flex; justify-content: center; flex-direction: column;">
                     <li> <b>Sesso:</b> <%=kid.sesso %>  </li>
                     <li> <b>Data di nascita:</b> <%=kid.birth_date %></li>
                     <li> <b>Citta di nascita:</b> <%=kid.birth_place %></li>
-                    <li> <%= link_to 'Elimina Figlio', user_kids_path(kid.user_id , kid),
+                    <li> <%= link_to 'Elimina Figlio',user_kids_path(kid.user_id , kid),
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
 	                </li>
@@ -298,31 +298,31 @@
                     <div class="row ">
                         <!-- form aggiungi figlio-->
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.text_field :name ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"nome", :required => true%>
+                            <%= form.text_field :name, :name=>'namefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"nome", :required => true%>
                             <!--<input id="name" type="text-area" name="name" placeholder="nome" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                         <div class="input-group col-lg-12 mb-4">
                             <!--<input id="surname" type="text-area" name="surname" placeholder="cognome" class="form-control bg-white border-left-0 border-md" required>-->
-                            <%= form.text_field :surname ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome",:required => true%>
+                            <%= form.text_field :surname ,:name=>'surnamefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"cognome",:required => true%>
                         </div>
                         <div class="input-group col-lg-12 mb-4">
                             <!--<input id="sesso" type="text-area" name="sesso" placeholder="sesso" class="form-control bg-white border-left-0 border-md" required>-->
                             <div style ="margin-right: 5%;">
                             <%= form.label :sesso , "Sesso:" %><br>
                             </div>
-                            <%= form.collection_select :sesso, ["Maschio","Femmina"],:to_s , :to_s,:class =>"form-control bg-white border-left-0 border-md", :required => true%>
+                            <%= form.collection_select :sesso,["Maschio","Femmina"],:to_s , :to_s,:class =>"form-control bg-white border-left-0 border-md", :required => true%>
                         </div>       
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.date_field :birth_date ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true%>
+                            <%= form.date_field :birth_date, :name=>'datefiglioadd' ,:class =>"form-control bg-white border-left-0 border-md",:placeholder =>"Data di nascita" ,:required => true%>
                             <!--<input id="birth_date" type="date" name="birth_date" placeholder="data di nascita" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                         <div class="input-group col-lg-12 mb-4">
-                            <%= form.text_field :birth_place ,:class=>"form-control bg-white border-left-0 border-md",:placeholder =>"Città di nascita" ,:required => true%>
+                            <%= form.text_field :birth_place, :name=>'placefiglioadd' ,:class=>"form-control bg-white border-left-0 border-md",:placeholder =>"Città di nascita" ,:required => true%>
                             <!--<input id="birth_place" type="text-area" name="birth_place" placeholder="citta di nascita" class="form-control bg-white border-left-0 border-md" required>-->
                         </div>
                     </div>
                     <div style="margin-top: 3%; margin-left: 5%;">
-                        <button class="nav-mybutton" type="submit">Aggiungi</button>
+                        <button class="nav-mybutton" id="savenewchild" type="submit">Aggiungi</button>
                         <button class="nav-mybutton" @click="showModal = false" type="button">Esci</button>
                     </div>
                     

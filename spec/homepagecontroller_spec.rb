@@ -122,6 +122,8 @@ describe HomepageController, type: :controller do
             expect(assigns(:occupati)).to eql([10])
 
         end
+
+
     end 
 
 
