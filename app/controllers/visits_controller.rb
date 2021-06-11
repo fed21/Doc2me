@@ -197,9 +197,19 @@ class VisitsController < ApplicationController
         
         @v=Visit.find(params[:format])
 
-        if @v.user_id != current_user.id
-            redirect_to "/"
-        end
+        if user_signed_in?
+        
+            if @v.user_id != current_user.id 
+                redirect_to "/"
+            end
+
+        elsif doctor_signed_in?
+
+            if @v.doctor_id != current_doctor.id 
+                redirect_to "/"
+            end
+
+        end 
 
         @v.destroy
         
@@ -211,7 +221,7 @@ class VisitsController < ApplicationController
             date=datehour.strftime("%Y-%m-%d")
             hour=datehour.strftime('%I:%M')
             UtenteeliminavisitaMailer.utenteeliminavisita(email_doc,current_user,date,hour,tipo).deliver
-            redirect_to "/prenotazioni" ,notice: "visita annullata" +email_doc
+            redirect_to "/prenotazioni" ,notice: "visita annullata" 
 
         elsif(doctor_signed_in?)
             utente = @v.user_id
@@ -221,7 +231,7 @@ class VisitsController < ApplicationController
             date=datehour.strftime("%Y-%m-%d")
             hour=datehour.strftime('%I:%M')
             MedicoeliminavisitaMailer.medicoeliminavisita(email_utente,current_doctor,date,hour,tipo).deliver
-            redirect_to "/prenotazioni" ,notice: "visita annullata" +email_utente
+            redirect_to "/prenotazioni" ,notice: "visita annullata" 
            
         end
         

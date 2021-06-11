@@ -1,4 +1,4 @@
-class UtenteeliminavisitaMailer < ActionMailer::Base
+class MedicoeliminavisitaMailer < ActionMailer::Base
     default from: "doc2me.app@gmail.com"
   
     def medicoeliminavisita(email_utente,current_doctor,datareq,hour,tipo)

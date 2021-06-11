@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%= favicon_link_tag 'icondoctor.ico' %>
     <title>Doc2me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <%= csrf_meta_tags %>
@@ -20,7 +21,8 @@
 
   <%= yield %>
 
-    <% if user_signed_in? %>
+    <!--FOR DEBUGGING
+     <% if user_signed_in? %>
       CIAO <%= current_user.nome%> 
       <br>
       EMAIL <%= current_user.email%> 
@@ -44,4 +46,5 @@
     Notification: <%= msg %>
   </div>
   <% end %>
+  -->
 </html>
