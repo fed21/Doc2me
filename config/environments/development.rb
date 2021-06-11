@@ -17,7 +17,7 @@ Rails.application.configure do
   #Per invio email in locale 
   config.action_mailer.default_url_options = { host:'localhost', port: 3000} 
   #Per invio email in heroku
-  #config.action_mailer.default_url_options = {:host=>'sendgridproof.herokuapp.com'}
+  #config.action_mailer.default_url_options = {:host=>'doc2me.herokuapp.com'}
   
   
   # Enable/disable caching. By default caching is disabled.
