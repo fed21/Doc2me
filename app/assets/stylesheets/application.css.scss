@@ -457,16 +457,23 @@
    }
    
    @media screen and (max-width: 1520px) {
-       .urgenza-flex{
+       .urgenza-flex {
+           margin-top: 5%;
            display: flex;
            flex-wrap: wrap;
            flex-direction: column;
            align-content: center; 
            
+           
+       }
+       .son-urgenza{
+           text-align:center;
        }
        .urgenza-text{
            width: 100%;
+           text-align: center;
        }
+
        #but-sos{
            margin-top: 0%;
            margin-left: 43%;
@@ -530,7 +537,13 @@
    }
    
    @media screen and (max-width: 760px) {
-      
+
+    
+       .urgenza-flex {
+            margin-top: 0%;
+            height: 65vh;
+        }
+
        #guida{
            height: 100%;
        }
@@ -577,9 +590,11 @@
    
        .father-team{
         
-           margin-left:10%;
+           margin-left: 0%;
        }
-       
+       .son-team{
+            margin-left: 1%;
+        }
        .team-text{
            margin-left: 16%;
        }
@@ -1407,7 +1422,6 @@
            margin-top:2ch;
            margin-bottom:2ch;
            
-           
        }
        
    }
@@ -1415,18 +1429,18 @@
    /*profile*/
 
 .profilo-card{
-   padding: 3%; padding-left: 7%; 
-    margin-bottom: 2%; margin-top: 33vh; margin-left: 150%;
+    padding: 3%; padding-left: 7%; 
+    margin-bottom: 2%;  margin-left: 150%;
     display: flex;
     justify-content: flex-start;
     width: 100%;
 }
 #profile-header{
 
-    margin-top:-22%; 
+    text-align: center;
+    margin-left: -137%; 
     color: #04044c; 
     position: relative; 
-    margin-left: 1%;
     display: flex;
     align-content: space-between;
 }
@@ -1459,6 +1473,10 @@
     margin-bottom: 5%;
 }
 
+.modifica{
+    margin-left: 5%; 
+}
+
 @media screen and (max-width: 1200px) {
     
     .ul-profile{
@@ -1480,17 +1498,24 @@
         height: 40vh;
     }
 
-    #profilo-card {
-        margin-right: 5%;
-        margin-left: 148%;
-        margin-top: 10%;
+    .profilo-card {
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        
     }
+
     #profile-header{
-        display: none;
+        flex-direction: column;
+    }
+
+    #figli-header{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .modifica{
+        margin-left: 0%; 
     }
    
 }

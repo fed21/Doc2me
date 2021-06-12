@@ -196,13 +196,13 @@
 </div>
 
 
-<div id='profile-header'>
-    <h1> Il tuo Profilo</h1>
-    <div id="richiedi2" style="width:50%; margin-left: 10%;">
-        <div>  
-            <button type="button"class="nav-mybutton" id="modifica" @click="showModal = true" style="margin-left: 5%; width 50%;">Modifica</button>
+<div >
+    <div id="richiedi2">
+        <div style="display: flex; justify-content: center; align-items: center;" id="profile-header">  
+            <h1> Il tuo Profilo</h1>
+            <button type="button"class="nav-mybutton modifica" id="modifica" @click="showModal = true" >Modifica</button>
         </div>
-
+       
         <transition name="slide" appear>
             <div class="modal modal3" v-if="showModal">
                             
@@ -251,7 +251,7 @@
     <div id="richiedi3">  
     <div style="display: flex; justify-content: center;align-items: center;" id="figli-header"> 
         <h1 >I tuoi Figli</h1>
-        <button id='addchild' style="margin-left: 5%;" type="button" class="nav-mybutton"  @click="showModal = true">aggiungi figlio</button>
+        <button id='addchild'  type="button" class="nav-mybutton modifica"  @click="showModal = true">aggiungi figlio</button>
     </div>
     
     <% flash.each do |type, msg| %>
