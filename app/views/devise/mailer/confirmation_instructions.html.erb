@@ -1,0 +1,11 @@
+<p>Ciao <%= @email %>!</p>
+
+<p>Conferma la tua registrazione cliccando sul link qua sotto</p>
+
+<p><%= link_to 'Conferma il tuo account Doc2me', confirmation_url(@resource, confirmation_token: @token) %></p>
+ <br>
+<br>
+-DOC2ME STAFF-
+<br>
+<br>
+<%= image_tag "https://cdn.icon-icons.com/icons2/2239/PNG/256/doctor_icon_134827.png" %>
