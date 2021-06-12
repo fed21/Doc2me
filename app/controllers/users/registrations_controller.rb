@@ -45,7 +45,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+  def after_sign_up_path_for(resource)
+    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Cliccal sul link al suo interno per confermare la registrazione!"
+    new_user_session_path# Or :prefix_to_your_route
+  end
+
+  def after_inactive_sign_up_path_for(resource)
+    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Cliccal sul link al suo interno per confermare la registrazione!"
+    new_user_session_path # Or :prefix_to_your_route
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
