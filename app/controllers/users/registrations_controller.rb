@@ -47,12 +47,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   protected
   def after_sign_up_path_for(resource)
-    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Cliccal sul link al suo interno per confermare la registrazione!"
+    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Clicca sul link al suo interno per confermare la registrazione!"
     new_user_session_path# Or :prefix_to_your_route
   end
 
   def after_inactive_sign_up_path_for(resource)
-    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Cliccal sul link al suo interno per confermare la registrazione!"
+    flash[:notice] = "Ti abbiamo inviato una mail al tuo indirizzo email. Clicca sul link al suo interno per confermare la registrazione!"
     new_user_session_path # Or :prefix_to_your_route
   end
 
