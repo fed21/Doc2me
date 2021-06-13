@@ -604,7 +604,15 @@
            margin-top:0px;
        }
    }
-   
+   @media screen and (max-width: 470px) {
+
+    
+    .urgenza-flex {
+         margin-top: 0%;
+         height: 85vh;
+     }
+
+    }
    #h2-home{
        font-weight: bold;
        border-top: #04044c; 

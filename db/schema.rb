@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_142622) do
+ActiveRecord::Schema.define(version: 2021_06_12_112158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,14 +64,6 @@ ActiveRecord::Schema.define(version: 2021_06_05_142622) do
     t.index ["user_id"], name: "index_kids_on_user_id"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.boolean "paid", default: false
-    t.string "token"
-    t.integer "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "turns", force: :cascade do |t|
     t.bigint "doctor_id"
     t.integer "day"
@@ -93,12 +85,12 @@ ActiveRecord::Schema.define(version: 2021_06_05_142622) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "nome"
     t.string "cognome"
     t.string "telefono"
