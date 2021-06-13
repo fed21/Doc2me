@@ -31,13 +31,10 @@ Utente registrato:
  Admin:
  	Può avere accesso dall’applicazione Rails a tutte le funzionalità del sito, può gestire gli utenti nel database di Rails e può avere una panoramica delle prenotazioni effettuate, può registrare un medico, può apportare modifiche al contenuto del sito web.
 
-# L’autenticazione                                                
+# L’ autenticazione                                                
 Sono previste due modalità di accesso al sito:   
-    Locale:
-        L’utente può autenticarsi direttamente nel sito inserendo i dati personali richiesti.
-
-    OAuth:
-    	L’utente può autenticarsi direttamente tramite il proprio account Google.
+    Locale: L’utente può autenticarsi direttamente nel sito inserendo i dati personali richiesti.
+    OAuth: L’utente può autenticarsi direttamente tramite il proprio account Google.
 
 L’applicazione usufruisce di servizi esterni integrati tramite le rispettive API RESTful: SENDGRID, PAYPAL SANDOBOX e GOOGLE O-AUTH.
 
